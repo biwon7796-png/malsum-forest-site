@@ -1,0 +1,60 @@
+/* ==========================================================================
+   MALSUM FOREST — GLOBAL HEADER CONTRACT  v0.1
+   Canonical reference:
+     MALSUM_FOREST_HOME_V2_FIVE_READING_WALKS_IDENTITY_BOUND_v0.1_CANDIDATE.html
+     (.nav / .nav .wrap / .wordmark / .navlinks and its @media 900 / 560 blocks)
+
+   Every value below is the HOME header's own value, hard-coded instead of
+   var(): child pages also load css/style.css, whose :root defines different
+   --navy / --serif / --sans, so tokens would NOT resolve to the HOME values.
+   Class names are site-* (not .nav/.wordmark) because css/style.css already
+   owns .nav and .wordmark for the legacy home page.
+
+   HOME inherited values that are declared explicitly here:
+     font-family  body var(--sans)   -> Arial,"Noto Sans KR",sans-serif
+     color        body               -> #2F3438
+     word-break   body               -> keep-all
+     link color / decoration  a{}    -> inherit / none
+     focus ring   a:focus-visible    -> 3px solid #2E9FC4, offset 3px
+   ========================================================================== */
+
+.site-header{
+  height:76px;display:flex;align-items:center;
+  border-bottom:1px solid #e4e8e9;background:rgba(247,247,244,.96);
+  position:sticky;top:0;z-index:20;
+  font-family:Arial,"Noto Sans KR",sans-serif;font-size:16px;font-weight:400;
+  line-height:normal;letter-spacing:normal;color:#2F3438;word-break:keep-all
+}
+.site-header__wrap{width:min(1180px,calc(100% - 48px));margin:auto;display:flex;align-items:center;gap:24px}
+.site-header a{color:inherit;text-decoration:none}
+.site-header a:focus-visible{outline:3px solid #2E9FC4;outline-offset:3px}
+
+.site-wordmark{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+/* HOME declares  Georgia,"Nanum Myeongjo",serif  but loads no webfont, so its
+   Hangul resolves to the generic serif (measured wordmark width 98.8px).
+   Child pages DO load Nanum Myeongjo for their body type, so copying HOME's
+   literal stack here would render the wordmark in Nanum Myeongjo (97.3px) and
+   break header parity. The stack below reproduces HOME's rendered result. */
+.site-wordmark b{font:700 24px/1.2 Georgia,serif;color:#123A5A}
+.site-wordmark span{font-size:9px;font-weight:700;letter-spacing:.28em;color:#66717A}
+
+.site-nav{margin-left:auto;display:flex;gap:24px;font-size:14px;align-items:center}
+.site-nav a{min-height:44px;display:flex;align-items:center}
+.site-nav a:hover{color:#2E9FC4}
+/* current page: the minimum mark that stays inside the HOME type contract —
+   weight only, no rule, no underline, no box (HOME itself has no active state) */
+.site-nav a[aria-current="page"]{font-weight:700;color:#123A5A}
+
+@media (max-width:900px){
+  .site-header{height:auto;min-height:64px;padding:8px 0}
+  .site-header__wrap{width:min(100% - 40px,720px);gap:12px}
+  .site-wordmark{flex-direction:column;align-items:flex-start;gap:0}
+  .site-wordmark b{font-size:20px}
+  .site-wordmark span{font-size:7px}
+  .site-nav{gap:10px;font-size:11px;flex-wrap:wrap;justify-content:flex-end}
+  .site-nav a{min-height:44px}
+}
+@media (max-width:560px){
+  .site-header__wrap{width:calc(100% - 40px)}
+  .site-nav{gap:6px;font-size:10px}
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>두려움과 믿음 — 말씀의 숲</title>
+<meta name="description" content="《말씀의 숲》 주제호 03 — 두려움과 믿음. 시편 56편, 출애굽기 1장, 창세기 15장을 따라 두려운 날에 무엇을 기억하고 누구를 신뢰할 것인지를 묻습니다.">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/site-header.v2-candidate.css">
+<style>
+/* ===== global footer — copied verbatim from books/books.css (values unchanged) ===== */
+.route-footer{background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:34px 6vw;font-size:12px}
+.route-footer>a{font-family:var(--serif);font-size:22px;font-weight:700}.route-footer>a span{margin-left:12px;font-family:var(--latin);font-size:8px;letter-spacing:.3em}
+@media(max-width:767.98px){
+  .route-footer{display:block;padding:34px 20px}.route-footer p{margin-top:22px}
+}
+@media (min-width:768px){
+  .route-footer{padding-left:max(32px,calc((100vw - 1240px)/2 + 32px));padding-right:max(32px,calc((100vw - 1240px)/2 + 32px))}
+}
+
+/* ===== BOOK DETAIL · 두려움과 믿음 — V2 detail grammar, shared vocabulary with 돌아옴과 환대 / 기다림과 때.
+   Composition differs from both: the hero holds copy and cover on a top-aligned split with the
+   purchase line carried under the copy, the one question rests on the olive plane (navy in 01,
+   light blue in 02), and the reading path runs against a quiet source note. ===== */
+.book-detail-page{
+  --v2-navy:#123A5A;--v2-blue:#2E9FC4;--v2-muted:#66717A;--v2-body:#2F3438;
+  --v2-paper:#F7F7F4;--v2-olivep:#F2F5E8;--v2-gray:#F0F1EF;--v2-light:#EDF5F7;
+  --v2-rule:rgba(18,58,90,.22);--v2-rule-soft:rgba(18,58,90,.14);
+  background:var(--v2-paper);color:var(--v2-body)
+}
+.book-detail-page .detail-wrap{width:min(1180px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+.book-detail-page .detail-eyebrow{font-family:var(--sans);font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--v2-blue)}
+.book-detail-page .detail-title{font-size:clamp(34px,4vw,58px);line-height:1.06;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-body{font-size:16px;line-height:1.8;color:var(--v2-body)}
+.book-detail-page .detail-body p+p{margin-top:16px}
+.book-detail-page .detail-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-link:hover{color:var(--v2-blue)}
+
+/* FEATURE — hero, copy and cover top-aligned, purchase line under the copy */
+.book-detail-page .detail-hero{padding:88px 0 92px;background:var(--v2-paper)}
+.book-detail-page .detail-hero__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.95fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-hero h1{margin-top:22px;font:700 clamp(48px,6vw,88px)/1.05 var(--serif);letter-spacing:-.035em;color:var(--v2-navy)}
+.book-detail-page .detail-hero__sub{margin-top:16px;font:400 clamp(18px,1.7vw,22px)/1.5 var(--serif);color:var(--v2-muted)}
+.book-detail-page .detail-hero__lead{margin-top:22px;max-width:640px;font-size:16px;line-height:1.85;color:var(--v2-body)}
+.book-detail-page .detail-hero__meta{margin-top:26px;padding-top:20px;border-top:1px solid var(--v2-rule);font-size:14px;line-height:1.6;color:var(--v2-muted)}
+.book-detail-page .detail-hero__meta b{font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-hero__buy{margin-top:8px;padding-top:6px;border-top:1px solid var(--v2-rule-soft);display:flex;flex-wrap:wrap;align-items:center;gap:0 24px}
+.book-detail-page .detail-hero__price{font-size:13px;line-height:1.6;color:var(--v2-muted)}
+.book-detail-page .detail-hero__price b{font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-hero__cover{justify-self:end;width:100%;max-width:360px;margin:6px 0 0}
+.book-detail-page .detail-hero__cover img{width:100%;height:auto;filter:drop-shadow(0 26px 36px rgba(18,58,90,.18))}
+
+/* question — the one question, carried on the olive plane */
+.book-detail-page .detail-question{background:var(--v2-olivep);padding:78px 0 82px}
+.book-detail-page .detail-question__line{margin-top:22px;font:400 clamp(24px,2.5vw,36px)/1.55 var(--serif);letter-spacing:-.01em;color:var(--v2-navy);max-width:900px}
+.book-detail-page .detail-question__line:before{content:"";display:block;width:40px;height:1px;margin-bottom:28px;background:rgba(18,58,90,.4)}
+
+/* about — asymmetric label / body */
+.book-detail-page .detail-about{padding:92px 0 96px;background:var(--v2-paper)}
+.book-detail-page .detail-about__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-about .detail-title{margin-top:18px;font-size:clamp(34px,3.5vw,50px)}
+.book-detail-page .detail-about__body{max-width:720px;padding-top:8px}
+.book-detail-page .detail-about__body p{font-size:17px;line-height:1.9}
+
+/* SECONDARY — reading path, numbered flow with a source note */
+.book-detail-page .detail-toc{padding:84px 0 88px;background:#fff}
+.book-detail-page .detail-toc__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-toc .detail-title{margin-top:18px;font-size:clamp(34px,3.5vw,50px)}
+.book-detail-page .detail-toc__source{margin-top:22px;padding-top:16px;border-top:1px solid var(--v2-rule-soft);font-size:13px;line-height:1.75;color:var(--v2-muted);max-width:340px}
+.book-detail-page .detail-toc__body{max-width:760px;padding-top:8px}
+.book-detail-page .detail-flow{list-style:none;margin:0;padding:0;border-top:1px solid var(--v2-rule)}
+.book-detail-page .detail-flow li{display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:22px;padding:20px 0;border-bottom:1px solid var(--v2-rule-soft)}
+.book-detail-page .detail-flow__no{font-family:var(--latin);font-size:20px;font-weight:600;line-height:1.35;color:var(--v2-blue)}
+.book-detail-page .detail-flow strong{display:block;font:700 21px/1.4 var(--serif);letter-spacing:-.02em;color:var(--v2-navy)}
+.book-detail-page .detail-flow p{margin-top:8px;font-size:14px;line-height:1.75;color:var(--v2-muted)}
+.book-detail-page .detail-flow__read{display:inline-flex;align-items:center;min-height:44px;margin-top:4px;font-size:13px;font-weight:700;color:var(--v2-blue)}
+.book-detail-page .detail-flow__read:hover{color:var(--v2-navy)}
+
+/* INDEX — publication info, note and the primary purchase link */
+.book-detail-page .detail-publication{padding:84px 0 88px;background:var(--v2-gray)}
+.book-detail-page .detail-publication__grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.35fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-publication .detail-title{margin-top:18px;font-size:clamp(30px,3vw,42px)}
+.book-detail-page .detail-publication__facts{margin:32px 0 0;border-top:1px solid var(--v2-rule)}
+.book-detail-page .detail-publication__facts div{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:20px;padding:12px 0;border-bottom:1px solid var(--v2-rule-soft);font-size:14px;line-height:1.6}
+.book-detail-page .detail-publication__facts dt{color:var(--v2-muted)}
+.book-detail-page .detail-publication__facts dd{margin:0;font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-publication__note{border-top:1px solid var(--v2-rule);padding-top:22px}
+.book-detail-page .detail-publication__note .detail-body{margin-top:16px;max-width:640px}
+.book-detail-page .detail-publication__buy{margin-top:22px;border-top:1px solid var(--v2-rule-soft);padding-top:10px}
+
+/* connect — series / neighbouring issues */
+.book-detail-page .detail-connect{padding:76px 0 80px;background:var(--v2-paper)}
+.book-detail-page .detail-connect__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-connect .detail-title{margin-top:18px;font-size:clamp(28px,2.8vw,40px)}
+.book-detail-page .detail-connect__links{border-top:1px solid var(--v2-rule);padding-top:14px;display:flex;flex-wrap:wrap;gap:0 40px}
+
+/* closing */
+.book-detail-page .detail-closing{padding:88px 0 96px;background:var(--v2-light)}
+.book-detail-page .detail-closing__grid{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.book-detail-page .detail-closing__line{font:400 clamp(22px,2.2vw,30px)/1.6 var(--serif);color:var(--v2-navy);max-width:760px}
+.book-detail-page .detail-closing__links{display:flex;flex-direction:column;align-items:flex-end}
+.book-detail-page .detail-closing .detail-link{border-bottom:1px solid rgba(18,58,90,.35);white-space:nowrap}
+
+@media(max-width:900px){
+  .book-detail-page .detail-wrap{width:min(100% - 40px,720px)}
+  .book-detail-page .detail-hero{padding:56px 0 60px}
+  .book-detail-page .detail-hero__grid{grid-template-columns:1fr;row-gap:40px}
+  .book-detail-page .detail-hero__cover{order:-1;justify-self:start;width:62%;max-width:300px;margin-top:0}
+  .book-detail-page .detail-hero h1{font-size:clamp(40px,10vw,56px)}
+  .book-detail-page .detail-question{padding:60px 0 64px}
+  .book-detail-page .detail-about,.book-detail-page .detail-toc,.book-detail-page .detail-publication{padding:60px 0 64px}
+  .book-detail-page .detail-about__grid,.book-detail-page .detail-toc__grid,.book-detail-page .detail-publication__grid,.book-detail-page .detail-connect__grid{grid-template-columns:1fr;row-gap:34px}
+  .book-detail-page .detail-about__body p{font-size:16px;line-height:1.8}
+  .book-detail-page .detail-toc__source{max-width:none}
+  .book-detail-page .detail-connect{padding:56px 0 60px}
+  .book-detail-page .detail-closing{padding:60px 0 68px}
+  .book-detail-page .detail-closing__grid{display:block}
+  .book-detail-page .detail-closing__links{margin-top:22px;align-items:flex-start}
+}
+@media(max-width:560px){
+  .book-detail-page .detail-wrap{width:calc(100% - 40px)}
+  .book-detail-page .detail-hero{padding:44px 0 52px}
+  .book-detail-page .detail-hero__cover{width:62%;max-width:240px}
+  .book-detail-page .detail-hero h1{font-size:44px}
+  .book-detail-page .detail-hero__sub{font-size:17px}
+  .book-detail-page .detail-hero__meta{font-size:13px}
+  .book-detail-page .detail-hero__buy{gap:0}
+  .book-detail-page .detail-question__line{font-size:22px;line-height:1.6}
+  .book-detail-page .detail-about .detail-title,.book-detail-page .detail-toc .detail-title{font-size:32px}
+  .book-detail-page .detail-flow li{grid-template-columns:38px minmax(0,1fr);column-gap:14px}
+  .book-detail-page .detail-flow__no{font-size:17px}
+  .book-detail-page .detail-flow strong{font-size:18px}
+  .book-detail-page .detail-publication__facts div{grid-template-columns:84px minmax(0,1fr)}
+  .book-detail-page .detail-connect__links{display:block}
+  .book-detail-page .detail-closing__line{font-size:20px}
+}
+</style>
+</head>
+<body class="book-detail-page">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" id="top">
+  <div class="site-header__wrap">
+    <a class="site-wordmark" href="/" aria-label="말씀의 숲 홈"><b>말씀의 숲</b><span>MALSUM FOREST</span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/open-pages/">Open Pages</a>
+      <a href="/books/">Books</a>
+      <a href="/series/">Series</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+  <!-- FEATURE · book hero -->
+  <section class="detail-hero" aria-labelledby="book-title">
+    <div class="detail-wrap detail-hero__grid">
+      <div class="detail-hero__copy">
+        <p class="detail-eyebrow">Malsum Forest · Issue 03</p>
+        <h1 id="book-title">두려움과 믿음</h1>
+        <p class="detail-hero__sub">주제별 성경연구와 설교사유</p>
+        <p class="detail-hero__lead">《말씀의 숲 주제호 03 — 두려움과 믿음》은 두려움을 빨리 없애는 방법을 제시하거나, 두려움을 신앙의 실패로 판단하는 책이 아닙니다. 삶이 흔들리고 앞이 보이지 않는 순간에도 하나님께 자신을 맡기며 오늘의 한 걸음을 살아가는 믿음이 무엇인지 묻습니다.</p>
+        <p class="detail-hero__meta"><b>이승주</b> · 퍼플 · 2026. 09. 08 · 82쪽</p>
+        <div class="detail-hero__buy">
+          <p class="detail-hero__price">정가 <b>17,500원</b> · POD(주문 후 제작)</p>
+          <a class="detail-link" href="https://product.kyobobook.co.kr/detail/S000221168623" target="_blank" rel="noopener noreferrer">교보문고에서 보기 →</a>
+        </div>
+      </div>
+      <figure class="detail-hero__cover"><img src="../../assets/img/fear-and-faith-cover.jpg" alt="《말씀의 숲》 주제호 03 『두려움과 믿음』 공식 표지" width="1000" height="1409"></figure>
+    </div>
+  </section>
+
+  <!-- question · the one question -->
+  <section class="detail-question" aria-labelledby="question-title">
+    <div class="detail-wrap">
+      <h2 class="detail-eyebrow" id="question-title">One Question</h2>
+      <blockquote class="detail-question__line">두려움이 사라지지 않아도<br>우리는 믿음으로 살아갈 수 있을까?</blockquote>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="detail-about" aria-labelledby="about-title">
+    <div class="detail-wrap detail-about__grid">
+      <div>
+        <p class="detail-eyebrow">About This Book</p>
+        <h2 class="detail-title" id="about-title">두려운 날,<br>무엇을 기억하는가</h2>
+      </div>
+      <div class="detail-about__body detail-body">
+        <p>이 책은 시편 56편을 중심으로 “두려운 날, 무엇을 기억하는가”라는 질문을 깊이 따라갑니다. 이어 출애굽기 1장을 통해 두려움이 타인을 위협과 위험으로 바라보게 만드는 방식을 살피고, 창세기 15장을 통해 불확실한 현실 속에서 믿음이 어디에서 시작되는지를 탐구합니다.</p>
+        <p>성경 본문 연구에 머물지 않고 인문학, 예술, 세계관, 공동체의 돌봄까지 시야를 넓힙니다. “믿음이 있다면 두렵지 않아야 하는가”, “확실하지 않아도 움직일 수 있는가”, “두려워하는 사람 곁에는 어떻게 서야 하는가”와 같은 실제적인 질문을 통해 믿음을 삶의 언어로 연결합니다.</p>
+        <p>마지막에는 묵상과 기록, 14일 읽기 길을 통해 자신의 두려움을 하나님 앞에 가져가고, 오늘 걸을 수 있는 작은 신뢰의 한 걸음을 찾도록 돕습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECONDARY · reading path -->
+  <section class="detail-toc" aria-labelledby="toc-title">
+    <div class="detail-wrap detail-toc__grid">
+      <div>
+        <p class="detail-eyebrow">Inside the Book</p>
+        <h2 class="detail-title" id="toc-title">읽기의 길</h2>
+        <p class="detail-toc__source">세부 목차는 상품 페이지에 등록되어 있지 않아, 책 소개가 밝힌 본문과 질문을 그대로 옮겼습니다.</p>
+      </div>
+      <div class="detail-toc__body">
+        <ol class="detail-flow">
+          <li><span class="detail-flow__no" aria-hidden="true">01</span><div><strong>시편 56편</strong><p>“두려운 날, 무엇을 기억하는가”라는 질문을 깊이 따라갑니다.</p><a class="detail-flow__read" href="/open-pages/when-fear-remains/">Open Pages에서 먼저 읽기 →</a></div></li>
+          <li><span class="detail-flow__no" aria-hidden="true">02</span><div><strong>출애굽기 1장</strong><p>두려움이 타인을 위협과 위험으로 바라보게 만드는 방식을 살핍니다.</p><a class="detail-flow__read" href="/open-pages/empire-counts/">Open Pages에서 먼저 읽기 →</a></div></li>
+          <li><span class="detail-flow__no" aria-hidden="true">03</span><div><strong>창세기 15장</strong><p>불확실한 현실 속에서 믿음이 어디에서 시작되는지를 탐구합니다.</p></div></li>
+          <li><span class="detail-flow__no" aria-hidden="true">04</span><div><strong>인문학, 예술, 세계관, 공동체의 돌봄</strong><p>“믿음이 있다면 두렵지 않아야 하는가”, “확실하지 않아도 움직일 수 있는가”, “두려워하는 사람 곁에는 어떻게 서야 하는가”</p></div></li>
+          <li><span class="detail-flow__no" aria-hidden="true">05</span><div><strong>묵상과 기록, 14일 읽기 길</strong><p>자신의 두려움을 하나님 앞에 가져가고, 오늘 걸을 수 있는 작은 신뢰의 한 걸음을 찾도록 돕습니다.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDEX · publication -->
+  <section class="detail-publication" aria-labelledby="publication-title">
+    <div class="detail-wrap detail-publication__grid">
+      <div>
+        <p class="detail-eyebrow">Publication</p>
+        <h2 class="detail-title" id="publication-title">두려움과 믿음</h2>
+        <dl class="detail-publication__facts">
+          <div><dt>지은이</dt><dd>이승주</dd></div>
+          <div><dt>발행일</dt><dd>2026. 09. 08</dd></div>
+          <div><dt>발행처</dt><dd>퍼플</dd></div>
+          <div><dt>분량</dt><dd>82쪽</dd></div>
+          <div><dt>크기</dt><dd>176 × 248 mm</dd></div>
+          <div><dt>ISBN</dt><dd>9788924254877</dd></div>
+          <div><dt>정가</dt><dd>17,500원</dd></div>
+          <div><dt>분야</dt><dd>종교 &gt; 기독교(개신교)</dd></div>
+          <div><dt>제작 방식</dt><dd>POD(주문 후 제작)</dd></div>
+          <div><dt>시리즈</dt><dd>말씀의 숲 주제호 03</dd></div>
+        </dl>
+      </div>
+      <div class="detail-publication__note">
+        <p class="detail-eyebrow">Notes</p>
+        <div class="detail-body">
+          <p>종이책은 승인된 본문과 표지를 기준으로 소개합니다. 본문 미리보기나 제3자 내지 이미지는 공개하지 않습니다.</p>
+          <p>종이책 구매는 교보문고 상품 페이지로 연결됩니다.</p>
+        </div>
+        <div class="detail-publication__buy">
+          <a class="detail-link" href="https://product.kyobobook.co.kr/detail/S000221168623" target="_blank" rel="noopener noreferrer">교보문고에서 보기 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- connect · series -->
+  <section class="detail-connect" aria-labelledby="connect-title">
+    <div class="detail-wrap detail-connect__grid">
+      <div>
+        <p class="detail-eyebrow">Series</p>
+        <h2 class="detail-title" id="connect-title">한 질문이<br>다음 질문으로</h2>
+      </div>
+      <div class="detail-connect__links">
+        <a class="detail-link" href="/series/">Series 보기 →</a>
+        <a class="detail-link" href="/series/issues/">말씀의 숲 주제호 보기 →</a>
+        <a class="detail-link" href="/books/return-and-welcome/">주제호 01 · 돌아옴과 환대 →</a>
+        <a class="detail-link" href="/books/waiting-and-time/">주제호 02 · 기다림과 때 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- closing -->
+  <section class="detail-closing" aria-label="마무리">
+    <div class="detail-wrap detail-closing__grid">
+      <p class="detail-closing__line">두려움이 없어져야 비로소 믿음이 시작되는 것이 아니라,<br>두려운 날에도 누구를 기억하고 누구를 신뢰할 것인가를<br>선택하는 자리에서 믿음의 길은 시작됩니다.</p>
+      <div class="detail-closing__links">
+        <a class="detail-link" href="https://product.kyobobook.co.kr/detail/S000221168623" target="_blank" rel="noopener noreferrer">교보문고에서 보기 →</a>
+        <a class="detail-link" href="/series/issues/">주제호 전체 보기 →</a>
+        <a class="detail-link" href="/books/">Books로 돌아가기 →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="route-footer"><a href="/">말씀의 숲 <span>MALSUM FOREST</span></a><p>© 2026 MALSUM FOREST.</p></footer>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>말씀의 숲 주제호 — Series</title>
+<meta name="description" content="말씀의 숲 주제호 — 주제별 성경연구와 설교사유. 돌아옴과 환대, 기다림과 때, 두려움과 믿음을 만납니다.">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/site-header.v2-candidate.css">
+<style>
+/* ===== global footer — copied verbatim from books/books.css (values unchanged) ===== */
+.route-footer{background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:34px 6vw;font-size:12px}
+.route-footer>a{font-family:var(--serif);font-size:22px;font-weight:700}.route-footer>a span{margin-left:12px;font-family:var(--latin);font-size:8px;letter-spacing:.3em}
+@media(max-width:767.98px){
+  .route-footer{display:block;padding:34px 20px}.route-footer p{margin-top:22px}
+}
+@media (min-width:768px){
+  .route-footer{padding-left:max(32px,calc((100vw - 1240px)/2 + 32px));padding-right:max(32px,calc((100vw - 1240px)/2 + 32px))}
+}
+
+/* ===== ISSUE HUB · 말씀의 숲 주제호 — V2 editorial grammar.
+   Same vocabulary as series/series.v2-candidate.css and books/books.v2-candidate.css
+   (tokens, eyebrow, 44px links, wrap, plane rhythm). Composition is its own: the latest
+   issue is carried alone on the olive plane with the cover leading from the right, the
+   published issues run as one editorial column in a single shared cover frame — not a card grid —
+   and the forthcoming issue closes the run on the navy plane with no route. ===== */
+.issues-page{
+  --v2-navy:#123A5A;--v2-blue:#2E9FC4;--v2-muted:#66717A;--v2-body:#2F3438;
+  --v2-paper:#F7F7F4;--v2-olivep:#F2F5E8;--v2-gray:#F0F1EF;--v2-light:#EDF5F7;
+  --v2-line:rgba(18,58,90,.22);--v2-line-soft:rgba(18,58,90,.14);
+  background:var(--v2-paper);color:var(--v2-body)
+}
+.issues-page .iv2-wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.issues-page .iv2-eyebrow{font-family:var(--sans);font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--v2-blue)}
+.issues-page .iv2-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;color:var(--v2-navy);letter-spacing:-.01em}
+.issues-page .iv2-link:hover{color:var(--v2-blue)}
+.issues-page .iv2-link--quiet{font-weight:400;color:var(--v2-muted)}
+.issues-page .iv2-link--quiet:hover{color:var(--v2-blue)}
+
+/* ---------- 1. HERO ---------- */
+.issues-page .iv2-head{padding:88px 0 76px;background:var(--v2-paper)}
+.issues-page .iv2-head__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.95fr);column-gap:72px;align-items:end}
+.issues-page .iv2-h1{margin-top:16px;font-family:var(--sans);font-size:clamp(40px,4.8vw,68px);line-height:1.06;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.issues-page .iv2-head__sub{margin-top:18px;font-family:var(--serif);font-size:clamp(18px,1.7vw,22px);line-height:1.5;color:var(--v2-muted)}
+.issues-page .iv2-head__lead{max-width:460px;padding-bottom:8px;font-size:16px;line-height:1.8;color:var(--v2-body)}
+.issues-page .iv2-head__lead p+p{margin-top:14px}
+.issues-page .iv2-head__count{margin-top:20px;padding-top:14px;border-top:1px solid var(--v2-line);font-size:13px;letter-spacing:.04em;color:var(--v2-muted)}
+
+/* ---------- 2. FEATURED ISSUE — carried alone on the olive plane ---------- */
+.issues-page .iv2-featured{background:var(--v2-olivep);padding:92px 0 100px}
+.issues-page .iv2-featured__grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.9fr);column-gap:80px;align-items:center}
+.issues-page .iv2-featured__no{display:block;font-family:var(--latin);font-variant-numeric:lining-nums;font-weight:500;font-size:clamp(88px,10vw,140px);line-height:.82;letter-spacing:-.03em;color:var(--v2-blue)}
+.issues-page .iv2-featured__copy .iv2-eyebrow{margin-top:24px}
+.issues-page .iv2-featured__issue{margin-top:16px;font-size:13px;letter-spacing:.04em;color:var(--v2-muted)}
+.issues-page .iv2-featured__title{margin-top:8px;font:700 clamp(38px,4.6vw,64px)/1.06 var(--serif);letter-spacing:-.035em;color:var(--v2-navy)}
+.issues-page .iv2-featured__sub{margin-top:14px;font-family:var(--serif);font-size:19px;line-height:1.6;color:var(--v2-muted)}
+.issues-page .iv2-featured__desc{margin-top:22px;max-width:560px;font-size:16px;line-height:1.85;color:var(--v2-body)}
+.issues-page .iv2-featured__meta{margin-top:24px;padding-top:18px;border-top:1px solid var(--v2-line);font-size:14px;line-height:1.6;color:var(--v2-muted)}
+.issues-page .iv2-featured__meta b{font-weight:700;color:var(--v2-navy)}
+.issues-page .iv2-featured__links{margin-top:10px;display:flex;flex-wrap:wrap;gap:0 32px}
+.issues-page .iv2-featured__links .iv2-link:first-child{border-bottom:1px solid rgba(18,58,90,.35)}
+.issues-page .iv2-featured__cover{margin:0;justify-self:end;width:100%;max-width:340px}
+.issues-page .iv2-featured__cover img{width:100%;height:auto;filter:drop-shadow(0 26px 36px rgba(18,58,90,.18))}
+
+/* ---------- pause ---------- */
+.issues-page .iv2-pause{margin:0;position:relative;height:clamp(220px,26vw,360px);overflow:hidden}
+.issues-page .iv2-pause img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+
+/* ---------- 3. PUBLISHED ISSUES — one editorial column, one shared cover frame ---------- */
+.issues-page .iv2-published{background:var(--v2-paper);padding:88px 0 92px}
+.issues-page .iv2-published__head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:end;padding-bottom:34px}
+.issues-page .iv2-published__title{margin-top:14px;font-family:var(--sans);font-size:clamp(32px,3.6vw,50px);line-height:1.08;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.issues-page .iv2-published__note{max-width:420px;font-size:14px;line-height:1.75;color:var(--v2-muted)}
+.issues-page .iv2-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--v2-line)}
+.issues-page .iv2-issue{display:grid;grid-template-columns:84px minmax(0,220px) minmax(0,1fr);column-gap:40px;align-items:center;padding:44px 0;border-bottom:1px solid var(--v2-line-soft)}
+.issues-page .iv2-issue__no{font-family:var(--latin);font-variant-numeric:lining-nums;font-weight:500;font-size:52px;line-height:1;letter-spacing:-.02em;color:var(--v2-blue);align-self:start}
+/* one shared cover frame for 01/02/03 — same width, same height, image centred.
+   Frame ratio 176:248 (1.4091) sits at or below every cover's own h/w
+   (01 1.4127 · 02 1.4380 · 03 1.4090), so each image fills the full frame HEIGHT
+   and only its width varies by ~2% — equal visual weight, no crop, no distortion. */
+.issues-page .iv2-issue__cover{margin:0;width:176px;aspect-ratio:176/248;display:flex;align-items:center;justify-content:center}
+.issues-page .iv2-issue__cover img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(18,58,90,.15))}
+.issues-page .iv2-issue__series{font-size:12px;letter-spacing:.04em;color:var(--v2-muted)}
+.issues-page .iv2-issue__title{margin-top:8px;font:700 clamp(28px,3vw,40px)/1.12 var(--serif);letter-spacing:-.03em;color:var(--v2-navy)}
+.issues-page .iv2-issue__question{margin-top:16px;max-width:560px;font-family:var(--serif);font-size:17px;line-height:1.65;color:var(--v2-muted)}
+.issues-page .iv2-issue__meta{margin-top:18px;padding-top:14px;border-top:1px solid var(--v2-line-soft);font-size:13px;line-height:1.6;color:var(--v2-muted)}
+.issues-page .iv2-issue__link{margin-top:4px;border-bottom:1px solid rgba(18,58,90,.35)}
+
+/* ---------- 4. FORTHCOMING ---------- */
+.issues-page .iv2-forthcoming{background:var(--v2-navy);padding:76px 0 82px;color:#fff}
+.issues-page .iv2-forthcoming__grid{display:grid;grid-template-columns:84px minmax(0,1fr) auto;column-gap:40px;align-items:center}
+.issues-page .iv2-forthcoming .iv2-eyebrow{color:#9BD4E8}
+.issues-page .iv2-forthcoming__no{font-family:var(--latin);font-variant-numeric:lining-nums;font-weight:500;font-size:52px;line-height:1;letter-spacing:-.02em;color:#9BD4E8}
+.issues-page .iv2-forthcoming__title{margin-top:10px;font:700 clamp(28px,3vw,40px)/1.12 var(--serif);letter-spacing:-.03em;color:#fff}
+.issues-page .iv2-forthcoming__status{justify-self:end;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.72)}
+
+/* ---------- 5. CLOSING ---------- */
+.issues-page .iv2-closing{background:#fff;padding:92px 0 100px}
+.issues-page .iv2-closing__grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);column-gap:72px;align-items:end}
+.issues-page .iv2-closing__quote{font-family:var(--serif);font-size:clamp(26px,2.6vw,38px);line-height:1.55;letter-spacing:-.01em;color:var(--v2-navy)}
+.issues-page .iv2-closing__links{justify-self:end;display:flex;flex-direction:column;align-items:flex-end}
+.issues-page .iv2-closing__links .iv2-link{border-bottom:1px solid rgba(18,58,90,.35)}
+
+/* ==========================================================================
+   tablet
+   ========================================================================== */
+@media (max-width:1023.98px){
+  .issues-page .iv2-head__grid{grid-template-columns:1fr;row-gap:24px}
+  .issues-page .iv2-head__lead{padding-bottom:0;max-width:640px}
+  .issues-page .iv2-featured__grid{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);column-gap:44px}
+  .issues-page .iv2-published__head{grid-template-columns:1fr;row-gap:18px;align-items:start}
+  .issues-page .iv2-issue{grid-template-columns:68px minmax(0,170px) minmax(0,1fr);column-gap:28px}
+  .issues-page .iv2-issue__cover{width:152px}
+}
+
+/* ==========================================================================
+   mobile (≤767.98) — one column, no horizontal overflow
+   ========================================================================== */
+@media (max-width:767.98px){
+  .issues-page .iv2-wrap{width:calc(100% - 40px)}
+
+  .issues-page .iv2-head{padding:56px 0 48px}
+  .issues-page .iv2-h1{font-size:40px;line-height:1.08}
+  .issues-page .iv2-head__sub{font-size:17px}
+  .issues-page .iv2-head__lead{font-size:15px;line-height:1.75}
+
+  .issues-page .iv2-featured{padding:60px 0 64px}
+  .issues-page .iv2-featured__grid{grid-template-columns:1fr;row-gap:36px}
+  .issues-page .iv2-featured__cover{order:-1;justify-self:start;width:62%;max-width:240px}
+  .issues-page .iv2-featured__no{font-size:80px}
+  .issues-page .iv2-featured__copy .iv2-eyebrow{margin-top:18px}
+  .issues-page .iv2-featured__title{font-size:38px}
+  .issues-page .iv2-featured__sub{font-size:17px}
+  .issues-page .iv2-featured__desc{font-size:15px;line-height:1.8}
+  .issues-page .iv2-featured__links{display:block}
+
+  .issues-page .iv2-pause{height:200px}
+
+  .issues-page .iv2-published{padding:56px 0 60px}
+  .issues-page .iv2-published__title{font-size:32px}
+  .issues-page .iv2-issue{display:block;padding:34px 0}
+  .issues-page .iv2-issue__no{font-size:40px}
+  .issues-page .iv2-issue__cover{width:58%;max-width:200px;margin:16px 0 20px}
+  .issues-page .iv2-issue__title{font-size:30px}
+  .issues-page .iv2-issue__question{font-size:16px}
+
+  .issues-page .iv2-forthcoming{padding:52px 0 56px}
+  .issues-page .iv2-forthcoming__grid{display:block}
+  .issues-page .iv2-forthcoming__no{font-size:40px}
+  .issues-page .iv2-forthcoming__title{font-size:30px}
+  .issues-page .iv2-forthcoming__status{display:block;margin-top:14px}
+
+  .issues-page .iv2-closing{padding:60px 0 68px}
+  .issues-page .iv2-closing__grid{grid-template-columns:1fr;row-gap:24px}
+  .issues-page .iv2-closing__quote{font-size:26px}
+  .issues-page .iv2-closing__links{justify-self:start;align-items:flex-start}
+}
+</style>
+</head>
+<body class="issues-page">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" id="top">
+  <div class="site-header__wrap">
+    <a class="site-wordmark" href="/" aria-label="말씀의 숲 홈"><b>말씀의 숲</b><span>MALSUM FOREST</span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/open-pages/">Open Pages</a>
+      <a href="/books/">Books</a>
+      <a href="/series/" aria-current="page">Series</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+  <!-- 1. HERO -->
+  <section class="iv2-head" aria-labelledby="issues-title">
+    <div class="iv2-wrap iv2-head__grid">
+      <div>
+        <p class="iv2-eyebrow">Series 01 · Issues</p>
+        <h1 class="iv2-h1" id="issues-title">말씀의 숲<br>주제호</h1>
+        <p class="iv2-head__sub">주제별 성경연구와 설교사유</p>
+      </div>
+      <div class="iv2-head__lead">
+        <p>한 가지 질문을 성경과 오늘의 삶 속에서 오래 읽는 주제 중심의 산책길.</p>
+        <p>각 주제호는 하나의 질문을 중심에 두고 성경 본문과 삶의 장면을 함께 읽습니다.</p>
+        <p class="iv2-head__count">3권 출간 · 1권 예정</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. FEATURED ISSUE · 가장 최근 출간 주제호 -->
+  <section class="iv2-featured" aria-labelledby="featured-title">
+    <div class="iv2-wrap iv2-featured__grid">
+      <div class="iv2-featured__copy">
+        <span class="iv2-featured__no" aria-hidden="true">03</span>
+        <p class="iv2-eyebrow">Latest Issue</p>
+        <p class="iv2-featured__issue">말씀의 숲 주제호 03</p>
+        <h2 class="iv2-featured__title" id="featured-title">두려움과 믿음</h2>
+        <p class="iv2-featured__sub">주제별 성경연구와 설교사유</p>
+        <p class="iv2-featured__desc">《말씀의 숲 주제호 03 — 두려움과 믿음》은 두려움을 빨리 없애는 방법을 제시하거나, 두려움을 신앙의 실패로 판단하는 책이 아닙니다. 삶이 흔들리고 앞이 보이지 않는 순간에도 하나님께 자신을 맡기며 오늘의 한 걸음을 살아가는 믿음이 무엇인지 묻습니다.</p>
+        <p class="iv2-featured__meta"><b>이승주</b> · 퍼플 · 2026. 09. 08 · 82쪽</p>
+        <div class="iv2-featured__links">
+          <a class="iv2-link" href="/books/fear-and-faith/">책 자세히 보기 →</a>
+          <a class="iv2-link iv2-link--quiet" href="https://product.kyobobook.co.kr/detail/S000221168623" target="_blank" rel="noopener noreferrer" aria-label="두려움과 믿음 교보문고에서 보기">교보문고 ↗</a>
+        </div>
+      </div>
+      <figure class="iv2-featured__cover">
+        <img src="../../assets/img/fear-and-faith-cover.jpg" alt="《말씀의 숲》 주제호 03 『두려움과 믿음』 공식 표지" width="1000" height="1409">
+      </figure>
+    </div>
+  </section>
+
+  <!-- pause -->
+  <figure class="iv2-pause">
+    <img src="../../assets/img/why.jpg" alt="흰 벽에 드리운 나뭇잎 그림자와 파란 하늘" width="1236" height="627">
+  </figure>
+
+  <!-- 3. PUBLISHED ISSUES -->
+  <section class="iv2-published" aria-labelledby="published-title">
+    <div class="iv2-wrap">
+      <div class="iv2-published__head">
+        <div>
+          <p class="iv2-eyebrow">Published Issues</p>
+          <h2 class="iv2-published__title" id="published-title">지금 읽을 수 있는<br>주제호</h2>
+        </div>
+        <p class="iv2-published__note">한 권마다 하나의 질문이 중심에 놓입니다. 아래는 각 주제호가 붙들고 있는 질문입니다.</p>
+      </div>
+
+      <ol class="iv2-list">
+        <li class="iv2-issue iv2-issue--a">
+          <span class="iv2-issue__no" aria-hidden="true">01</span>
+          <figure class="iv2-issue__cover">
+            <img src="../../assets/img/return-and-welcome-cover.png" alt="《말씀의 숲》 주제호 01 『돌아옴과 환대』 공식 앞표지" width="1146" height="1619" loading="lazy">
+          </figure>
+          <div>
+            <p class="iv2-issue__series">말씀의 숲 주제호 01</p>
+            <h3 class="iv2-issue__title">돌아옴과 환대</h3>
+            <p class="iv2-issue__question">하나님은 잃은 이를 어떻게 찾아 돌아오게 하시며, 교회는 그 기쁨을 어떻게 안전하고 진실한 환대로 살아낼 것인가?</p>
+            <p class="iv2-issue__meta">이승주 · 퍼플 · 2026. 08. 21 · 118쪽</p>
+            <a class="iv2-link iv2-issue__link" href="/books/return-and-welcome/">자세히 보기 →</a>
+          </div>
+        </li>
+
+        <li class="iv2-issue iv2-issue--b">
+          <span class="iv2-issue__no" aria-hidden="true">02</span>
+          <figure class="iv2-issue__cover">
+            <img src="../../assets/img/waiting-and-time-cover.png" alt="《말씀의 숲》 주제호 02 『기다림과 때』 공식 앞표지" width="500" height="719" loading="lazy">
+          </figure>
+          <div>
+            <p class="iv2-issue__series">말씀의 숲 주제호 02</p>
+            <h3 class="iv2-issue__title">기다림과 때</h3>
+            <p class="iv2-issue__question">원하는 때와 실제 삶의 때가 다를 때, 우리는 기다림의 시간을 어떻게 이해하고 살아갈 것인가?</p>
+            <p class="iv2-issue__meta">이승주 · 퍼플 · 2026. 09. 03 · 115쪽</p>
+            <a class="iv2-link iv2-issue__link" href="/books/waiting-and-time/">자세히 보기 →</a>
+          </div>
+        </li>
+
+        <li class="iv2-issue iv2-issue--c">
+          <span class="iv2-issue__no" aria-hidden="true">03</span>
+          <figure class="iv2-issue__cover">
+            <img src="../../assets/img/fear-and-faith-cover.jpg" alt="《말씀의 숲》 주제호 03 『두려움과 믿음』 공식 표지" width="1000" height="1409" loading="lazy">
+          </figure>
+          <div>
+            <p class="iv2-issue__series">말씀의 숲 주제호 03</p>
+            <h3 class="iv2-issue__title">두려움과 믿음</h3>
+            <p class="iv2-issue__question">두려움이 사라지지 않아도 우리는 믿음으로 살아갈 수 있을까?</p>
+            <p class="iv2-issue__meta">이승주 · 퍼플 · 2026. 09. 08 · 82쪽</p>
+            <a class="iv2-link iv2-issue__link" href="/books/fear-and-faith/">자세히 보기 →</a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. FORTHCOMING — no detail route -->
+  <section class="iv2-forthcoming" aria-labelledby="forthcoming-title">
+    <div class="iv2-wrap iv2-forthcoming__grid">
+      <span class="iv2-forthcoming__no" aria-hidden="true">04</span>
+      <div>
+        <p class="iv2-eyebrow">Forthcoming</p>
+        <h2 class="iv2-forthcoming__title" id="forthcoming-title">약함과 은혜</h2>
+      </div>
+      <p class="iv2-forthcoming__status">곧 출간</p>
+    </div>
+  </section>
+
+  <!-- 5. CLOSING -->
+  <section class="iv2-closing" aria-label="시리즈로 돌아가기">
+    <div class="iv2-wrap iv2-closing__grid">
+      <p class="iv2-closing__quote">한 권의 질문이,<br>다음 질문으로 이어집니다.</p>
+      <div class="iv2-closing__links">
+        <a class="iv2-link" href="/series/">Series로 돌아가기 →</a>
+        <a class="iv2-link" href="/books/">Books 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="route-footer"><a href="/">말씀의 숲 <span>MALSUM FOREST</span></a><p>© 2026 MALSUM FOREST.</p></footer>
+</body>
+</html>

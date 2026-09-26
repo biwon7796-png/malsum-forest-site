@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>살아 있는 세계 — Series Preview · 말씀의 숲</title>
+<meta name="description" content="살아 있는 세계는 생물의 겉모습만 소개하는 도감이 아닙니다. 눈에 보이는 자연과 그 아래 숨은 생명의 원리, 그리고 삶의 의미를 함께 읽는 말씀의 숲 자연사 시리즈입니다.">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/site-header.v2-candidate.css">
+<style>
+.route-footer{background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:34px 6vw;font-size:12px}
+.route-footer>a{font-family:var(--serif);font-size:22px;font-weight:700}.route-footer>a span{margin-left:12px;font-family:var(--latin);font-size:8px;letter-spacing:.3em}
+@media(max-width:767.98px){
+  .route-footer{display:block;padding:34px 20px}.route-footer p{margin-top:22px}
+}
+@media (min-width:768px){
+  .route-footer{padding-left:max(32px,calc((100vw - 1240px)/2 + 32px));padding-right:max(32px,calc((100vw - 1240px)/2 + 32px))}
+}
+
+/* ===== LIVING WORLD PREVIEW · Series 03 — same vocabulary as series/series.v2-candidate.css ===== */
+.lw2-page{
+  --v2-navy:#123A5A;--v2-blue:#2E9FC4;--v2-muted:#66717A;--v2-body:#2F3438;
+  --v2-paper:#F7F7F4;--v2-olivep:#F2F5E8;--v2-gray:#F0F1EF;--v2-light:#EDF5F7;
+  --v2-line:rgba(18,58,90,.22);--v2-line-soft:rgba(18,58,90,.14);
+  background:var(--v2-paper);color:var(--v2-body)
+}
+.lw2-page .lw2-wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.lw2-page .lw2-eyebrow{font-family:var(--sans);font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--v2-blue)}
+.lw2-page .lw2-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;color:var(--v2-navy);letter-spacing:-.01em;border-bottom:1px solid rgba(18,58,90,.35)}
+.lw2-page .lw2-link:hover{color:var(--v2-blue)}
+
+.lw2-page .lw2-head{padding:88px 0 0;background:var(--v2-paper)}
+.lw2-page .lw2-head__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);column-gap:64px;align-items:center;padding-bottom:56px}
+.lw2-page .lw2-h1{margin-top:16px;font-family:var(--sans);font-size:clamp(38px,4.4vw,60px);line-height:1.08;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.lw2-page .lw2-head__lead{margin-top:18px;font-family:var(--serif);font-size:18px;line-height:1.7;color:var(--v2-muted);max-width:480px}
+.lw2-page .lw2-head__figure{margin:0;background:var(--v2-gray);border:1px solid var(--v2-line-soft);overflow:hidden;aspect-ratio:1800/1270}
+.lw2-page .lw2-head__figure img{display:block;width:100%;height:auto;object-fit:cover;max-height:640px}
+.lw2-page .lw2-head__figure--zoom img{width:182%;max-width:none;max-height:none;object-position:left top}
+.lw2-page .lw2-head__figure figcaption{padding:10px 14px;font-size:12.5px;line-height:1.6;color:var(--v2-muted);border-top:1px solid var(--v2-line-soft)}
+
+/* IDENTITY */
+.lw2-page .lw2-identity{padding:76px 0}
+.lw2-page .lw2-identity__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);column-gap:64px;align-items:start}
+.lw2-page .lw2-identity h2{margin-top:12px;font-family:var(--sans);font-size:clamp(26px,2.8vw,38px);line-height:1.15;letter-spacing:-.04em;color:var(--v2-navy)}
+.lw2-page .lw2-identity__body p{font-size:16px;line-height:1.9;color:var(--v2-body);max-width:640px}
+.lw2-page .lw2-identity__body p+p{margin-top:16px}
+.lw2-page .lw2-identity__quote{margin-top:28px;padding:26px 28px;background:var(--v2-olivep);font-family:var(--serif);font-size:clamp(19px,2vw,24px);line-height:1.6;color:var(--v2-navy)}
+.lw2-page .lw2-identity__quote cite{display:block;margin-top:12px;font-style:normal;font-size:13px;font-family:var(--sans);color:var(--v2-muted)}
+
+.lw2-page .lw2-samples{background:var(--v2-gray);padding:80px 0}
+.lw2-page .lw2-samples__head h2{margin-top:12px;font-family:var(--sans);font-size:clamp(30px,3.2vw,44px);line-height:1.08;letter-spacing:-.045em;color:var(--v2-navy)}
+.lw2-page .lw2-samples__lead{margin-top:14px;max-width:640px;font-size:15px;line-height:1.8;color:var(--v2-muted)}
+.lw2-page .lw2-featured{margin-top:44px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);column-gap:56px;align-items:center;padding-bottom:48px;border-bottom:1px solid var(--v2-line)}
+.lw2-page .lw2-featured .lw2-figbox{margin:0;background:#fff;border:1px solid var(--v2-line-soft)}
+.lw2-page .lw2-featured .lw2-figbox img{display:block;width:100%;height:auto;object-fit:cover;max-height:640px}
+.lw2-page .lw2-featured .lw2-figbox--eel{overflow:hidden;aspect-ratio:1600/632}
+.lw2-page .lw2-featured .lw2-figbox--eel img{height:100%;max-height:none;object-position:top}
+.lw2-page .lw2-featured__tag{font-family:var(--latin);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--v2-muted)}
+.lw2-page .lw2-featured h3{margin-top:10px;font-family:var(--sans);font-size:clamp(24px,2.6vw,34px);letter-spacing:-.04em;color:var(--v2-navy)}
+.lw2-page .lw2-featured p{margin-top:14px;font-size:15.5px;line-height:1.85;color:var(--v2-body)}
+.lw2-page .lw2-index{margin-top:8px}
+.lw2-page .lw2-index__row{display:grid;grid-template-columns:130px 1fr auto;column-gap:24px;align-items:center;padding:24px 0;border-bottom:1px solid var(--v2-line-soft)}
+.lw2-page .lw2-index__row .lw2-thumb{width:130px;height:92px;background:#fff;border:1px solid var(--v2-line-soft);display:flex;align-items:center;justify-content:center}
+.lw2-page .lw2-index__row .lw2-thumb img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.lw2-page .lw2-index__row h4{font-family:var(--sans);font-size:19px;font-weight:700;letter-spacing:-.03em;color:var(--v2-navy)}
+.lw2-page .lw2-index__row p{margin-top:5px;font-size:13.5px;color:var(--v2-muted)}
+.lw2-page .lw2-index__row .lw2-tag{justify-self:end;font-size:11px;color:var(--v2-muted);text-align:right;white-space:nowrap}
+
+.lw2-page .lw2-process{padding:80px 0}
+.lw2-page .lw2-process__head h2{margin-top:12px;font-family:var(--sans);font-size:clamp(26px,3vw,38px);letter-spacing:-.04em;color:var(--v2-navy)}
+.lw2-page .lw2-process__body{margin-top:36px;display:grid;grid-template-columns:minmax(280px,.9fr) 1fr;column-gap:56px;align-items:center}
+.lw2-page .lw2-process__body .lw2-figbox{margin:0;background:var(--v2-gray);border:1px solid var(--v2-line-soft)}
+.lw2-page .lw2-process__body .lw2-figbox img{display:block;width:100%;height:auto;object-fit:cover;max-height:640px}
+.lw2-page .lw2-steps{list-style:none;margin:0;padding:0;counter-reset:lw2-step}
+.lw2-page .lw2-steps li{counter-increment:lw2-step;position:relative;padding:16px 0 16px 42px;border-bottom:1px solid var(--v2-line-soft);font-size:15px;line-height:1.7;color:var(--v2-body)}
+.lw2-page .lw2-steps li:last-child{border-bottom:none}
+.lw2-page .lw2-steps li::before{content:counter(lw2-step);position:absolute;left:0;top:16px;width:24px;height:24px;border-radius:50%;background:var(--v2-navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.lw2-page .lw2-steps b{color:var(--v2-navy);font-weight:700}
+
+.lw2-page .lw2-pages{background:#fff;padding:80px 0 40px}
+.lw2-page .lw2-pages__head h2{margin-top:12px;font-family:var(--sans);font-size:clamp(30px,3.2vw,44px);letter-spacing:-.045em;color:var(--v2-navy)}
+.lw2-page .lw2-pages__grid{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px}
+.lw2-page .lw2-pages__grid figure{margin:0;background:var(--v2-gray);border:1px solid var(--v2-line-soft)}
+.lw2-page .lw2-pages__grid img{display:block;width:100%;height:auto;object-fit:cover;max-height:480px}
+.lw2-page .lw2-pages__grid figcaption{padding:14px 16px;font-size:13.5px;line-height:1.65;color:var(--v2-muted);border-top:1px solid var(--v2-line-soft)}
+.lw2-page .lw2-pages__grid figcaption b{display:block;font-size:14.5px;color:var(--v2-navy);font-weight:700;margin-bottom:3px}
+.lw2-page .lw2-pages__note{margin-top:40px;padding-top:24px;border-top:1px solid var(--v2-line);font-size:12.5px;line-height:1.7;color:var(--v2-muted)}
+
+.lw2-page .lw2-progress{padding:32px 0;border-top:1px solid var(--v2-line)}
+.lw2-page .lw2-progress__text{max-width:640px;font-size:13px;line-height:1.7;color:var(--v2-muted)}
+
+.lw2-page .lw2-closing{background:#fff;padding:96px 0 104px}
+.lw2-page .lw2-closing__grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);column-gap:72px;align-items:end}
+.lw2-page .lw2-closing__quote{font-family:var(--serif);font-size:clamp(26px,2.6vw,38px);line-height:1.55;letter-spacing:-.01em;color:var(--v2-navy)}
+.lw2-page .lw2-closing .lw2-link{justify-self:end}
+
+@media (max-width:1023.98px){
+  .lw2-page .lw2-head__grid{grid-template-columns:1fr;row-gap:32px}
+  .lw2-page .lw2-identity__grid{grid-template-columns:1fr;row-gap:20px}
+  .lw2-page .lw2-featured{grid-template-columns:1fr;row-gap:28px}
+  .lw2-page .lw2-process__body{grid-template-columns:1fr;row-gap:28px}
+}
+@media (max-width:767.98px){
+  .lw2-page .lw2-wrap{width:calc(100% - 40px)}
+  .lw2-page .lw2-head{padding-top:56px}
+  .lw2-page .lw2-head__grid{padding-bottom:44px}
+  .lw2-page .lw2-h1{font-size:36px}
+  .lw2-page .lw2-head__figure img{height:auto}
+  .lw2-page .lw2-identity{padding:52px 0}
+  .lw2-page .lw2-samples{padding:56px 0}
+  .lw2-page .lw2-featured .lw2-figbox img{height:auto}
+  .lw2-page .lw2-featured .lw2-figbox--eel img{height:100%}
+  .lw2-page .lw2-index__row{grid-template-columns:88px 1fr;row-gap:6px}
+  .lw2-page .lw2-index__row .lw2-thumb{width:88px;height:64px}
+  .lw2-page .lw2-index__row .lw2-tag{grid-column:2;justify-self:start}
+  .lw2-page .lw2-process{padding:56px 0}
+  .lw2-page .lw2-process__body .lw2-figbox img{height:auto}
+  .lw2-page .lw2-pages{padding:56px 0 30px}
+  .lw2-page .lw2-pages__grid{grid-template-columns:1fr;gap:32px}
+  .lw2-page .lw2-pages__grid img{height:auto}
+  .lw2-page .lw2-progress{padding:48px 0}
+  .lw2-page .lw2-closing{padding:64px 0 68px}
+  .lw2-page .lw2-closing__grid{grid-template-columns:1fr;row-gap:26px}
+  .lw2-page .lw2-closing .lw2-link{justify-self:start}
+}
+</style>
+</head>
+<body class="lw2-page">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" id="top">
+  <div class="site-header__wrap">
+    <a class="site-wordmark" href="/" aria-label="말씀의 숲 홈"><b>말씀의 숲</b><span>MALSUM FOREST</span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/open-pages/">Open Pages</a>
+      <a href="/books/">Books</a>
+      <a href="/series/" aria-current="page">Series</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+  <!-- HERO -->
+  <section class="lw2-head" aria-labelledby="living-title">
+    <div class="lw2-wrap lw2-head__grid">
+      <div>
+        <p class="lw2-eyebrow">Series 03 · 살아 있는 세계</p>
+        <h1 id="living-title" class="lw2-h1">보이는 자연 너머,<br>보이지 않는 원리까지</h1>
+        <p class="lw2-head__lead">살아 있는 세계는 동물 한 종을 관찰에서 그치지 않습니다. 눈에 보이는 행동이 만드는 풍경, 그리고 그 아래 숨어 있는 원리를 과학과 예술의 시선으로 함께 읽는 자연사 시리즈입니다.</p>
+      </div>
+      <figure class="lw2-head__figure lw2-head__figure--zoom">
+        <img src="../../assets/img/series/living-world/beaver-hero.jpg" alt="비버의 댐과 물길이 만드는 습지 풍경 — 한 동물의 행동이 풍경을 바꾸는 과정을 보여주는 페이지" style="aspect-ratio:1800/1270">
+        <figcaption>한 동물의 행동이 풍경을 바꿀 때 — 비버 편에서.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- IDENTITY -->
+  <section class="lw2-identity" aria-labelledby="living-identity-title">
+    <div class="lw2-wrap lw2-identity__grid">
+      <div><p class="lw2-eyebrow">이 책은 어떤 책인가</p><h2 id="living-identity-title">겉모습이 아니라,<br>원리와 의미까지</h2></div>
+      <div class="lw2-identity__body">
+        <p>흔한 생물 도감은 생김새와 서식지를 나열하고 끝납니다. 살아 있는 세계는 한 걸음 더 들어갑니다. 먼저 눈에 보이는 행동과 장면을 보여 주고, 그 행동을 가능하게 하는 몸속 구조와 원리를 짚은 다음, 그것이 삶과 어떤 의미로 이어지는지를 함께 읽습니다.</p>
+        <p>그래서 이 책은 “이 동물은 이렇게 생겼다”로 끝나지 않고, “이 동물의 행동은 왜, 어떻게 가능한가”, 그리고 “그 관찰이 우리 삶에 무엇을 보여 주는가”를 함께 묻습니다.</p>
+        <blockquote class="lw2-identity__quote">“비버의 행동은 물길의 변화를 시작으로 여러 생태계 변화를 연쇄적으로 일으킬 수 있습니다. 이처럼 한 동물의 행동이 물과 땅, 서식지를 거쳐 다른 생물들에게까지 연결될 수 있습니다.”<cite>— 비버 편 페이지 중에서</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIES SAMPLES -->
+  <section class="lw2-samples" aria-labelledby="living-samples-title">
+    <div class="lw2-wrap">
+      <div class="lw2-samples__head"><p class="lw2-eyebrow">책 속 여섯 편</p><h2 id="living-samples-title">한 편씩 만나는 생명들</h2></div>
+      <p class="lw2-samples__lead">전기뱀장어, 잎새개미, 비버, 아홀로틀, 권총새우, 맨티스새우 — 여섯 편을 차례로 만나게 됩니다. 편마다 지금 볼 수 있는 페이지와 그림이 조금씩 다릅니다.</p>
+
+      <div class="lw2-featured">
+        <figure class="lw2-figbox lw2-figbox--eel"><img src="../../assets/img/series/living-world/electric-eel-mechanism.jpg" alt="전기뱀장어의 전기기관과 전기세포 배열을 보여주는 페이지" style="aspect-ratio:1600/1130"></figure>
+        <div>
+          <p class="lw2-featured__tag">전기뱀장어 편</p>
+          <h3>전기뱀장어</h3>
+          <p>보이지 않는 전기를 몸속 어디서, 어떻게 만드는지 — 전기기관과 전기세포의 배열을 다이어그램으로 풀어낸 편입니다.</p>
+        </div>
+      </div>
+
+      <div class="lw2-index">
+        <article class="lw2-index__row">
+          <div class="lw2-thumb"><img src="../../assets/img/series/living-world/leafcutter-ant.jpg" alt="잎새개미 둥지와 균류 정원을 보여주는 페이지"></div>
+          <div><h4>잎새개미 편</h4><p>잎을 나르는 개미가 실은 균류 정원을 돌보고 있었다는 것을 보여주는 수채화 페이지.</p></div>
+          <span class="lw2-tag">샘플 페이지</span>
+        </article>
+        <article class="lw2-index__row">
+          <div class="lw2-thumb"><img src="../../assets/img/series/living-world/beaver-page1.jpg" alt="비버 댐 구조를 보여주는 페이지"></div>
+          <div><h4>비버 편</h4><p>댐이 물을 완전히 막는 벽이 아니라 물이 흐르는 방식을 바꾸는 구조라는 것을 보여주는 편.</p></div>
+          <span class="lw2-tag">샘플 페이지</span>
+        </article>
+        <article class="lw2-index__row">
+          <div class="lw2-thumb"><img src="../../assets/img/series/living-world/axolotl.jpg" alt="아홀로틀의 다리 재생 과정을 보여주는 페이지"></div>
+          <div><h4>아홀로틀 편</h4><p>잘린 다리가 다시 만들어지는 여섯 단계를 세포 수준까지 따라간 페이지.</p></div>
+          <span class="lw2-tag">샘플 페이지</span>
+        </article>
+        <article class="lw2-index__row">
+          <div class="lw2-thumb"><img src="../../assets/img/series/living-world/pistol-shrimp-v023.jpg" alt="물속에서 터지는 작은 거품 — 권총새우의 기포와 압력파를 보여주는 페이지"></div>
+          <div><h4>권총새우 편</h4><p>“물속에서 터지는 작은 거품” — 집게가 만드는 기포와 압력파를 다루는 편.</p></div>
+          <span class="lw2-tag">샘플 페이지</span>
+        </article>
+        <article class="lw2-index__row">
+          <div class="lw2-thumb"><img src="../../assets/img/series/living-world/mantis-shrimp.jpg" alt="맨티스새우의 산호초 대소동 그림"></div>
+          <div><h4>맨티스새우 편</h4><p>“사마귀새우의 산호초 대소동” — 눈 앞의 장면을 생생한 그림으로 만나는 편.</p></div>
+          <span class="lw2-tag">샘플 페이지</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW A PAGE IS MADE -->
+  <section class="lw2-process" aria-labelledby="living-process-title">
+    <div class="lw2-wrap">
+      <div class="lw2-process__head"><p class="lw2-eyebrow">보이는 것에서 원리로</p><h2 id="living-process-title">관찰이 한 페이지가 되기까지</h2></div>
+      <div class="lw2-process__body">
+        <figure class="lw2-figbox"><img src="../../assets/img/series/living-world/electric-eel-scene.jpg" alt="숨어 있는 먹이를 탐지하는 전기뱀장어의 행동을 보여주는 페이지" style="aspect-ratio:1600/1130"></figure>
+        <ol class="lw2-steps">
+          <li><b>관찰</b> — 전기뱀장어가 숨은 먹이를 찾아내고 몸을 마는 행동, 눈에 보이는 장면에서 질문이 시작됩니다.</li>
+          <li><b>원리</b> — 그 행동을 가능하게 하는 전기기관과 전기세포의 배열을 다이어그램으로 그려 몸속 구조를 보여줍니다.</li>
+          <li><b>페이지</b> — 관찰과 원리를 한 펼침면 안에 앉혀, 읽는 이가 보이는 것과 보이지 않는 것을 함께 따라가도록 완성합니다.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE PAGES -->
+  <section class="lw2-pages" aria-labelledby="living-pages-title">
+    <div class="lw2-wrap">
+      <div class="lw2-pages__head"><p class="lw2-eyebrow">실제 페이지</p><h2 id="living-pages-title">책 속 미리보기</h2></div>
+      <div class="lw2-pages__grid">
+        <figure>
+          <img src="../../assets/img/series/living-world/electric-eel-mechanism.jpg" alt="전기뱀장어 편, 전기기관과 전기세포 배열을 보여주는 페이지" style="aspect-ratio:1600/1130">
+          <figcaption><b>전기뱀장어 편</b>전기기관과 전기세포 배열을 다이어그램으로 보여주는 페이지.</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/img/series/living-world/axolotl.jpg" alt="아홀로틀 편, 다리 재생 과정을 보여주는 페이지" style="aspect-ratio:1800/1270">
+          <figcaption><b>아홀로틀 편 · 재생의 여섯 단계</b>잘린 다리가 다시 만들어지는 과정을 보여주는 페이지.</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/img/series/living-world/pistol-shrimp-v023.jpg" alt="권총새우 편, 기포와 압력파를 보여주는 페이지" style="aspect-ratio:1600/1129">
+          <figcaption><b>권총새우 편</b>“물속에서 터지는 작은 거품” — 기포와 압력파를 보여주는 페이지.</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/img/series/living-world/beaver-hero.jpg" alt="비버 편, 풍경을 바꾸는 행동을 보여주는 페이지" style="aspect-ratio:1800/1270">
+          <figcaption><b>비버 편 · 풍경을 바꾸는 행동</b>댐 하나가 만드는 생태계의 연쇄를 보여주는 페이지.</figcaption>
+        </figure>
+      </div>
+      <p class="lw2-pages__note">이 페이지들은 내부 제작 과정에서 나온 자료입니다. 최종 인쇄·출간본과 다를 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- CURRENT STATUS -->
+  <section class="lw2-progress" aria-label="제작 상태">
+    <div class="lw2-wrap">
+      <p class="lw2-progress__text">살아 있는 세계는 지금 만들어지고 있는 시리즈입니다. 이 페이지는 그 과정에서 미리 보여 드리는 프리뷰이며, 아직 최종 출간본은 아닙니다.</p>
+    </div>
+  </section>
+
+  <!-- BACK TO SERIES -->
+  <section class="lw2-closing" aria-label="시리즈로 돌아가기">
+    <div class="lw2-wrap lw2-closing__grid">
+      <p class="lw2-closing__quote">보이는 것 너머,<br>계속 관찰하고 있습니다.</p>
+      <a class="lw2-link" href="/series/">다시 다섯 산책길로 →</a>
+    </div>
+  </section>
+
+</main>
+<footer class="route-footer"><a href="/">말씀의 숲 <span>MALSUM FOREST</span></a><p>© 2026 MALSUM FOREST.</p></footer>
+</body>
+</html>

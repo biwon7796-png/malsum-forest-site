@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>숲의 한 문장 — Series · 말씀의 숲</title>
+<meta name="description" content="숲의 한 문장 — 한 문장을 오래 붙들며 말씀과 삶 사이의 여운을 따라 걷는 산책길. 《말씀의 숲》과 《투명의 호수》를 만납니다.">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/site-header.v2-candidate.css">
+<style>
+.route-footer{background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:34px 6vw;font-size:12px}
+.route-footer>a{font-family:var(--serif);font-size:22px;font-weight:700}.route-footer>a span{margin-left:12px;font-family:var(--latin);font-size:8px;letter-spacing:.3em}
+@media(max-width:767.98px){
+  .route-footer{display:block;padding:34px 20px}.route-footer p{margin-top:22px}
+}
+@media (min-width:768px){
+  .route-footer{padding-left:max(32px,calc((100vw - 1240px)/2 + 32px));padding-right:max(32px,calc((100vw - 1240px)/2 + 32px))}
+}
+
+/* ===== FOREST SENTENCE HUB · 숲의 한 문장 — same vocabulary as series/issues/index.v2-candidate.html ===== */
+.fs2-page{
+  --v2-navy:#123A5A;--v2-blue:#2E9FC4;--v2-muted:#66717A;--v2-body:#2F3438;
+  --v2-paper:#F7F7F4;--v2-olivep:#F2F5E8;--v2-gray:#F0F1EF;--v2-light:#EDF5F7;
+  --v2-line:rgba(18,58,90,.22);--v2-line-soft:rgba(18,58,90,.14);
+  background:var(--v2-paper);color:var(--v2-body)
+}
+.fs2-page .fs2-wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.fs2-page .fs2-eyebrow{font-family:var(--sans);font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--v2-blue)}
+.fs2-page .fs2-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;color:var(--v2-navy);letter-spacing:-.01em}
+.fs2-page .fs2-link:hover{color:var(--v2-blue)}
+
+/* HERO */
+.fs2-page .fs2-head{padding:88px 0 76px;background:var(--v2-paper)}
+.fs2-page .fs2-head__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.95fr);column-gap:72px;align-items:end}
+.fs2-page .fs2-h1{margin-top:16px;font-family:var(--sans);font-size:clamp(40px,4.8vw,68px);line-height:1.06;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.fs2-page .fs2-head__sub{margin-top:18px;font-family:var(--serif);font-size:clamp(18px,1.7vw,22px);line-height:1.5;color:var(--v2-muted)}
+.fs2-page .fs2-head__lead{max-width:460px;padding-bottom:8px;font-size:16px;line-height:1.8;color:var(--v2-body)}
+.fs2-page .fs2-head__count{margin-top:20px;padding-top:14px;border-top:1px solid var(--v2-line);font-size:13px;letter-spacing:.04em;color:var(--v2-muted)}
+
+/* FEATURED */
+.fs2-page .fs2-featured{background:var(--v2-olivep);padding:92px 0 100px}
+.fs2-page .fs2-featured__grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.9fr);column-gap:80px;align-items:center}
+.fs2-page .fs2-featured__copy .fs2-eyebrow{margin-top:0}
+.fs2-page .fs2-featured__title{margin-top:8px;font:700 clamp(38px,4.6vw,64px)/1.06 var(--serif);letter-spacing:-.035em;color:var(--v2-navy)}
+.fs2-page .fs2-featured__sub{margin-top:14px;font-family:var(--serif);font-size:19px;line-height:1.6;color:var(--v2-muted)}
+.fs2-page .fs2-featured__desc{margin-top:22px;max-width:560px;font-size:16px;line-height:1.85;color:var(--v2-body)}
+.fs2-page .fs2-featured__meta{margin-top:24px;padding-top:18px;border-top:1px solid var(--v2-line);font-size:14px;line-height:1.6;color:var(--v2-muted)}
+.fs2-page .fs2-featured__meta b{font-weight:700;color:var(--v2-navy)}
+.fs2-page .fs2-featured__links{margin-top:10px;display:flex;flex-wrap:wrap;gap:0 32px}
+.fs2-page .fs2-featured__links .fs2-link{border-bottom:1px solid rgba(18,58,90,.35)}
+.fs2-page .fs2-featured__cover{margin:0;justify-self:end;width:100%;max-width:300px}
+.fs2-page .fs2-featured__cover img{width:100%;height:auto;filter:drop-shadow(0 26px 36px rgba(18,58,90,.18))}
+
+/* pause */
+.fs2-page .fs2-pause{margin:0;position:relative;height:clamp(220px,26vw,360px);overflow:hidden}
+.fs2-page .fs2-pause img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+
+/* PUBLISHED LIST */
+.fs2-page .fs2-published{background:var(--v2-paper);padding:88px 0 92px}
+.fs2-page .fs2-published__head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:end;padding-bottom:34px}
+.fs2-page .fs2-published__title{margin-top:14px;font-family:var(--sans);font-size:clamp(32px,3.6vw,50px);line-height:1.08;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.fs2-page .fs2-published__note{max-width:420px;font-size:14px;line-height:1.75;color:var(--v2-muted)}
+.fs2-page .fs2-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--v2-line)}
+.fs2-page .fs2-book{display:grid;grid-template-columns:84px minmax(0,190px) minmax(0,1fr);column-gap:40px;align-items:center;padding:44px 0;border-bottom:1px solid var(--v2-line-soft)}
+.fs2-page .fs2-book__no{font-family:var(--latin);font-variant-numeric:lining-nums;font-weight:500;font-size:52px;line-height:1;letter-spacing:-.02em;color:var(--v2-blue);align-self:start}
+.fs2-page .fs2-book__cover{margin:0;width:152px;aspect-ratio:176/248;display:flex;align-items:center;justify-content:center}
+.fs2-page .fs2-book__cover img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(18,58,90,.15))}
+.fs2-page .fs2-book__series{font-size:12px;letter-spacing:.04em;color:var(--v2-muted)}
+.fs2-page .fs2-book__title{margin-top:8px;font:700 clamp(28px,3vw,40px)/1.12 var(--serif);letter-spacing:-.03em;color:var(--v2-navy)}
+.fs2-page .fs2-book__desc{margin-top:16px;max-width:560px;font-size:16px;line-height:1.85;color:var(--v2-body)}
+.fs2-page .fs2-book__meta{margin-top:18px;padding-top:14px;border-top:1px solid var(--v2-line-soft);font-size:13px;line-height:1.6;color:var(--v2-muted)}
+.fs2-page .fs2-book__link{margin-top:4px;border-bottom:1px solid rgba(18,58,90,.35)}
+
+/* CLOSING */
+.fs2-page .fs2-closing{background:#fff;padding:92px 0 100px}
+.fs2-page .fs2-closing__grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);column-gap:72px;align-items:end}
+.fs2-page .fs2-closing__quote{font-family:var(--serif);font-size:clamp(26px,2.6vw,38px);line-height:1.55;letter-spacing:-.01em;color:var(--v2-navy)}
+.fs2-page .fs2-closing__links{justify-self:end;display:flex;flex-direction:column;align-items:flex-end}
+.fs2-page .fs2-closing__links .fs2-link{border-bottom:1px solid rgba(18,58,90,.35)}
+
+@media (max-width:1023.98px){
+  .fs2-page .fs2-head__grid{grid-template-columns:1fr;row-gap:24px}
+  .fs2-page .fs2-head__lead{padding-bottom:0;max-width:640px}
+  .fs2-page .fs2-featured__grid{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);column-gap:44px}
+  .fs2-page .fs2-published__head{grid-template-columns:1fr;row-gap:18px;align-items:start}
+  .fs2-page .fs2-book{grid-template-columns:68px minmax(0,150px) minmax(0,1fr);column-gap:28px}
+}
+@media (max-width:767.98px){
+  .fs2-page .fs2-wrap{width:calc(100% - 40px)}
+  .fs2-page .fs2-head{padding:56px 0 48px}
+  .fs2-page .fs2-h1{font-size:40px;line-height:1.08}
+  .fs2-page .fs2-head__sub{font-size:17px}
+  .fs2-page .fs2-head__lead{font-size:15px;line-height:1.75}
+  .fs2-page .fs2-featured{padding:60px 0 64px}
+  .fs2-page .fs2-featured__grid{grid-template-columns:1fr;row-gap:36px}
+  .fs2-page .fs2-featured__cover{order:-1;justify-self:start;width:62%;max-width:240px}
+  .fs2-page .fs2-featured__title{font-size:38px}
+  .fs2-page .fs2-featured__sub{font-size:17px}
+  .fs2-page .fs2-featured__desc{font-size:15px;line-height:1.8}
+  .fs2-page .fs2-featured__links{display:block}
+  .fs2-page .fs2-pause{height:200px}
+  .fs2-page .fs2-published{padding:56px 0 60px}
+  .fs2-page .fs2-published__title{font-size:32px}
+  .fs2-page .fs2-book{display:block;padding:34px 0}
+  .fs2-page .fs2-book__no{font-size:40px}
+  .fs2-page .fs2-book__cover{width:56%;max-width:190px;margin:16px 0 20px}
+  .fs2-page .fs2-book__title{font-size:30px}
+  .fs2-page .fs2-book__desc{font-size:15px}
+  .fs2-page .fs2-closing{padding:60px 0 68px}
+  .fs2-page .fs2-closing__grid{grid-template-columns:1fr;row-gap:24px}
+  .fs2-page .fs2-closing__quote{font-size:26px}
+  .fs2-page .fs2-closing__links{justify-self:start;align-items:flex-start}
+}
+</style>
+</head>
+<body class="fs2-page">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" id="top">
+  <div class="site-header__wrap">
+    <a class="site-wordmark" href="/" aria-label="말씀의 숲 홈"><b>말씀의 숲</b><span>MALSUM FOREST</span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/open-pages/">Open Pages</a>
+      <a href="/books/">Books</a>
+      <a href="/series/" aria-current="page">Series</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+  <!-- 1. HERO -->
+  <section class="fs2-head" aria-labelledby="fs-title">
+    <div class="fs2-wrap fs2-head__grid">
+      <div>
+        <p class="fs2-eyebrow">Series 04 · 숲의 한 문장</p>
+        <h1 class="fs2-h1" id="fs-title">숲의<br>한 문장</h1>
+        <p class="fs2-head__sub">한 문장을 오래 붙드는 산책길</p>
+      </div>
+      <div class="fs2-head__lead">
+        <p>한 문장을 오래 붙들며 말씀과 삶 사이의 여운을 따라 걷는 산책길.</p>
+        <p class="fs2-head__count">2권 출간</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. FEATURED — 말씀의 숲 -->
+  <section class="fs2-featured" aria-labelledby="featured-title">
+    <div class="fs2-wrap fs2-featured__grid">
+      <div class="fs2-featured__copy">
+        <p class="fs2-eyebrow">Featured</p>
+        <h2 class="fs2-featured__title" id="featured-title">말씀의 숲</h2>
+        <p class="fs2-featured__sub">Malsum Forest · Essay</p>
+        <p class="fs2-featured__desc">AI를 자동 응답기가 아닌 말씀 연구 환경으로. 흩어진 자료를 건져 올리고, 질문의 순서를 세우며, 깊은 연구가 다시 강단과 공동체로 흘러가게 한 한 목회자의 기록입니다.</p>
+        <p class="fs2-featured__meta"><b>이승주</b> · 퍼플 · 2026. 08. 14 · 86쪽</p>
+        <div class="fs2-featured__links">
+          <a class="fs2-link" href="/books/malsum-forest/">책 자세히 보기 →</a>
+        </div>
+      </div>
+      <figure class="fs2-featured__cover">
+        <img src="../../assets/img/malsum-forest-cover.jpg" alt="《말씀의 숲》 공식 앞표지" width="1600" height="2462">
+      </figure>
+    </div>
+  </section>
+
+  <!-- pause -->
+  <figure class="fs2-pause">
+    <img src="../../assets/img/why.jpg" alt="흰 벽에 드리운 나뭇잎 그림자와 파란 하늘" width="1236" height="627">
+  </figure>
+
+  <!-- 3. PUBLISHED -->
+  <section class="fs2-published" aria-labelledby="published-title">
+    <div class="fs2-wrap">
+      <div class="fs2-published__head">
+        <div>
+          <p class="fs2-eyebrow">Published</p>
+          <h2 class="fs2-published__title" id="published-title">지금 읽을 수 있는<br>두 권</h2>
+        </div>
+        <p class="fs2-published__note">숲의 한 문장은 한 권의 두꺼운 답보다, 오래 머무는 한 문장을 남기는 책들을 모읍니다.</p>
+      </div>
+
+      <ol class="fs2-list">
+        <li class="fs2-book">
+          <span class="fs2-book__no" aria-hidden="true">01</span>
+          <figure class="fs2-book__cover">
+            <img src="../../assets/img/malsum-forest-cover.jpg" alt="《말씀의 숲》 공식 앞표지" width="1600" height="2462" loading="lazy">
+          </figure>
+          <div>
+            <p class="fs2-book__series">숲의 한 문장 01</p>
+            <h3 class="fs2-book__title">말씀의 숲</h3>
+            <p class="fs2-book__desc">AI를 자동 응답기가 아닌 말씀 연구 환경으로 삼아, 깊은 연구가 강단과 공동체로 흘러가게 한 기록.</p>
+            <p class="fs2-book__meta">이승주 · 퍼플 · 2026. 08. 14 · 86쪽</p>
+            <a class="fs2-link fs2-book__link" href="/books/malsum-forest/">자세히 보기 →</a>
+          </div>
+        </li>
+
+        <li class="fs2-book">
+          <span class="fs2-book__no" aria-hidden="true">02</span>
+          <figure class="fs2-book__cover">
+            <img src="../../assets/img/transparent-lake-cover.png" alt="《투명의 호수》 공식 표지" width="1024" height="1536" loading="lazy">
+          </figure>
+          <div>
+            <p class="fs2-book__series">숲의 한 문장 02</p>
+            <h3 class="fs2-book__title">투명의 호수</h3>
+            <p class="fs2-book__desc">사람과 관계, 사랑과 헤어짐, 기억과 기다림, 그리고 일상 속 깊은 순간들을 글과 그림으로 담은 에세이.</p>
+            <p class="fs2-book__meta">이승주 · 퍼플 · 2026. 09. 11 · 74쪽 · 글과 그림</p>
+            <a class="fs2-link fs2-book__link" href="/books/transparent-lake/">자세히 보기 →</a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5. CLOSING -->
+  <section class="fs2-closing" aria-label="시리즈로 돌아가기">
+    <div class="fs2-wrap fs2-closing__grid">
+      <p class="fs2-closing__quote">한 문장이,<br>오래 곁에 남습니다.</p>
+      <div class="fs2-closing__links">
+        <a class="fs2-link" href="/series/">Series로 돌아가기 →</a>
+        <a class="fs2-link" href="/books/">Books 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="route-footer"><a href="/">말씀의 숲 <span>MALSUM FOREST</span></a><p>© 2026 MALSUM FOREST.</p></footer>
+</body>
+</html>

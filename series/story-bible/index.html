@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이야기로 읽는 성경 — Series Preview · 말씀의 숲</title>
+<meta name="description" content="이야기로 읽는 성경은 성경 이야기를 요약해서 들려주지 않습니다. 서사와 삽화, 페이지가 함께 움직이며 한 이야기를 완성해 가는 말씀의 숲 그림 성경 시리즈입니다. 「요나서」의 이야기와 그림을 미리 만납니다.">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/site-header.v2-candidate.css">
+<style>
+.route-footer{background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:34px 6vw;font-size:12px}
+.route-footer>a{font-family:var(--serif);font-size:22px;font-weight:700}.route-footer>a span{margin-left:12px;font-family:var(--latin);font-size:8px;letter-spacing:.3em}
+@media(max-width:767.98px){
+  .route-footer{display:block;padding:34px 20px}.route-footer p{margin-top:22px}
+}
+@media (min-width:768px){
+  .route-footer{padding-left:max(32px,calc((100vw - 1240px)/2 + 32px));padding-right:max(32px,calc((100vw - 1240px)/2 + 32px))}
+}
+
+/* ===== STORY BIBLE PREVIEW · Series 05 — same vocabulary as series/series.v2-candidate.css ===== */
+.sb2-page{
+  --v2-navy:#123A5A;--v2-blue:#2E9FC4;--v2-muted:#66717A;--v2-body:#2F3438;
+  --v2-paper:#F7F7F4;--v2-olivep:#F2F5E8;--v2-gray:#F0F1EF;--v2-light:#EDF5F7;
+  --v2-line:rgba(18,58,90,.22);--v2-line-soft:rgba(18,58,90,.14);
+  background:var(--v2-paper);color:var(--v2-body)
+}
+.sb2-page .sb2-wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.sb2-page .sb2-eyebrow{font-family:var(--sans);font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--v2-blue)}
+.sb2-page .sb2-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;color:var(--v2-navy);letter-spacing:-.01em;border-bottom:1px solid rgba(18,58,90,.35)}
+.sb2-page .sb2-link:hover{color:var(--v2-blue)}
+
+.sb2-page .sb2-head{padding:88px 0 0;background:var(--v2-paper)}
+.sb2-page .sb2-head__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);column-gap:64px;align-items:center;padding-bottom:56px}
+.sb2-page .sb2-h1{margin-top:16px;font-family:var(--sans);font-size:clamp(38px,4.4vw,60px);line-height:1.08;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.sb2-page .sb2-head__lead{margin-top:18px;font-family:var(--serif);font-size:18px;line-height:1.7;color:var(--v2-muted);max-width:480px}
+.sb2-page .sb2-head__figure{margin:0;background:var(--v2-gray);border:1px solid var(--v2-line-soft)}
+.sb2-page .sb2-head__figure img{display:block;width:100%;height:auto;object-fit:cover;max-height:640px}
+.sb2-page .sb2-head__figure figcaption{padding:10px 14px;font-size:12.5px;line-height:1.6;color:var(--v2-muted);border-top:1px solid var(--v2-line-soft)}
+
+.sb2-page .sb2-identity{padding:76px 0}
+.sb2-page .sb2-identity__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);column-gap:64px;align-items:start}
+.sb2-page .sb2-identity h2{margin-top:12px;font-family:var(--sans);font-size:clamp(26px,2.8vw,38px);line-height:1.15;letter-spacing:-.04em;color:var(--v2-navy)}
+.sb2-page .sb2-identity__body p{font-size:16px;line-height:1.9;color:var(--v2-body);max-width:640px}
+.sb2-page .sb2-identity__body p+p{margin-top:16px}
+.sb2-page .sb2-identity__quote{margin-top:28px;padding:26px 28px;background:var(--v2-olivep);font-family:var(--serif);font-size:clamp(19px,2vw,24px);line-height:1.6;color:var(--v2-navy)}
+.sb2-page .sb2-identity__quote cite{display:block;margin-top:12px;font-style:normal;font-size:13px;font-family:var(--sans);color:var(--v2-muted)}
+
+.sb2-page .sb2-samples{background:var(--v2-gray);padding:80px 0}
+.sb2-page .sb2-samples__head h2{margin-top:12px;font-family:var(--sans);font-size:clamp(30px,3.2vw,44px);line-height:1.08;letter-spacing:-.045em;color:var(--v2-navy)}
+.sb2-page .sb2-featured{margin-top:44px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);column-gap:56px;align-items:center}
+.sb2-page .sb2-featured .sb2-figbox{margin:0;background:#fff;border:1px solid var(--v2-line-soft)}
+.sb2-page .sb2-featured .sb2-figbox img{display:block;width:100%;height:auto;object-fit:cover;max-height:640px}
+.sb2-page .sb2-featured__tag{font-family:var(--latin);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--v2-muted)}
+.sb2-page .sb2-featured h3{margin-top:10px;font-family:var(--sans);font-size:clamp(24px,2.6vw,34px);letter-spacing:-.04em;color:var(--v2-navy)}
+.sb2-page .sb2-featured p{margin-top:14px;font-size:15.5px;line-height:1.85;color:var(--v2-body)}
+
+.sb2-page .sb2-process{padding:80px 0}
+.sb2-page .sb2-process__head h2{margin-top:12px;font-family:var(--sans);font-size:clamp(26px,3vw,38px);letter-spacing:-.04em;color:var(--v2-navy)}
+.sb2-page .sb2-process__body{margin-top:36px;display:grid;grid-template-columns:minmax(280px,.9fr) 1fr;column-gap:56px;align-items:center}
+.sb2-page .sb2-process__body .sb2-figbox{margin:0;background:var(--v2-gray);border:1px solid var(--v2-line-soft)}
+.sb2-page .sb2-process__body .sb2-figbox img{display:block;width:100%;height:auto;object-fit:cover;max-height:640px}
+.sb2-page .sb2-steps{list-style:none;margin:0;padding:0;counter-reset:sb2-step}
+.sb2-page .sb2-steps li{counter-increment:sb2-step;position:relative;padding:16px 0 16px 42px;border-bottom:1px solid var(--v2-line-soft);font-size:15px;line-height:1.7;color:var(--v2-body)}
+.sb2-page .sb2-steps li:last-child{border-bottom:none}
+.sb2-page .sb2-steps li::before{content:counter(sb2-step);position:absolute;left:0;top:16px;width:24px;height:24px;border-radius:50%;background:var(--v2-navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.sb2-page .sb2-steps b{color:var(--v2-navy);font-weight:700}
+
+.sb2-page .sb2-pages{background:#fff;padding:80px 0 40px}
+.sb2-page .sb2-pages__head h2{margin-top:12px;font-family:var(--sans);font-size:clamp(30px,3.2vw,44px);letter-spacing:-.045em;color:var(--v2-navy)}
+.sb2-page .sb2-pages__grid{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px}
+.sb2-page .sb2-pages__grid figure{margin:0;background:var(--v2-gray);border:1px solid var(--v2-line-soft)}
+.sb2-page .sb2-pages__grid img{display:block;width:100%;height:auto;object-fit:contain;max-height:none}
+.sb2-page .sb2-pages__grid figcaption{padding:14px 16px;font-size:13.5px;line-height:1.65;color:var(--v2-muted);border-top:1px solid var(--v2-line-soft)}
+.sb2-page .sb2-pages__grid figcaption b{display:block;font-size:14.5px;color:var(--v2-navy);font-weight:700;margin-bottom:3px}
+.sb2-page .sb2-pages__note{margin-top:40px;padding-top:24px;border-top:1px solid var(--v2-line);font-size:12.5px;line-height:1.7;color:var(--v2-muted)}
+
+.sb2-page .sb2-progress{padding:32px 0;border-top:1px solid var(--v2-line)}
+.sb2-page .sb2-progress__text{max-width:640px;font-size:13px;line-height:1.7;color:var(--v2-muted)}
+
+.sb2-page .sb2-closing{background:#fff;padding:96px 0 104px}
+.sb2-page .sb2-closing__grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);column-gap:72px;align-items:end}
+.sb2-page .sb2-closing__quote{font-family:var(--serif);font-size:clamp(26px,2.6vw,38px);line-height:1.55;letter-spacing:-.01em;color:var(--v2-navy)}
+.sb2-page .sb2-closing .sb2-link{justify-self:end}
+
+@media (max-width:1023.98px){
+  .sb2-page .sb2-head__grid{grid-template-columns:1fr;row-gap:32px}
+  .sb2-page .sb2-identity__grid{grid-template-columns:1fr;row-gap:20px}
+  .sb2-page .sb2-featured{grid-template-columns:1fr;row-gap:28px}
+  .sb2-page .sb2-process__body{grid-template-columns:1fr;row-gap:28px}
+}
+@media (max-width:767.98px){
+  .sb2-page .sb2-wrap{width:calc(100% - 40px)}
+  .sb2-page .sb2-head{padding-top:56px}
+  .sb2-page .sb2-head__grid{padding-bottom:44px}
+  .sb2-page .sb2-h1{font-size:36px}
+  .sb2-page .sb2-head__figure img{height:auto}
+  .sb2-page .sb2-identity{padding:52px 0}
+  .sb2-page .sb2-samples{padding:56px 0}
+  .sb2-page .sb2-featured .sb2-figbox img{height:auto}
+  .sb2-page .sb2-process{padding:56px 0}
+  .sb2-page .sb2-process__body .sb2-figbox img{height:auto}
+  .sb2-page .sb2-pages{padding:56px 0 30px}
+  .sb2-page .sb2-pages__grid{grid-template-columns:1fr;gap:32px}
+  .sb2-page .sb2-pages__grid img{height:auto}
+  .sb2-page .sb2-progress{padding:48px 0}
+  .sb2-page .sb2-closing{padding:64px 0 68px}
+  .sb2-page .sb2-closing__grid{grid-template-columns:1fr;row-gap:26px}
+  .sb2-page .sb2-closing .sb2-link{justify-self:start}
+}
+</style>
+</head>
+<body class="sb2-page">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" id="top">
+  <div class="site-header__wrap">
+    <a class="site-wordmark" href="/" aria-label="말씀의 숲 홈"><b>말씀의 숲</b><span>MALSUM FOREST</span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/open-pages/">Open Pages</a>
+      <a href="/books/">Books</a>
+      <a href="/series/" aria-current="page">Series</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+  <!-- HERO -->
+  <section class="sb2-head" aria-labelledby="story-title">
+    <div class="sb2-wrap sb2-head__grid">
+      <div>
+        <p class="sb2-eyebrow">Series 05 · 이야기로 읽는 성경</p>
+        <h1 id="story-title" class="sb2-h1">이야기와 그림이<br>함께 만드는 책</h1>
+        <p class="sb2-head__lead">이야기로 읽는 성경은 성경 이야기를 요약해서 들려주지 않습니다. 서사와 삽화, 페이지가 함께 움직이며 한 이야기를 완성해 가는 그림 성경 시리즈입니다.</p>
+      </div>
+      <figure class="sb2-head__figure">
+        <img src="../../assets/img/series/story-bible/jonah-page-storm-spread.jpg" alt="요나가 풍랑 이는 바다 위 배에서 선원들과 함께 있는 장면, 원고 문장과 삽화가 함께 놓인 페이지" style="aspect-ratio:1200/1678">
+        <figcaption>「요나서」 한 장면 — 실제 페이지에서.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- IDENTITY -->
+  <section class="sb2-identity" aria-labelledby="story-identity-title">
+    <div class="sb2-wrap sb2-identity__grid">
+      <div><p class="sb2-eyebrow">이 책은 어떤 책인가</p><h2 id="story-identity-title">줄거리 요약이 아니라,<br>이야기와 그림이 함께 짓는 책</h2></div>
+      <div class="sb2-identity__body">
+        <p>성경 이야기를 짧게 요약하는 책은 많습니다. 이야기로 읽는 성경은 다른 길을 갑니다. 본문의 장면과 침묵까지 그대로 살려 원고로 옮기고, 그 장면에 맞춰 인물과 배경을 그리고, 원고와 그림을 한 페이지 안에 함께 앉힙니다.</p>
+        <p>그래서 이 책은 “이야기가 무엇을 말하는가”로 끝나지 않고, “그 이야기가 어떤 장면과 그림으로 살아나는가”를 함께 보여 줍니다.</p>
+        <blockquote class="sb2-identity__quote">“나는 하늘과 바다와 육지를 지으신 여호와 하나님을 경외하는 히브리 사람입니다. 지금 나는 그 크신 여호와를 피해 달아나는 길입니다.”<cite>— 「요나서」 페이지 중에서</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST SAMPLE -->
+  <section class="sb2-samples" aria-labelledby="story-samples-title">
+    <div class="sb2-wrap">
+      <div class="sb2-samples__head"><p class="sb2-eyebrow">이야기 미리보기</p><h2 id="story-samples-title">요나서</h2></div>
+      <div class="sb2-featured">
+        <figure class="sb2-figbox"><img src="../../assets/img/series/story-bible/jonah-illustration-storm.jpg" alt="풍랑 이는 바다 위에서 선원들에게 자신이 누구인지 밝히는 요나 그림" style="aspect-ratio:1400/933"></figure>
+        <div>
+          <p class="sb2-featured__tag">이야기로 읽는 성경 · 첫 편</p>
+          <h3>요나서</h3>
+          <p>니느웨로 가라는 부르심을 피해 달아난 요나가 풍랑과 큰 물고기, 그리고 다시 주어진 부르심을 지나는 이야기를 그림책 분량으로 다시 썼습니다. 원고와 그림, 페이지까지 모두 만들었습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW A PAGE IS MADE -->
+  <section class="sb2-process" aria-labelledby="story-process-title">
+    <div class="sb2-wrap">
+      <div class="sb2-process__head"><p class="sb2-eyebrow">이야기 → 인물·장면 → 그림 → 페이지</p><h2 id="story-process-title">원고에서 한 페이지가 되기까지</h2></div>
+      <div class="sb2-process__body">
+        <figure class="sb2-figbox"><img src="../../assets/img/series/story-bible/jonah-illustration-fish.jpg" alt="큰 물고기에게 삼켜지는 요나 그림" style="aspect-ratio:1374/1145"></figure>
+        <ol class="sb2-steps">
+          <li><b>이야기</b> — 요나서 전체를 침묵하는 장면까지 그대로 살려 원고로 옮겨 씁니다. 내용을 줄이거나 상상으로 채우지 않습니다.</li>
+          <li><b>인물과 장면</b> — 배가 떠나는 욥바, 풍랑 이는 바다, 큰 물고기, 시든 박넝쿨 아래의 요나까지, 원고 속 장면을 하나씩 짚습니다.</li>
+          <li><b>그림</b> — 각 장면의 인물과 배경, 색을 원고에 맞춰 그립니다.</li>
+          <li><b>페이지</b> — 원고와 그림을 한 판형 안에 앉혀, 읽는 이가 문장과 그림을 함께 따라가도록 완성합니다.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE PAGES -->
+  <section class="sb2-pages" aria-labelledby="story-pages-title">
+    <div class="sb2-wrap">
+      <div class="sb2-pages__head"><p class="sb2-eyebrow">실제 페이지와 그림</p><h2 id="story-pages-title">책 속 미리보기</h2></div>
+      <div class="sb2-pages__grid">
+        <figure>
+          <img src="../../assets/img/series/story-bible/jonah-page-storm-spread.jpg" alt="요나서, 풍랑 속 선원들과 요나의 대화가 담긴 페이지" style="aspect-ratio:1200/1678">
+          <figcaption><b>풍랑 속에서</b>선원들이 제비를 뽑고, 요나가 자신을 밝히는 장면 — 원고와 그림이 함께 놓인 페이지.</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/img/series/story-bible/jonah-page-joppa-spread.jpg" alt="요나서, 니느웨 대신 다시스로 향하는 요나가 담긴 페이지" style="aspect-ratio:1200/1678">
+          <figcaption><b>다시스로</b>니느웨로 향하지 않고 배를 타는 요나 — 이야기의 출발점.</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/img/series/story-bible/jonah-illustration-fish.jpg" alt="큰 물고기에게 삼켜지는 요나 그림" style="aspect-ratio:1374/1145">
+          <figcaption><b>그림</b>깊은 바다에 던져진 요나와 큰 물고기.</figcaption>
+        </figure>
+        <figure>
+          <img src="../../assets/img/series/story-bible/jonah-illustration-vine.jpg" alt="시든 박넝쿨 아래 화가 난 요나 그림" style="aspect-ratio:1374/1145">
+          <figcaption><b>그림</b>시든 박넝쿨 아래에서 화를 내는 요나.</figcaption>
+        </figure>
+      </div>
+      <p class="sb2-pages__note">이 페이지들은 내부 제작 과정에서 나온 자료입니다. 최종 인쇄·출간본과 다를 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- CURRENT STATUS -->
+  <section class="sb2-progress" aria-label="제작 상태">
+    <div class="sb2-wrap">
+      <p class="sb2-progress__text">이야기로 읽는 성경은 지금 만들어지고 있는 시리즈입니다. 이 페이지는 그 과정에서 미리 보여 드리는 프리뷰이며, 다음 이야기는 준비되는 대로 이 자리에 더해집니다.</p>
+    </div>
+  </section>
+
+  <!-- BACK TO SERIES -->
+  <section class="sb2-closing" aria-label="시리즈로 돌아가기">
+    <div class="sb2-wrap sb2-closing__grid">
+      <p class="sb2-closing__quote">다음 이야기도,<br>이렇게 한 페이지씩 지어집니다.</p>
+      <a class="sb2-link" href="/series/">다시 다섯 산책길로 →</a>
+    </div>
+  </section>
+
+</main>
+<footer class="route-footer"><a href="/">말씀의 숲 <span>MALSUM FOREST</span></a><p>© 2026 MALSUM FOREST.</p></footer>
+</body>
+</html>

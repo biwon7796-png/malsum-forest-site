@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>투명의 호수 — 말씀의 숲</title>
+<meta name="description" content="《투명의 호수》는 사람과 관계, 사랑과 헤어짐, 기억과 기다림, 그리고 일상 속에서 문득 마주하는 깊은 순간들을 글과 그림으로 담은 에세이입니다.">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/site-header.v2-candidate.css">
+<style>
+/* ===== global nav / footer — copied verbatim from books/books.css (values unchanged) ===== */
+.route-footer{background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:34px 6vw;font-size:12px}
+.route-footer>a{font-family:var(--serif);font-size:22px;font-weight:700}.route-footer>a span{margin-left:12px;font-family:var(--latin);font-size:8px;letter-spacing:.3em}
+@media(max-width:767.98px){
+  .route-footer{display:block;padding:34px 20px}.route-footer p{margin-top:22px}
+}
+@media (min-width:768px){
+  .route-footer{padding-left:max(32px,calc((100vw - 1240px)/2 + 32px));padding-right:max(32px,calc((100vw - 1240px)/2 + 32px))}
+}
+
+/* ===== BOOK DETAIL · 투명의 호수 — HOME V2 visual grammar, scoped to .book-detail-page ===== */
+.book-detail-page{
+  --v2-navy:#123A5A;--v2-blue:#2E9FC4;--v2-muted:#66717A;--v2-body:#2F3438;
+  --v2-paper:#F7F7F4;--v2-olivep:#F2F5E8;--v2-gray:#F0F1EF;--v2-light:#EDF5F7;
+  --v2-rule:rgba(18,58,90,.22);--v2-rule-soft:rgba(18,58,90,.14);
+  background:var(--v2-paper);color:var(--v2-body)
+}
+.book-detail-page .detail-wrap{width:min(1180px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+.book-detail-page .detail-eyebrow{font-family:var(--sans);font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--v2-blue)}
+.book-detail-page .detail-title{font-size:clamp(34px,4vw,58px);line-height:1.06;letter-spacing:-.045em;font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-body{font-size:16px;line-height:1.8;color:var(--v2-body)}
+.book-detail-page .detail-body p+p{margin-top:16px}
+.book-detail-page .detail-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-link:hover{color:var(--v2-blue)}
+
+/* FEATURE — hero */
+.book-detail-page .detail-hero{padding:88px 0 92px;background:var(--v2-paper)}
+.book-detail-page .detail-hero__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.95fr);column-gap:72px;align-items:end}
+.book-detail-page .detail-hero__copy{padding-bottom:12px}
+.book-detail-page .detail-hero h1{margin-top:22px;font:700 clamp(48px,6vw,88px)/1.05 var(--serif);letter-spacing:-.035em;color:var(--v2-navy)}
+.book-detail-page .detail-hero__meta{margin-top:26px;padding-top:20px;border-top:1px solid var(--v2-rule);font-size:14px;line-height:1.6;color:var(--v2-muted)}
+.book-detail-page .detail-hero__meta b{font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-hero__cover{justify-self:end;width:100%;max-width:360px;margin:0}
+.book-detail-page .detail-hero__cover img{width:100%;height:auto;filter:drop-shadow(0 26px 36px rgba(18,58,90,.18))}
+
+/* essence — serif quotation with one image pause */
+.book-detail-page .detail-essence{background:var(--v2-olivep);padding:84px 0 88px}
+.book-detail-page .detail-essence__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:center}
+.book-detail-page .detail-essence__pause{margin:0;max-width:340px}
+.book-detail-page .detail-essence__pause img{width:100%;height:auto;aspect-ratio:1122/1402;object-fit:cover;border:1px solid var(--v2-rule-soft)}
+.book-detail-page .detail-essence__quote{font:400 clamp(24px,2.4vw,34px)/1.6 var(--serif);letter-spacing:-.01em;color:var(--v2-navy);max-width:680px}
+.book-detail-page .detail-essence__quote:before{content:"";display:block;width:40px;height:1px;margin-bottom:28px;background:rgba(18,58,90,.4)}
+.book-detail-page .detail-essence .detail-eyebrow{margin-bottom:22px}
+
+/* about — asymmetric label / body */
+.book-detail-page .detail-about{padding:92px 0 96px;background:var(--v2-paper)}
+.book-detail-page .detail-about__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-about .detail-title{margin-top:18px;font-size:clamp(34px,3.5vw,50px)}
+.book-detail-page .detail-about__body{max-width:720px;padding-top:8px}
+.book-detail-page .detail-about__body p{font-size:17px;line-height:1.9}
+
+/* SECONDARY — inside the book */
+.book-detail-page .detail-toc{padding:84px 0 88px;background:#fff}
+.book-detail-page .detail-toc__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-toc .detail-title{margin-top:18px;font-size:clamp(34px,3.5vw,50px)}
+.book-detail-page .detail-toc__body{max-width:720px;padding-top:8px}
+.book-detail-page .detail-toc__flow{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--v2-rule)}
+.book-detail-page .detail-toc__flow li{display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:18px;align-items:center;min-height:64px;padding:12px 0;border-bottom:1px solid var(--v2-rule-soft)}
+.book-detail-page .detail-toc__flow span{font-size:14px;font-weight:700;color:var(--v2-blue)}
+.book-detail-page .detail-toc__flow p{font:400 21px/1.45 var(--serif);color:var(--v2-navy)}
+
+/* SECONDARY — preview / related open page */
+.book-detail-page .detail-side{padding:76px 0 84px;background:var(--v2-gray)}
+.book-detail-page .detail-side__grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.35fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-side__col{border-top:1px solid var(--v2-rule);padding-top:22px}
+.book-detail-page .detail-preview__note{margin-top:16px;font-size:16px;line-height:1.8;color:var(--v2-body)}
+.book-detail-page .detail-preview__note a{display:inline;padding:11px 0;font-weight:700;color:var(--v2-navy);text-decoration:underline;text-decoration-color:rgba(18,58,90,.35);text-underline-offset:5px}
+.book-detail-page .detail-preview__note a:hover{color:var(--v2-blue)}
+.book-detail-page .detail-open__index{display:block;margin-top:16px;font-size:11px;font-weight:700;letter-spacing:.15em;color:var(--v2-blue)}
+.book-detail-page .detail-open__title{margin-top:8px;font:500 clamp(22px,2.4vw,34px)/1.25 var(--serif);color:var(--v2-navy)}
+.book-detail-page .detail-open__lead{margin-top:14px;font-size:16px;line-height:1.8;color:var(--v2-body);max-width:520px}
+.book-detail-page .detail-open .detail-link{margin-top:10px}
+.book-detail-page .detail-open__more{margin-top:18px;padding-top:14px;border-top:1px solid var(--v2-rule-soft);font-size:13px;color:var(--v2-muted)}
+.book-detail-page .detail-open__more a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--v2-blue)}
+.book-detail-page .detail-open__more a:hover{color:var(--v2-navy)}
+
+/* INDEX — publication info + author */
+.book-detail-page .detail-info{padding:84px 0 72px;background:var(--v2-paper)}
+.book-detail-page .detail-info__grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.35fr);column-gap:72px;align-items:start}
+.book-detail-page .detail-info .detail-title{margin-top:18px;font-size:clamp(30px,3vw,42px)}
+.book-detail-page .detail-info__facts{margin:32px 0 0;border-top:1px solid var(--v2-rule)}
+.book-detail-page .detail-info__facts div{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:20px;padding:12px 0;border-bottom:1px solid var(--v2-rule-soft);font-size:14px;line-height:1.6}
+.book-detail-page .detail-info__facts dt{color:var(--v2-muted)}
+.book-detail-page .detail-info__facts dd{margin:0;font-weight:700;color:var(--v2-navy)}
+.book-detail-page .detail-author{border-top:1px solid var(--v2-rule);padding-top:22px}
+.book-detail-page .detail-author h3{margin-top:14px;font:700 24px/1.3 var(--serif);letter-spacing:-.02em;color:var(--v2-navy)}
+.book-detail-page .detail-author .detail-body{margin-top:18px;max-width:620px}
+
+/* link — Kyobo */
+.book-detail-page .detail-purchase{padding:0 0 84px;background:var(--v2-paper)}
+.book-detail-page .detail-purchase__row{border-top:1px solid var(--v2-rule);padding-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px}
+.book-detail-page .detail-purchase__row p{font-size:13px;line-height:1.6;color:var(--v2-muted)}
+.book-detail-page .detail-purchase__row p b{font-weight:700;color:var(--v2-navy)}
+
+/* closing */
+.book-detail-page .detail-closing{padding:88px 0 96px;background:var(--v2-olivep)}
+.book-detail-page .detail-closing__grid{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.book-detail-page .detail-closing__line{font:400 clamp(24px,2.5vw,34px)/1.5 var(--serif);color:var(--v2-navy);max-width:720px}
+.book-detail-page .detail-closing .detail-link{border-bottom:1px solid rgba(18,58,90,.35);white-space:nowrap}
+
+@media(max-width:900px){
+  .book-detail-page .detail-wrap{width:min(100% - 40px,720px)}
+  .book-detail-page .detail-hero{padding:56px 0 60px}
+  .book-detail-page .detail-hero__grid{grid-template-columns:1fr;row-gap:40px}
+  .book-detail-page .detail-hero__cover{order:-1;justify-self:start;width:62%;max-width:300px}
+  .book-detail-page .detail-hero h1{font-size:clamp(40px,10vw,56px)}
+  .book-detail-page .detail-essence{padding:60px 0 64px}
+  .book-detail-page .detail-essence__grid{grid-template-columns:1fr;row-gap:34px}
+  .book-detail-page .detail-essence__pause{max-width:300px}
+  .book-detail-page .detail-about,.book-detail-page .detail-toc,.book-detail-page .detail-info{padding:60px 0 64px}
+  .book-detail-page .detail-about__grid,.book-detail-page .detail-toc__grid,.book-detail-page .detail-side__grid,.book-detail-page .detail-info__grid{grid-template-columns:1fr;row-gap:34px}
+  .book-detail-page .detail-about__body p{font-size:16px;line-height:1.8}
+  .book-detail-page .detail-side{padding:56px 0 60px}
+  .book-detail-page .detail-purchase{padding-bottom:60px}
+  .book-detail-page .detail-closing{padding:60px 0 68px}
+  .book-detail-page .detail-closing__grid{display:block}
+  .book-detail-page .detail-closing .detail-link{margin-top:26px}
+}
+@media(max-width:560px){
+  .book-detail-page .detail-wrap{width:calc(100% - 40px)}
+  .book-detail-page .detail-hero{padding:44px 0 52px}
+  .book-detail-page .detail-hero__cover{width:62%;max-width:240px}
+  .book-detail-page .detail-hero h1{font-size:44px}
+  .book-detail-page .detail-hero__meta{font-size:13px}
+  .book-detail-page .detail-essence__quote{font-size:22px;line-height:1.6}
+  .book-detail-page .detail-about .detail-title,.book-detail-page .detail-toc .detail-title{font-size:32px}
+  .book-detail-page .detail-toc__flow p{font-size:18px}
+  .book-detail-page .detail-open__title{font-size:24px}
+  .book-detail-page .detail-info__facts div{grid-template-columns:84px minmax(0,1fr)}
+  .book-detail-page .detail-closing__line{font-size:22px}
+}
+</style>
+</head>
+<body class="book-detail-page">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" id="top">
+  <div class="site-header__wrap">
+    <a class="site-wordmark" href="/" aria-label="말씀의 숲 홈"><b>말씀의 숲</b><span>MALSUM FOREST</span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/open-pages/">Open Pages</a>
+      <a href="/books/">Books</a>
+      <a href="/series/">Series</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+  <!-- FEATURE · book hero -->
+  <section class="detail-hero" aria-labelledby="book-title">
+    <div class="detail-wrap detail-hero__grid">
+      <div class="detail-hero__copy">
+        <p class="detail-eyebrow">Malsum Forest · Essay</p>
+        <h1 id="book-title">투명의 호수</h1>
+        <p class="detail-hero__meta"><b>이승주</b> · 퍼플 · 2026. 09. 11 · 74쪽 · 글과 그림</p>
+      </div>
+      <figure class="detail-hero__cover"><img src="../../assets/img/transparent-lake-cover.png" alt="《투명의 호수》 공식 표지" width="1024" height="1536"></figure>
+    </div>
+  </section>
+
+  <!-- essence -->
+  <section class="detail-essence" aria-labelledby="essence-title">
+    <div class="detail-wrap detail-essence__grid">
+      <figure class="detail-essence__pause"><img src="../../assets/img/transparent-lake-pause.jpg" alt="노을 지는 호수를 바라보며 나무 데크에 앉아 있는 사람을 그린 그림" width="1122" height="1402" loading="lazy"></figure>
+      <div>
+        <h2 class="detail-eyebrow" id="essence-title">Essence</h2>
+        <blockquote class="detail-essence__quote">그 글들을 다시 모아 읽는 동안 하나의 시선이 드러났습니다. 사람을 너무 빨리 안다고 말하지 않는 것, 사랑하기 때문에 붙잡지 않는 것, 사라질 것을 알기에 오늘을 더 오래 바라보는 것입니다.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="detail-about" aria-labelledby="about-title">
+    <div class="detail-wrap detail-about__grid">
+      <div>
+        <p class="detail-eyebrow">About This Book</p>
+        <h2 class="detail-title" id="about-title">글과 그림으로<br>담은 에세이</h2>
+      </div>
+      <div class="detail-about__body detail-body">
+        <p>《투명의 호수》는 사람과 관계, 사랑과 헤어짐, 기억과 기다림, 그리고 일상 속에서 문득 마주하는 깊은 순간들을 글과 그림으로 담은 에세이입니다.</p>
+        <p>처음부터 한 권의 책을 생각하며 쓰인 글들은 아닙니다. 책을 읽다가 떠오른 생각, 그림을 그리며 만난 마음, 사람을 만나고 헤어진 뒤 오래 남은 여운, 하나님을 묵상하며 적어 둔 문장들이 서로 다른 시간에 하나씩 쌓였습니다.</p>
+        <p>《투명의 호수》는 무엇을 가르치기 위한 책이라기보다 잠시 멈추어 자신의 마음과 곁에 있는 사람을 바라보게 하는 책입니다. 조용한 글과 그림 사이를 걷다 보면 어느 순간 내가 바라보던 세계뿐 아니라 나 또한 누군가의 눈에 비추어지고 있음을 발견하게 됩니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECONDARY · inside the book -->
+  <section class="detail-toc" aria-labelledby="toc-title">
+    <div class="detail-wrap detail-toc__grid">
+      <div>
+        <p class="detail-eyebrow">Inside the Book</p>
+        <h2 class="detail-title" id="toc-title">책의 흐름</h2>
+      </div>
+      <div class="detail-toc__body">
+        <div class="detail-body">
+          <p>《투명의 호수》는 서로 다른 시기에 쓰인 42편의 글과 그림을 6부의 흐름으로 엮었습니다.</p>
+          <p>사람을 바라보는 일에서 시작해 관계와 사랑, 상실과 기다림, 삶의 작은 순간들, 그리고 더 깊은 곳을 향한 묵상으로 이어집니다. 각각의 글은 독립적으로 읽을 수 있지만 처음부터 끝까지 천천히 따라가면 서로 멀리 떨어져 있던 생각과 이미지들이 하나의 흐름으로 연결됩니다.</p>
+          <p>짧은 글 한 편을 읽고 그림 앞에 잠시 머물러도 좋고, 마음이 가는 곳을 펼쳐 다시 읽어도 좋습니다. 빠르게 읽어 끝내기보다 곁에 두고 천천히 되돌아볼 수 있도록 구성한 책입니다.</p>
+        </div>
+        <ul class="detail-toc__flow" aria-label="책의 흐름">
+          <li><span aria-hidden="true">→</span><p>사람을 바라보는 일</p></li>
+          <li><span aria-hidden="true">→</span><p>관계와 사랑</p></li>
+          <li><span aria-hidden="true">→</span><p>상실과 기다림</p></li>
+          <li><span aria-hidden="true">→</span><p>삶의 작은 순간들</p></li>
+          <li><span aria-hidden="true">→</span><p>더 깊은 곳을 향한 묵상</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECONDARY · preview / related open page -->
+  <section class="detail-side" aria-label="미리보기와 관련 Open Page">
+    <div class="detail-wrap detail-side__grid">
+      <div class="detail-side__col detail-preview">
+        <h2 class="detail-eyebrow">Preview</h2>
+        <p class="detail-preview__note">미리보기는 <a href="https://product.kyobobook.co.kr/detail/S000221331239" target="_blank" rel="noopener noreferrer">교보문고 상품 페이지 ↗</a>에서 제공됩니다.</p>
+      </div>
+      <div class="detail-side__col detail-open">
+        <h2 class="detail-eyebrow">Open Pages</h2>
+        <span class="detail-open__index">OPEN PAGE 09</span>
+        <p class="detail-open__title">투명의 호수</p>
+        <p class="detail-open__lead">책의 표지를 다시 보여 주기보다, 그 안에서 시작된 생각과 질문을 한 페이지씩 꺼내 놓습니다.</p>
+        <a class="detail-link" href="/open-pages/transparent-lake/">OPEN PAGE 09 · 투명의 호수 →</a>
+        <p class="detail-open__more">그리고 <a href="/open-pages/cezannes-apple/">OPEN PAGE 10 · 세잔의 사과 →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDEX · publication info + author -->
+  <section class="detail-info" aria-labelledby="info-title">
+    <div class="detail-wrap detail-info__grid">
+      <div>
+        <p class="detail-eyebrow">Publication Info</p>
+        <h2 class="detail-title" id="info-title">투명의 호수</h2>
+        <dl class="detail-info__facts">
+          <div><dt>지은이</dt><dd>이승주</dd></div>
+          <div><dt>발행일</dt><dd>2026. 09. 11</dd></div>
+          <div><dt>발행처</dt><dd>퍼플</dd></div>
+          <div><dt>분량</dt><dd>74쪽</dd></div>
+          <div><dt>크기</dt><dd>152 × 225 mm</dd></div>
+          <div><dt>ISBN</dt><dd>9788924258660</dd></div>
+          <div><dt>정가</dt><dd>8,000원</dd></div>
+          <div><dt>분야</dt><dd>시/에세이 &gt; 테마에세이</dd></div>
+          <div><dt>제작 방식</dt><dd>POD(주문 후 제작)</dd></div>
+        </dl>
+      </div>
+      <div class="detail-author">
+        <p class="detail-eyebrow">About the Author</p>
+        <h3>이승주</h3>
+        <div class="detail-body">
+          <p>이승주는 사람의 얼굴과 말, 마음의 움직임을 오래 바라봅니다.</p>
+          <p>사람을 너무 빨리 안다고 말하지 않으려 하고, 가까이 있으면서도 붙잡아 두지 않으려 합니다. 글을 쓸 때에도 그림을 그릴 때에도 같은 시선으로 사람과 일상, 사과 하나와 꽃 한 송이, 하늘의 빛과 바다의 깊이를 바라봅니다.</p>
+          <p>그에게 글과 그림은 서로 다른 작업이라기보다 오래 바라본 시간에서 남겨진 두 가지 흔적에 가깝습니다.</p>
+          <p>《투명의 호수》에는 그렇게 일상의 자리에서 발견한 관계와 사랑, 기다림과 헤어짐, 믿음과 삶에 대한 생각을 담았습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- link · Kyobo -->
+  <section class="detail-purchase" aria-label="구매 링크">
+    <div class="detail-wrap detail-purchase__row">
+      <p><b>투명의 호수</b> · 정가 8,000원 · POD(주문 후 제작)</p>
+      <a class="detail-link" href="https://product.kyobobook.co.kr/detail/S000221331239" target="_blank" rel="noopener noreferrer">교보문고에서 보기 →</a>
+    </div>
+  </section>
+
+  <!-- closing -->
+  <section class="detail-closing" aria-label="마무리">
+    <div class="detail-wrap detail-closing__grid">
+      <p class="detail-closing__line">사라질 것을 알기에<br>오늘을 더 오래 바라보는 것</p>
+      <a class="detail-link" href="/books/">Books로 돌아가기</a>
+    </div>
+  </section>
+
+</main>
+<footer class="route-footer"><a href="/">말씀의 숲 <span>MALSUM FOREST</span></a><p>© 2026 MALSUM FOREST.</p></footer>
+</body>
+</html>
