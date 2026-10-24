@@ -57,6 +57,8 @@
 .series-page .sv2-cover--3{grid-column:7/13;z-index:3;margin-top:34%;transform:rotate(1.4deg)}
 .series-page .sv2-cover--3 img{filter:drop-shadow(0 26px 36px rgba(18,58,90,.18))}
 .series-page .sv2-cover:hover{z-index:4}
+.series-page .sv2-feature__covers--two .sv2-cover--1{grid-column:1/7;margin-top:0;transform:rotate(-1.2deg)}
+.series-page .sv2-feature__covers--two .sv2-cover--3{grid-column:6/13;margin-top:14%;transform:rotate(1.4deg)}
 
 /* ---------- pause image ---------- */
 .series-page .sv2-pause{margin:0;position:relative;height:clamp(260px,32vw,440px);overflow:hidden}
