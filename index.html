@@ -152,14 +152,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .explore__head{display:flex;justify-content:space-between;align-items:end;gap:42px}
 .explore__head .body{max-width:460px}
 .explore__rows{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #cdd7da;border-bottom:1px solid #cdd7da;margin-top:48px}
-.explore-row{display:flex;flex-direction:column;align-items:flex-start;min-height:260px;padding:24px 22px 22px;border-right:1px solid #cdd7da}
+.explore-row{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-height:210px;padding:24px 22px 24px;border-right:1px solid #cdd7da;transition:background .2s}.explore-row:hover{background:rgba(18,58,90,.04)}
 .explore-row:last-child{border-right:0}
 .explore-row .no{display:block;margin-bottom:34px;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--blue)}
 .explore-row h3{font-size:22px;line-height:1.35;min-height:60px;color:var(--navy);font-weight:600}
 .explore-row p{margin-top:14px;font:400 15px/1.65 var(--serif);color:var(--muted);flex:1}
 .explore-row .status{flex:0;margin-top:18px;font:700 12px/1.4 var(--sans);letter-spacing:.06em;color:var(--navy)}
-.explore-row a{margin-top:10px;min-height:44px;width:100%;display:flex;align-items:center;font-size:13px;font-weight:700;color:var(--navy)}
-.explore-row a:hover{color:var(--blue)}
+.explore-row .explore-link{color:inherit}.explore-row .explore-link::after{content:"";position:absolute;inset:0}.explore-row:hover .explore-link,.explore-row .explore-link:focus-visible{color:var(--blue)}
 .explore__index{margin-top:26px}
 .explore__index .cta{margin-top:0}
 
@@ -278,7 +277,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .explore-row .no{margin-bottom:10px}
   .explore-row p{margin-top:8px}
   .explore-row .status{margin-top:12px}
-  .explore-row a{margin-top:4px}
   .visual{min-height:560px}
   .visual .visual__field{grid-template-columns:1fr}
   .visual .visual__field img{display:none}
@@ -466,11 +464,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <p class="body">말씀의 숲이라는 하나의 세계 안에서, 독자가 서로 다른 방식으로 말씀과 삶을 탐색하는 다섯 개의 산책 경로를 제시합니다.</p>
     </div>
     <div class="explore__rows" aria-label="말씀의 숲 다섯 산책길">
-      <div class="explore-row"><span class="no">01</span><h3>말씀의 숲 주제호</h3><p>한 가지 질문을 성경과 오늘의 삶 속에서 오래 읽는 주제 중심의 산책길.</p><span class="status">출간됨</span><a href="/series/issues/">산책하기 →</a></div>
-      <div class="explore-row"><span class="no">02</span><h3>땅으로 읽는 성경</h3><p>땅과 장소를 따라 성경 장면과 삶의 세계를 입체적으로 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span><a href="/series/land-reading/">산책하기 →</a></div>
-      <div class="explore-row"><span class="no">03</span><h3>살아 있는 세계</h3><p>관찰과 과학, 생태와 경이를 따라 창조 세계를 천천히 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span><a href="/series/living-world/">산책하기 →</a></div>
-      <div class="explore-row"><span class="no">04</span><h3>숲의 한 문장</h3><p>한 문장을 오래 붙들며 말씀과 삶 사이의 여운을 따라 걷는 산책길.</p><span class="status">출간됨</span><a href="/series/forest-sentence/">산책하기 →</a></div>
-      <div class="explore-row"><span class="no">05</span><h3>이야기로 읽는 성경</h3><p>성경의 이야기와 인물, 장면의 흐름을 따라 말씀을 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span><a href="/series/story-bible/">산책하기 →</a></div>
+      <div class="explore-row"><span class="no">01</span><h3><a class="explore-link" href="/series/issues/">말씀의 숲 주제호</a></h3><p>한 가지 질문을 성경과 오늘의 삶 속에서 오래 읽는 주제 중심의 산책길.</p><span class="status">출간됨</span></div>
+      <div class="explore-row"><span class="no">02</span><h3><a class="explore-link" href="/series/land-reading/">땅으로 읽는 성경</a></h3><p>땅과 장소를 따라 성경 장면과 삶의 세계를 입체적으로 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span></div>
+      <div class="explore-row"><span class="no">03</span><h3><a class="explore-link" href="/series/living-world/">살아 있는 세계</a></h3><p>관찰과 과학, 생태와 경이를 따라 창조 세계를 천천히 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span></div>
+      <div class="explore-row"><span class="no">04</span><h3><a class="explore-link" href="/series/forest-sentence/">숲의 한 문장</a></h3><p>한 문장을 오래 붙들며 말씀과 삶 사이의 여운을 따라 걷는 산책길.</p><span class="status">출간됨</span></div>
+      <div class="explore-row"><span class="no">05</span><h3><a class="explore-link" href="/series/story-bible/">이야기로 읽는 성경</a></h3><p>성경의 이야기와 인물, 장면의 흐름을 따라 말씀을 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span></div>
     </div>
     <div class="explore__index">
       <a class="cta" href="/series/">Series 전체 보기 →</a>
