@@ -57,6 +57,7 @@
   .site-header__wrap{width:calc(100% - 40px);flex-wrap:wrap;gap:0}
   .site-wordmark{flex-direction:row;align-items:center;gap:8px;padding:10px 0}
   .wordmark__ma{width:26px;height:26px;flex-basis:26px}
-  .site-nav{margin-left:0;width:100%;display:grid;grid-template-columns:repeat(6,auto);justify-content:space-between;gap:0;font-size:14px;border-top:1px solid #e4e8e9}
+  .site-nav{margin-left:0;width:100%;display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;gap:0;font-size:14px;border-top:1px solid #e4e8e9}
   .site-nav a{padding:0 2px}
+  .site-nav a[href="/"]{display:none}
 }
