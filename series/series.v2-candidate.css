@@ -65,13 +65,14 @@
 /* ---------- 3. SECONDARY — 02~05 text bands ---------- */
 .series-page .sv2-walks{background:var(--v2-paper);padding:72px 0 84px}
 .series-page .sv2-walks .sv2-wrap{border-top:1px solid var(--v2-line)}
-.series-page .sv2-walk{display:grid;grid-template-columns:104px minmax(0,1fr) minmax(0,1.3fr) 110px;column-gap:28px;align-items:center;padding:40px 0;min-height:150px;border-bottom:1px solid var(--v2-line)}
+.series-page .sv2-walk{position:relative;transition:background .2s;display:grid;grid-template-columns:104px minmax(0,1fr) minmax(0,1.3fr) 110px;column-gap:28px;align-items:center;padding:40px 0;min-height:150px;border-bottom:1px solid var(--v2-line)}
 .series-page .sv2-walk__no{font-family:var(--latin);font-variant-numeric:lining-nums;font-weight:500;font-size:52px;line-height:1;letter-spacing:-.02em;color:var(--v2-blue)}
 .series-page .sv2-walk__name{font-family:var(--sans);font-size:clamp(26px,2.6vw,36px);line-height:1.15;letter-spacing:-.035em;font-weight:700;color:var(--v2-navy)}
 .series-page .sv2-walk__world{font-family:var(--serif);font-size:18px;line-height:1.6;color:var(--v2-muted)}
 .series-page .sv2-walk__status{justify-self:end;text-align:right;font-size:13px;letter-spacing:.04em;color:var(--v2-muted)}
 .series-page .sv2-walk__works{grid-column:3;grid-row:2;display:flex;flex-wrap:wrap;gap:4px 22px;margin:10px 0 0;padding:0;list-style:none}
-.series-page .sv2-walk__works .sv2-link{font-size:13px}
+.series-page .sv2-walk__works .sv2-link{font-size:13px;position:relative;z-index:2}
+.series-page .sv2-walk__link{color:inherit}.series-page .sv2-walk__link::after{content:"";position:absolute;inset:0}.series-page .sv2-walk:hover{background:rgba(18,58,90,.035)}.series-page .sv2-walk:hover .sv2-walk__link,.series-page .sv2-walk__link:focus-visible{color:var(--v2-blue)}
 
 /* ---------- 4. INDEX ---------- */
 .series-page .sv2-index{background:var(--v2-gray);padding:84px 0 92px}
