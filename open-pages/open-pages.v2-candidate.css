@@ -90,7 +90,7 @@
 .open-pages-page .op-row__link{display:flex;align-items:center;justify-content:flex-end;gap:6px;min-height:44px;text-align:right;font-size:13px;font-weight:700;color:var(--v2-navy);white-space:nowrap}
 .open-pages-page .op-row__link span,.open-pages-page .op-link span{font-size:16px;line-height:1;transition:transform .2s ease}
 .open-pages-page .op-row__link:hover span,.open-pages-page .op-link:hover span{transform:translate(3px,-3px)}
-.open-pages-page .op-row__a{color:inherit}.open-pages-page .op-row__a::after{content:"";position:absolute;inset:0}.open-pages-page .op-row:hover{background:rgba(18,58,90,.035)}.open-pages-page .op-row:hover .op-row__a,.open-pages-page .op-row__a:focus-visible{color:var(--v2-blue)}
+.open-pages-page .op-row__a{color:inherit}.open-pages-page .op-row__a::after{content:"";position:absolute;inset:0}.open-pages-page .op-row:hover{background:rgba(46,159,196,.11)}.open-pages-page .op-row:hover .op-row__a,.open-pages-page .op-row__a:focus-visible{color:var(--v2-blue)}
 
 /* ---------- 4b. book index (optional, text-only) ---------- */
 .open-pages-page .op-bookindex{margin-top:32px;padding-top:22px;border-top:1px solid var(--v2-rule);font-size:14px;line-height:2;color:var(--v2-muted)}

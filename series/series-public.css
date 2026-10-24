@@ -74,7 +74,7 @@
 .series-page .sv2-walk__status{justify-self:end;text-align:right;font-size:13px;letter-spacing:.04em;color:var(--v2-muted)}
 .series-page .sv2-walk__works{grid-column:3;grid-row:2;display:flex;flex-wrap:wrap;gap:4px 22px;margin:10px 0 0;padding:0;list-style:none}
 .series-page .sv2-walk__works .sv2-link{font-size:13px;position:relative;z-index:2}
-.series-page .sv2-walk__link{color:inherit}.series-page .sv2-walk__link::after{content:"";position:absolute;inset:0}.series-page .sv2-walk:hover{background:rgba(18,58,90,.035)}.series-page .sv2-walk:hover .sv2-walk__link,.series-page .sv2-walk__link:focus-visible{color:var(--v2-blue)}
+.series-page .sv2-walk__link{color:inherit}.series-page .sv2-walk__link::after{content:"";position:absolute;inset:0}.series-page .sv2-walk:hover{background:rgba(46,159,196,.11)}.series-page .sv2-walk:hover .sv2-walk__link,.series-page .sv2-walk__link:focus-visible{color:var(--v2-blue)}
 
 /* ---------- 4. INDEX ---------- */
 .series-page .sv2-index{background:var(--v2-gray);padding:84px 0 92px}
