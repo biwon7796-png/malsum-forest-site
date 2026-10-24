@@ -83,14 +83,14 @@
 .open-pages-page .op-index{padding:84px 0 92px;background:var(--v2-paper)}
 .open-pages-page .op-index__head{display:flex;justify-content:space-between;align-items:end;gap:42px}
 .open-pages-page .op-index__rows{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--v2-rule)}
-.open-pages-page .op-row{display:grid;grid-template-columns:120px minmax(0,1.3fr) minmax(0,1fr) 150px;column-gap:22px;align-items:center;min-height:88px;padding:14px 0;border-bottom:1px solid var(--v2-rule)}
+.open-pages-page .op-row{position:relative;transition:background .2s;display:grid;grid-template-columns:120px minmax(0,1.3fr) minmax(0,1fr);column-gap:22px;align-items:center;min-height:88px;padding:14px 0;border-bottom:1px solid var(--v2-rule)}
 .open-pages-page .op-row__no{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--v2-blue)}
 .open-pages-page .op-row__title{font-size:22px;line-height:1.35;font-weight:600;letter-spacing:-.02em;color:var(--v2-navy)}
 .open-pages-page .op-row__source{font-family:var(--serif);font-size:16px;line-height:1.55;color:var(--v2-muted)}
 .open-pages-page .op-row__link{display:flex;align-items:center;justify-content:flex-end;gap:6px;min-height:44px;text-align:right;font-size:13px;font-weight:700;color:var(--v2-navy);white-space:nowrap}
 .open-pages-page .op-row__link span,.open-pages-page .op-link span{font-size:16px;line-height:1;transition:transform .2s ease}
 .open-pages-page .op-row__link:hover span,.open-pages-page .op-link:hover span{transform:translate(3px,-3px)}
-.open-pages-page .op-row__link:hover{color:var(--v2-blue)}
+.open-pages-page .op-row__a{color:inherit}.open-pages-page .op-row__a::after{content:"";position:absolute;inset:0}.open-pages-page .op-row:hover{background:rgba(18,58,90,.035)}.open-pages-page .op-row:hover .op-row__a,.open-pages-page .op-row__a:focus-visible{color:var(--v2-blue)}
 
 /* ---------- 4b. book index (optional, text-only) ---------- */
 .open-pages-page .op-bookindex{margin-top:32px;padding-top:22px;border-top:1px solid var(--v2-rule);font-size:14px;line-height:2;color:var(--v2-muted)}
