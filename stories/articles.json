@@ -2,6 +2,19 @@
   "version": 1,
   "articles": [
     {
+      "slug": "giacometti-walking-man-psalm",
+      "category": "essay",
+      "title": "걸어가는 사람, 할라크의 사람",
+      "excerpt": "자코메티의 〈걸어가는 사람 I〉과 시편의 길을 함께 읽으며, 우리는 어디를 향해 걷고 있는지 묻습니다.",
+      "passage": "시편 1편 · 23편 · 26편",
+      "image": "/stories/giacometti-walking-man-psalm/tehran.jpg",
+      "imageAlt": "알베르토 자코메티, 〈걸어가는 사람 I〉(테헤란 현대미술관 전시)",
+      "date": "2026-10-25",
+      "body": "자코메티의 〈걸어가는 사람 I〉과 시편, 그리고 길 위의 인간",
+      "page": "/stories/giacometti-walking-man-psalm/",
+      "status": "published"
+    },
+    {
       "slug": "munch-scream-psalm-54",
       "category": "essay",
       "title": "절규는 어디를 향하는가",
