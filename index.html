@@ -250,7 +250,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .nav .wrap{flex-wrap:wrap;gap:0}
   .wordmark{flex-direction:row;align-items:center;gap:8px;padding:10px 0}
   .wordmark__ma{width:26px;height:26px;flex-basis:26px}
-  .navlinks{margin-left:0;width:100%;display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;gap:0;font-size:14px;border-top:1px solid #e4e8e9}
+  .navlinks{margin-left:0;width:100%;display:grid;grid-template-columns:repeat(6,auto);justify-content:space-between;gap:0;font-size:14px;border-top:1px solid #e4e8e9}
   .navlinks a{padding:0 2px}
   .navlinks a[href="/"]{display:none}
   [id]{scroll-margin-top:104px}
@@ -291,6 +291,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .about__quote-line{font-size:19px}
   .about__media{min-height:270px}.about__quote{left:20px;bottom:24px;font-size:22px}
 }
+.jb-home{padding:84px 0 92px;background:#f2ece0;border-top:1px solid #e6dcc8;border-bottom:1px solid #e6dcc8}
+.jb-home__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
+.jb-home__copy .body{margin-top:22px;max-width:460px}
+.jb-home .eyebrow{color:#9a7230;margin-bottom:14px}
+.jb-home__btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;margin-top:30px;padding:0 26px;background:var(--navy);color:#fff;font-size:15px;font-weight:700;border:1px solid var(--navy)}
+.jb-home__btn:hover{background:#0d2c45}
+.jb-home__shot img{width:100%;height:auto;border:1px solid #d9ccb2;border-radius:6px;box-shadow:0 20px 50px -24px rgba(18,58,90,.35)}
+@media(max-width:900px){.jb-home{padding:60px 0 64px}.jb-home__grid{grid-template-columns:1fr;gap:34px}}
+@media(max-width:560px){.jb-home__btn{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.visual .visual__field,.visual__copy,.story__arrow{transition:none}}
 </style>
 </head>
@@ -305,6 +314,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <a href="/stories/">이야기</a>
       <a href="/books/">책</a>
       <a href="/series/">시리즈</a>
+      <a href="/judebible/">주드성경</a>
       <a href="#about">소개</a>
     </nav>
   </div>
@@ -477,6 +487,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </section>
 
+<!-- 4b. JUDEBIBLE — research tool linked from Malsum Forest -->
+<section class="jb-home" id="judebible" aria-labelledby="jb-home-title">
+  <div class="wrap jb-home__grid">
+    <div class="jb-home__copy">
+      <p class="eyebrow">주드성경 · JudeBible</p>
+      <h2 class="section-title" id="jb-home-title">말씀을 읽는 데서,<br>깊이 이해하는 데까지</h2>
+      <p class="body">말씀의 숲에서 읽고 묵상한 본문을, 원문과 지도, 연표와 함께 더 깊이 살펴볼 수 있는 성경 연구 도구입니다.</p>
+      <a class="jb-home__btn" href="/judebible/">주드성경 알아보기<span aria-hidden="true">→</span></a>
+    </div>
+    <a class="jb-home__shot" href="/judebible/" tabindex="-1" aria-hidden="true"><img src="/judebible/app-study.jpg" width="1800" height="1133" loading="lazy" alt=""></a>
+  </div>
+</section>
+
 <!-- 5. VISUAL MEDITATION — EDITORIAL_PAUSE (not a product list or series index) -->
 <section class="visual" id="visual-meditation" aria-labelledby="visual-title">
   <div class="visual__field" aria-hidden="true">
@@ -514,7 +537,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 <footer class="footer">
   <div class="wrap">
     <div><b>말씀의 숲</b><p>MALSUM FOREST · © 2026</p></div>
-    <nav aria-label="하단 메뉴"><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="#about">소개</a></nav>
+    <nav aria-label="하단 메뉴"><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/judebible/">주드성경</a><a href="#about">소개</a></nav>
   </div>
 </footer>
 <script>
