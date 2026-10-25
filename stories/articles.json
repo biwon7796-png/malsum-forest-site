@@ -2,6 +2,19 @@
   "version": 1,
   "articles": [
     {
+      "slug": "bible-overview-one-story",
+      "category": "art",
+      "title": "성경은 어떤 책인가? 엠마오의 길에서 읽는 성경개관 제1과",
+      "excerpt": "부활하신 예수님이 엠마오 길에서 성경을 풀어 주신 장면을 따라, 흩어진 이야기처럼 보이는 성경을 하나님의 구원 역사로 읽는 법을 명화와 함께 배웁니다.",
+      "passage": "누가복음 24:13–35",
+      "image": "/stories/bible-overview-one-story/caravaggio.jpg",
+      "imageAlt": "카라바조, 〈엠마오의 저녁 식사〉, 1601",
+      "date": "2026-10-26",
+      "body": "성경개관 제1과: 엠마오의 길에서 읽는 성경",
+      "page": "/stories/bible-overview-one-story/",
+      "status": "published"
+    },
+    {
       "slug": "giacometti-walking-man-psalm",
       "category": "essay",
       "title": "걸어가는 사람, 할라크의 사람",
