@@ -61,9 +61,11 @@ body.jb-page{margin:0;background:#f7f7f4;color:#2f3438;font:16px/1.8 Arial,"Noto
 
 /* screenshots */
 .jb-shots{margin-top:44px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 36px;align-items:start}
+.jb-shots{grid-template-columns:repeat(2,minmax(0,1fr))}
 .jb-shots__wide{grid-column:1 / -1}
+.jb-credit{margin-top:26px;font-size:13px;color:#66717a;text-align:center}
 .jb-shots img{border:1px solid #d9ccb2;border-radius:6px;box-shadow:0 18px 44px -22px rgba(18,58,90,.3);background:#fff}
-.jb-shots__phone{max-width:300px;justify-self:center}
+.jb-shots__phone{grid-column:1 / -1;max-width:300px;justify-self:center}
 
 /* who */
 .jb-who{margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid #cdd7da;border-bottom:1px solid #cdd7da}
