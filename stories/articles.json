@@ -2,6 +2,19 @@
   "version": 1,
   "articles": [
     {
+      "slug": "eichmann-banality-of-evil",
+      "category": "essay",
+      "title": "예루살렘의 아이히만: 악의 평범성이 우리에게 던지는 질문",
+      "excerpt": "아렌트의 『예루살렘의 아이히만』과 ‘악의 평범성’을 신앙의 눈으로 읽으며, 생각하지 않음과 성찰하는 삶에 대해 묻습니다.",
+      "passage": "악의 평범성",
+      "image": "/stories/eichmann-banality-of-evil/trial-1.jpg",
+      "imageAlt": "1961년 예루살렘 아이히만 재판의 증언 장면",
+      "date": "2026-10-27",
+      "body": "한나 아렌트의 『예루살렘의 아이히만』과 악의 평범성, 그리고 성찰하는 신앙",
+      "page": "/stories/eichmann-banality-of-evil/",
+      "status": "published"
+    },
+    {
       "slug": "bible-overview-one-story",
       "category": "art",
       "title": "성경은 어떤 책인가?",
