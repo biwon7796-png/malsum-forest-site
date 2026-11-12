@@ -91,7 +91,12 @@
     add(play, disc, meta);
     play.setAttribute("aria-label", M.playLabel + " — 영상 재생하기 (YouTube에서 불러옴)");
     play.addEventListener("click", function () {
+      // 파일로 직접 열었을 때(file://)는 YouTube가 출처 정보 없는 임베드를 거부해 검은 화면만 나온다 → 공식 영상 페이지를 새 탭으로 연다
+      if (location.protocol === "file:") { window.open("https://www.youtube.com/watch?v=" + encodeURIComponent(M.videoId), "_blank", "noopener"); return; }
       var f = document.createElement("iframe");
+      f.referrerPolicy = "strict-origin-when-cross-origin"; // YouTube는 출처(Referer) 없는 임베드를 막는다
+      var helpNote = el("p", "note", "영상이 멈춰 있으면 화면의 재생 단추를 한 번 더 눌러 주세요.");
+      pl.parentNode.insertBefore(helpNote, pl.nextSibling);
       f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(M.videoId) + "?autoplay=1&rel=0&playsinline=1";
       f.title = M.embedTitle;
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
