@@ -25,7 +25,7 @@
     function node(id) { return document.getElementById(id); }
 
     function layout() { // 이어 읽기 안내 줄이 있으면 그 아래부터 쪽을 시작한다
-      var top = 44;
+      var top = 44 + (parseFloat(getComputedStyle(root).getPropertyValue("--site-h")) || 0); // 사이트 공통 메뉴 + 진행 막대
       if (box && !box.hidden) { var r = box.getBoundingClientRect(); if (r.bottom > top) top = Math.ceil(r.bottom); }
       root.style.setProperty("--sp-top", top + "px");
     }

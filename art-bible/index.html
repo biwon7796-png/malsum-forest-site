@@ -8,13 +8,29 @@
 <meta name="description" content="그림 한 점, 음악 한 곡, 말씀 한 자락 — 예술과 말씀을 함께 감상하는 나만의 웹북.">
 <link rel="canonical" href="https://www.malsumforest.com/art-bible/">
 <!-- 캐시 갱신: 아래 CSS·JS 주소의 ?v= 값을 한 번에 같은 값으로 올리면 휴대전화도 새 파일을 받습니다(README 참고). -->
-<link rel="stylesheet" href="css/book.css?v=20261112g">
-<link rel="stylesheet" href="css/library.css?v=20261112g">
-<link rel="stylesheet" href="css/spread.css?v=20261112g">
-<link rel="stylesheet" href="css/print.css?v=20261112g" media="print">
+<link rel="stylesheet" href="/css/site-header.v2-candidate.css">
+<link rel="stylesheet" href="css/book.css?v=20261112h">
+<link rel="stylesheet" href="css/library.css?v=20261112h">
+<link rel="stylesheet" href="css/spread.css?v=20261112h">
+<link rel="stylesheet" href="css/print.css?v=20261112h" media="print">
+<style>
+/* 사이트 공통 메뉴(위)와 앱의 진행 막대(아래)가 겹치지 않도록: 막대를 메뉴 높이만큼 내린다. --site-h 는 아래 스크립트가 실제 메뉴 높이로 갱신한다. */
+:root{--site-h:76px}
+.bar{top:var(--bar-top,var(--site-h))}
+html{scroll-padding-top:calc(var(--site-h) + 44px)}
+/* 좁은 휴대전화에서는 메뉴가 두 줄(약 140px)이라 읽는 화면을 가리지 않도록 메뉴를 고정하지 않는다. 스크롤하면 진행 막대가 맨 위로 올라온다. */
+@media (max-width:560px){.site-header{position:static}html{scroll-padding-top:44px}}
+</style>
 </head>
 <body>
 <a class="skip" href="#s1">본문으로 건너뛰기</a>
+
+<header class="site-header" id="site-top">
+  <div class="site-header__wrap">
+    <a class="site-wordmark" href="/#page-top" aria-label="말씀의 숲 홈"><img class="wordmark__ma" src="/favicon-48x48.png" alt="" width="48" height="48" aria-hidden="true"><b>말씀의 숲</b></a>
+    <nav class="site-nav" aria-label="주요 메뉴"><a href="/">홈</a><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/art-bible/" aria-current="page">예술성경</a><a href="/judebible/">주드성경</a><a href="/#about">소개</a></nav>
+  </div>
+</header>
 
 <header class="bar" id="bar" aria-label="진행 상황">
   <a class="bar-series" id="barHome">내 손안의 예술성경</a>
@@ -34,13 +50,20 @@
   </div>
 </div>
 
-<script src="content/library.js?v=20261112g"></script>
-<script src="content/note-common.js?v=20261112g"></script>
-<script src="js/main.js?v=20261112g"></script>
-<script src="js/app.js?v=20261112g"></script>
-<script src="js/notes.js?v=20261112g"></script>
-<script src="js/library.js?v=20261112g"></script>
-<script src="js/spread.js?v=20261112g"></script>
+<script>
+/* 사이트 공통 메뉴의 실제 높이를 --site-h 로, 진행 막대의 위치를 --bar-top 으로 알린다(화면 폭에 따라 달라짐). 앱 코드(js/spread.js)가 --site-h 를 읽는다. */
+(function(){var h=document.querySelector('.site-header'),r=document.documentElement;if(!h)return;
+function s(){var H=h.offsetHeight;r.style.setProperty('--site-h',H+'px');
+  r.style.setProperty('--bar-top',(getComputedStyle(h).position==='sticky'?H:Math.max(0,H-(window.pageYOffset||0)))+'px')}
+s();addEventListener('resize',s);addEventListener('load',s);addEventListener('scroll',s,{passive:true});if(window.ResizeObserver)new ResizeObserver(s).observe(h)})();
+</script>
+<script src="content/library.js?v=20261112h"></script>
+<script src="content/note-common.js?v=20261112h"></script>
+<script src="js/main.js?v=20261112h"></script>
+<script src="js/app.js?v=20261112h"></script>
+<script src="js/notes.js?v=20261112h"></script>
+<script src="js/library.js?v=20261112h"></script>
+<script src="js/spread.js?v=20261112h"></script>
 <script>ArtBook.start()</script>
 </body>
 </html>
