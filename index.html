@@ -298,6 +298,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .jb-home__btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;margin-top:30px;padding:0 26px;background:var(--navy);color:#fff;font-size:15px;font-weight:700;border:1px solid var(--navy)}
 .jb-home__btn:hover{background:#0d2c45}
 .jb-home__shot img{width:100%;height:auto;border:1px solid #d9ccb2;border-radius:6px;box-shadow:0 20px 50px -24px rgba(18,58,90,.35)}
+.art-bible-home{padding:84px 0 92px;background:#fbf8f1;border-top:1px solid #e6dcc8}
+.art-bible-home .eyebrow{color:#8b6331;margin-bottom:14px}
+.art-bible-home__cover{display:flex;justify-content:center}
+.art-bible-home__cover img{display:block;width:min(100%,440px);max-height:560px;object-fit:cover;object-position:center;border:1px solid #d9ccb2;border-radius:6px;box-shadow:0 24px 58px -26px rgba(59,43,23,.4)}
+@media(max-width:900px){.art-bible-home{padding:60px 0 64px}}
 @media(max-width:900px){.jb-home{padding:60px 0 64px}.jb-home__grid{grid-template-columns:1fr;gap:34px}}
 @media(max-width:560px){.jb-home__btn{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.visual .visual__field,.visual__copy,.story__arrow{transition:none}}
@@ -314,6 +319,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <a href="/stories/">이야기</a>
       <a href="/books/">책</a>
       <a href="/series/">시리즈</a>
+      <a href="/art-bible/">예술성경</a>
       <a href="/judebible/">주드성경</a>
       <a href="#about">소개</a>
     </nav>
@@ -487,6 +493,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </section>
 
+<!-- 4b. ART BIBLE — a visual webbook corner inside Malsum Forest -->
+<section class="art-bible-home" id="art-bible" aria-labelledby="art-bible-title">
+  <div class="wrap jb-home__grid">
+    <div class="jb-home__copy">
+      <p class="eyebrow">내 손안의 예술성경 · ART BIBLE</p>
+      <h2 class="section-title" id="art-bible-title">그림 한 점,<br>음악 한 곡,<br>말씀 한 자락</h2>
+      <p class="body">그림과 음악을 천천히 바라보고 들으며 성경 본문에 머무는 작은 웹북입니다. 네 편의 예술성경과 영화 《어바웃 타임》을 잇는 특별판을 한 서재에서 만날 수 있습니다.</p>
+      <a class="jb-home__btn" href="/art-bible/">예술성경 펼치기<span aria-hidden="true">→</span></a>
+    </div>
+    <a class="art-bible-home__cover" href="/art-bible/" tabindex="-1" aria-hidden="true"><img src="/art-bible/assets/default-cover-1080.jpg" loading="lazy" alt=""></a>
+  </div>
+</section>
+
 <!-- 4b. JUDEBIBLE — research tool linked from Malsum Forest -->
 <section class="jb-home" id="judebible" aria-labelledby="jb-home-title">
   <div class="wrap jb-home__grid">
@@ -537,7 +556,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 <footer class="footer">
   <div class="wrap">
     <div><b>말씀의 숲</b><p>MALSUM FOREST · © 2026</p></div>
-    <nav aria-label="하단 메뉴"><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/judebible/">주드성경</a><a href="#about">소개</a></nav>
+    <nav aria-label="하단 메뉴"><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/art-bible/">예술성경</a><a href="/judebible/">주드성경</a><a href="#about">소개</a></nav>
   </div>
 </footer>
 <script>
