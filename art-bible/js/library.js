@@ -51,6 +51,8 @@
     put("성경", 3, [].concat(arr(m.bible.ranges), arr(m.bible.books), arr(m.bible.bookAliases)));
     put("화가", 3, [m.art.artist].concat(arr(m.art.artistAliases)));
     put("작곡가", 3, [m.music.composer].concat(arr(m.music.composerAliases)));
+    if (m.literature) put("문학", 3, [m.literature.author, m.literature.title].concat(arr(m.literature.aliases)));
+    if (m.film) put("영화", 3, [m.film.director, m.film.title].concat(arr(m.film.aliases)));
     put("태그", 2, m.tags);
     put("관련 본문", 1, m.bible.related);
     put("소개", 1, m.summary);

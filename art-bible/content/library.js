@@ -7,6 +7,7 @@ window.ArtBookManifest = {
     "the-sower",
     "good-samaritan",
     "return-of-prodigal-son",
-    "about-time" // ART-BIBLE-005 · 특별판
+    "about-time", // ART-BIBLE-005
+    "the-lord-is-my-shepherd" // ART-BIBLE-006
   ]
 };

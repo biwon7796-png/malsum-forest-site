@@ -83,14 +83,17 @@
     var M = B.listen, o = section("s3", "paper2", 3, sc[2].name);
     add(o.inner, el("p", "work", M.work), el("p", "de", M.titleDe), el("p", "ko", M.titleKo));
     M.items.forEach(function (it) { o.inner.appendChild(item(it)); });
-    var pl = el("div", "player"), play = el("button", "play"); play.type = "button";
+    var pl = el("div", "player"), embedded = !!M.videoId;
+    var play = el(embedded ? "button" : "a", "play" + (embedded ? "" : " ext"));
+    if (embedded) play.type = "button";
+    else { play.href = M.externalPlayUrl || (M.links[0] && M.links[0].url) || "#"; play.target = "_blank"; play.rel = "noopener noreferrer"; }
     var disc = el("span", "disc"); disc.appendChild(el("span", "tri"));
     var meta = el("span", "pmeta");
     add(meta, el("span", "t", M.playLabel), el("small", null, M.channel + " · " + M.duration),
-      el("small", "src", "누르면 YouTube 공식 영상을 불러옵니다"));
+      el("small", "src", embedded ? "누르면 YouTube 공식 영상을 불러옵니다" : "공식 감상 페이지를 새 창으로 엽니다"));
     add(play, disc, meta);
-    play.setAttribute("aria-label", M.playLabel + " — 영상 재생하기 (YouTube에서 불러옴)");
-    play.addEventListener("click", function () {
+    play.setAttribute("aria-label", M.playLabel + (embedded ? " — 영상 재생하기 (YouTube에서 불러옴)" : " — 공식 감상 페이지에서 열기"));
+    if (embedded) play.addEventListener("click", function () {
       // 파일로 직접 열었을 때(file://)는 YouTube가 출처 정보 없는 임베드를 거부해 검은 화면만 나온다 → 공식 영상 페이지를 새 탭으로 연다
       if (location.protocol === "file:") { window.open("https://www.youtube.com/watch?v=" + encodeURIComponent(M.videoId), "_blank", "noopener"); return; }
       var f = document.createElement("iframe");
