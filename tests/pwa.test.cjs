@@ -69,9 +69,20 @@ test('online-first navigation caches HTML and reopens the visited page offline',
   app.setOnline(false);
   assert.equal((await app.navigate('/stories/')).body, 'live:/stories/');
 });
-test('unknown offline route shows the connection-help page', async () => {
+test('unknown offline route returns the cached app home, not a dead end', async () => {
   const app = harness(); await app.lifecycle('install'); app.setOnline(false);
-  assert.equal((await app.navigate('/unknown/')).body, 'shell:/offline.html');
+  assert.equal((await app.navigate('/unknown/')).body, 'shell:/');
+});
+test('installed app starts offline from /index.html and query-based launch URLs', async () => {
+  const app = harness(); await app.lifecycle('install'); app.setOnline(false);
+  assert.equal((await app.navigate('/index.html')).body, 'shell:/');
+  assert.equal((await app.navigate('/?source=homescreen')).body, 'shell:/');
+});
+test('home fallback does not override a cached visited article', async () => {
+  const app = harness(); await app.lifecycle('install');
+  assert.equal((await app.navigate('/stories/read-1')).body, 'live:/stories/read-1');
+  app.setOnline(false);
+  assert.equal((await app.navigate('/stories/read-1')).body, 'live:/stories/read-1');
 });
 test('offline home uses the pre-cached home document', async () => {
   const app = harness(); await app.lifecycle('install'); app.setOnline(false);
@@ -86,7 +97,7 @@ test('does not intercept foreign origins, non-GET requests or resource loads', a
 test('limits saved visited pages to twenty', async () => {
   const app = harness(); await app.lifecycle('install');
   for (let i = 0; i < 23; i++) await app.navigate('/stories/test-' + i);
-  const saved = app.stores.get('malsum-reading-v1-20261116-pages');
+  const saved = app.stores.get('malsum-reading-v2-20261116-pages');
   assert.equal(saved.size, 20);
   assert.ok(!saved.has('https://www.malsumforest.com/stories/test-0'));
   assert.ok(saved.has('https://www.malsumforest.com/stories/test-22'));
