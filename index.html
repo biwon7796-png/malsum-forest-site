@@ -322,6 +322,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .install-action{min-height:44px;padding:10px 18px;border:0;border-radius:9px;background:var(--navy);color:#fff;font-size:15px;font-weight:700;cursor:pointer}
 .install-action[hidden]{display:none}
 @media(max-width:560px){.install-card{padding:25px 20px}}
+
+/* Mobile hero readability: preserve the photographic background while lifting text contrast. */
+.install-entry{padding:10px 16px;border:1px solid rgba(18,58,90,.27);border-radius:10px;background:rgba(255,255,255,.9);box-shadow:0 2px 9px rgba(18,58,90,.07)}
+.install-entry:hover{background:#fff;border-color:rgba(18,58,90,.5)}
+@media(max-width:900px){
+  .hero__image:after{background:linear-gradient(180deg,rgba(247,247,244,.96) 0%,rgba(247,247,244,.87) 52%,rgba(247,247,244,.68) 80%,rgba(247,247,244,.24) 100%)}
+  .hero__copy{margin:26px 0 34px;padding:40px 20px 38px;border-radius:16px;background:rgba(247,247,244,.76);box-shadow:0 8px 32px rgba(18,58,90,.055)}
+}
+@media(max-width:560px){
+  .hero__copy{margin:18px 0 24px;padding:30px 16px 32px;background:rgba(247,247,244,.78)}
+  .install-entry{margin-top:20px}
+}
 </style>
 </head>
 <body>
