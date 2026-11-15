@@ -28,6 +28,6 @@ jobs:
           node --check js/pwa-register.js
       - name: Validate manifest
         run: |
-          node -e "const m=require('./site.webmanifest'); if(m.display!=='standalone'||!m.name||!m.icons?.length) process.exit(1)"
+          node -e "const m=JSON.parse(require('node:fs').readFileSync('./site.webmanifest','utf8')); if(m.display!=='standalone'||!m.name||!m.icons?.length) process.exit(1)"
       - name: Run navigation and offline cache tests
         run: node --test tests/pwa.test.cjs
