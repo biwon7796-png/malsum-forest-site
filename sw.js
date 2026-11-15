@@ -39,7 +39,9 @@ self.addEventListener('fetch', event => {
     try {
       const response = await fetch(request);
       // Preserve online freshness, and do not block navigation on disk writes.
-      event.waitUntil(saveVisitedPage(request, response.clone()));
+      await saveVisitedPage(request, response.clone()).catch(error => {
+        console.warn('Offline page save skipped:', error);
+      });
       return response;
     } catch (_) {
       const pages = await caches.open(PAGES);
