@@ -1,5 +1,5 @@
 /* ART-BIBLE-009 · 광야에서 나를 보시는 분 — 페르디난트 볼 · 가스펠 《His Eye Is on the Sparrow》 · 창세기 16:7–13
-   승인된 상세 편집 기획 v0.2에 따라 제작한 Captain 공개 승인 대기 후보본. */
+   승인된 상세 편집 기획 v0.2에 따라 제작하고 Captain이 2026-11-16 공개를 승인한 기본편. */
 ArtBook.register({
   id: "hagar-el-roi",
 
@@ -15,7 +15,7 @@ ArtBook.register({
   },
   series: "내 손안의 예술성경",
   seriesSub: "그림 한 점, 음악 한 곡, 말씀 한 자락",
-  status: "완성 후보 · Captain 공개 승인 대기",
+  status: "기본편 · Captain 공개 승인본",
   title: "광야에서 나를 보시는 분",
   passage: "창세기 16:7–13",
   themes: "발견 · 들으심 · 보심",
@@ -144,7 +144,7 @@ ArtBook.register({
 
   sources: {
     title: "작품과 자료 출처", checkedOn: "2026-11-16",
-    releaseStatus: "HOLD · Captain 개별 공개 승인 대기 · 외부 자료 권리 및 공식 임베드 검증 완료",
+    releaseStatus: "READY · Captain 공개 승인(2026-11-16) · 외부 자료 권리 및 공식 임베드 검증 완료",
     groups: [
       { label: "미술작품", lines: [
           "페르디난트 볼, 《Hagar and the Angel at the Well on the Way to Shur》, 약 1640년, 종이에 펜과 갈색 잉크 및 갈색 담채, 18.2 × 23.3 cm. 암스테르담 국립미술관 RP-T-1930-27.",
@@ -196,7 +196,7 @@ ArtBook.register({
       commentary: {
         id: "text-9", authorship: "프로젝트 자체 집필", externalTextCopied: false, url: null,
         license: "프로젝트 자체 원고; 외부 이용 허락 없음", rightsHolder: "필자(프로젝트 내부 원고)", rightsBasisUrl: null, useForm: "original commentary", pdfInclude: false, pdfReason: "현재 PDF는 작품 해설을 복제하지 않음",
-        status: "CANDIDATE_READY_FOR_CAPTAIN_REVIEW", open: ["Captain 개별 공개 승인"], checkedOn: "2026-11-16"
+        status: "APPROVED_FOR_RELEASE", open: [], checkedOn: "2026-11-16", approvedBy: "Captain", approvedOn: "2026-11-16"
       }
     }
   }
