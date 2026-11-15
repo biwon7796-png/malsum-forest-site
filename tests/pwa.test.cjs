@@ -1,0 +1,93 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const vm = require('node:vm');
+const fs = require('node:fs');
+
+function harness() {
+  const handlers = new Map();
+  const stores = new Map();
+  let online = true;
+  let claimed = false;
+  const home = 'https://www.malsumforest.com';
+  class MockResponse {
+    constructor(body, type = 'text/html', control = '') {
+      this.body = body; this.ok = true; this.type = 'basic';
+      this.headers = { get: key => key === 'content-type' ? type : key === 'cache-control' ? control : '' };
+    }
+    clone() { return new MockResponse(this.body, this.headers.get('content-type'), this.headers.get('cache-control')); }
+  }
+  function keyOf(req) { return typeof req === 'string' ? new URL(req, home).href : req.url; }
+  const caches = {
+    async open(name) {
+      if (!stores.has(name)) stores.set(name, new Map());
+      const data = stores.get(name);
+      return {
+        async addAll(urls) { for (const url of urls) data.set(keyOf(url), new MockResponse('shell:' + url)); },
+        async put(request, response) { data.set(keyOf(request), response); },
+        async match(request) { return data.get(keyOf(request)); },
+        async keys() { return [...data.keys()].map(url => ({ url })); },
+        async delete(request) { return data.delete(keyOf(request)); }
+      };
+    },
+    async match(request) {
+      for (const data of stores.values()) if (data.has(keyOf(request))) return data.get(keyOf(request));
+    },
+    async keys() { return [...stores.keys()]; },
+    async delete(name) { return stores.delete(name); }
+  };
+  const context = {
+    URL, caches, console,
+    self: { location: { origin: home }, clients: { claim: async () => { claimed = true; } },
+      addEventListener: (type, callback) => handlers.set(type, callback) },
+    fetch: async request => {
+      if (!online) throw new Error('offline');
+      return new MockResponse('live:' + new URL(request.url).pathname);
+    },
+    Response: { error: () => ({ error: true }) }
+  };
+  vm.runInNewContext(fs.readFileSync('sw.js', 'utf8'), context, { filename: 'sw.js' });
+  async function lifecycle(type) {
+    let job; handlers.get(type)({ waitUntil: p => { job = p; } }); await job;
+  }
+  async function navigate(path, origin = home, mode = 'navigate', method = 'GET') {
+    const request = { url: origin + path, method, mode };
+    let promise;
+    handlers.get('fetch')({ request, respondWith: p => { promise = p; } });
+    return promise ? promise : null;
+  }
+  return { lifecycle, navigate, setOnline: value => { online = value; }, caches, stores, getClaimed: () => claimed };
+}
+
+test('install and activate preserve shell, claim clients', async () => {
+  const app = harness(); await app.lifecycle('install'); await app.lifecycle('activate');
+  assert.ok(await app.caches.match('/offline.html'));
+  assert.ok(app.getClaimed());
+});
+test('online-first navigation caches HTML and reopens the visited page offline', async () => {
+  const app = harness(); await app.lifecycle('install');
+  assert.equal((await app.navigate('/stories/')).body, 'live:/stories/');
+  app.setOnline(false);
+  assert.equal((await app.navigate('/stories/')).body, 'live:/stories/');
+});
+test('unknown offline route shows the connection-help page', async () => {
+  const app = harness(); await app.lifecycle('install'); app.setOnline(false);
+  assert.equal((await app.navigate('/unknown/')).body, 'shell:/offline.html');
+});
+test('offline home uses the pre-cached home document', async () => {
+  const app = harness(); await app.lifecycle('install'); app.setOnline(false);
+  assert.equal((await app.navigate('/')).body, 'shell:/');
+});
+test('does not intercept foreign origins, non-GET requests or resource loads', async () => {
+  const app = harness();
+  assert.equal(await app.navigate('/x', 'https://elsewhere.test'), null);
+  assert.equal(await app.navigate('/x', 'https://www.malsumforest.com', 'cors'), null);
+  assert.equal(await app.navigate('/x', 'https://www.malsumforest.com', 'navigate', 'POST'), null);
+});
+test('limits saved visited pages to twenty', async () => {
+  const app = harness(); await app.lifecycle('install');
+  for (let i = 0; i < 23; i++) await app.navigate('/stories/test-' + i);
+  const saved = app.stores.get('malsum-reading-v1-20261116-pages');
+  assert.equal(saved.size, 20);
+  assert.ok(!saved.has('https://www.malsumforest.com/stories/test-0'));
+  assert.ok(saved.has('https://www.malsumforest.com/stories/test-22'));
+});
