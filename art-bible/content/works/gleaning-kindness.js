@@ -1,5 +1,5 @@
 /* ART-BIBLE-010 · 남겨진 이삭을 줍는 마음 — 장프랑수아 밀레 · 스팅 《Fields of Gold》 · 룻기 2장
-   승인된 상세 편집 기획 v0.2에 따라 제작한 Captain 검수 전 완성 후보. */
+   승인된 상세 편집 기획 v0.2에 따라 제작하고 Captain이 2026-11-16 공개를 승인한 기본편. */
 ArtBook.register({
   id: "gleaning-kindness",
 
@@ -15,7 +15,7 @@ ArtBook.register({
   },
   series: "내 손안의 예술성경",
   seriesSub: "그림 한 점, 음악 한 곡, 말씀 한 자락",
-  status: "완성 후보 · Captain 공개 승인 대기",
+  status: "기본편 · Captain 공개 승인본",
   title: "남겨진 이삭을 줍는 마음",
   passage: "룻기 2장",
   themes: "노동 · 배려 · 보호",
@@ -162,7 +162,7 @@ ArtBook.register({
 
   sources: {
     title: "작품과 자료 출처", checkedOn: "2026-11-16",
-    releaseStatus: "HOLD · Captain 개별 공개 승인 대기 · 외부 자료 권리 및 공식 임베드 검증 완료",
+    releaseStatus: "READY · Captain 공개 승인(2026-11-16) · 외부 자료 권리 및 공식 임베드 검증 완료",
     groups: [
       { label: "미술작품", lines: [
           "장프랑수아 밀레, 《Des glaneuses》, 1857년, 캔버스에 유채, 83.5 × 110 cm. 오르세 미술관 RF 592.",
@@ -214,7 +214,7 @@ ArtBook.register({
       commentary: {
         id: "text-10", authorship: "프로젝트 자체 집필", externalTextCopied: false, url: null,
         license: "프로젝트 자체 원고; 외부 이용 허락 없음", rightsHolder: "필자(프로젝트 내부 원고)", rightsBasisUrl: null, useForm: "original commentary", pdfInclude: false, pdfReason: "현재 PDF는 작품 해설을 복제하지 않음",
-        status: "CANDIDATE_READY_FOR_CAPTAIN_REVIEW", open: ["Captain 개별 공개 승인"], checkedOn: "2026-11-16"
+        status: "APPROVED_FOR_RELEASE", open: [], checkedOn: "2026-11-16", approvedBy: "Captain", approvedOn: "2026-11-16"
       }
     }
   }
