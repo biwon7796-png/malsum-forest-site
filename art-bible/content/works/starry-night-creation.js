@@ -1,5 +1,5 @@
 /* ART-BIBLE-007 · 별빛 아래 세상이 시작되다 — 반 고흐 · 하이든 《천지창조》 · 창세기 1:1–5
-   승인된 상세 편집 기획 v0.2에 따른 Captain 검토 후보. 공개 배포 전까지 candidate 상태를 유지한다. */
+   승인된 상세 편집 기획 v0.2에 따라 제작하고 Captain이 2026-11-15 공개를 승인한 기본편. */
 ArtBook.register({
   id: "starry-night-creation",
 
@@ -19,7 +19,7 @@ ArtBook.register({
   },
   series: "내 손안의 예술성경",
   seriesSub: "그림 한 점, 음악 한 곡, 말씀 한 자락",
-  status: "완성 후보 · Captain 최종 승인 전 공개 금지",
+  status: "기본편 · Captain 공개 승인본",
   title: "별빛 아래 세상이 시작되다",
   passage: "창세기 1:1–5",
   themes: "창조 · 빛 · 경이",
@@ -153,7 +153,7 @@ ArtBook.register({
   sources: {
     title: "작품과 자료 출처",
     checkedOn: "2026-11-15",
-    releaseStatus: "HOLD · 완성 후보와 권리 검증 완료 · Captain 개별 최종 승인 전 공개 배포 금지",
+    releaseStatus: "READY · Captain 공개 승인(2026-11-15) · 외부 자료 권리 및 공식 임베드 확인",
     groups: [
       { label: "미술작품", lines: [
           "빈센트 반 고흐, 《The Starry Night》, 1889년 6월, 캔버스에 유채, 73.7 × 92.1 cm. 뉴욕 현대미술관(MoMA) 작품번호 472.1941.",
@@ -214,7 +214,7 @@ ArtBook.register({
         id: "text-7", authorship: "프로젝트 자체 집필", externalTextCopied: false, url: null,
         license: "프로젝트 자체 원고; 외부 이용 허락 없음", rightsHolder: "필자(프로젝트 내부 원고)", rightsBasisUrl: null,
         useForm: "original commentary", pdfInclude: false, pdfReason: "현재 PDF는 작품 해설을 복제하지 않음",
-        status: "CANDIDATE_AWAITING_CAPTAIN_APPROVAL", open: ["Captain 개별 최종 승인 필요"], checkedOn: "2026-11-15", approvedBy: null, approvedOn: null
+        status: "APPROVED_FOR_RELEASE", open: [], checkedOn: "2026-11-15", approvedBy: "Captain", approvedOn: "2026-11-15"
       }
     }
   }
