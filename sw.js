@@ -2,7 +2,7 @@
  * Online-first for fresh editorial content; offline copies for previously visited public pages.
  * This worker intentionally never caches third-party URLs or API requests.
  */
-const VERSION = 'malsum-reading-v1-20261116';
+const VERSION = 'malsum-reading-v2-20261116';
 const SHELL = VERSION + '-shell';
 const PAGES = VERSION + '-pages';
 const SHELL_URLS = ['/', '/offline.html', '/android-chrome-192x192.png'];
@@ -47,10 +47,10 @@ self.addEventListener('fetch', event => {
       const pages = await caches.open(PAGES);
       const saved = await pages.match(request);
       if (saved) return saved;
-      if (url.pathname === '/') {
-        const home = await caches.match('/');
-        if (home) return home;
-      }
+      // The installed app can relaunch with /index.html, a query string, or a
+      // previously-opened uncached route. Prefer the cached home to a dead end.
+      const home = await caches.match('/');
+      if (home) return home;
       return (await caches.match('/offline.html')) || Response.error();
     }
   })());

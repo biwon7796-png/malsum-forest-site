@@ -2,13 +2,14 @@ name: PWA smoke tests
 on:
   push:
     branches:
-      - feature/reading-pwa-v1-20261116
+      - fix/offline-home-startup-20261116
   pull_request:
     paths:
       - 'sw.js'
       - 'js/pwa-register.js'
       - 'offline.html'
       - 'index.html'
+      - 'site.webmanifest'
       - 'tests/pwa.test.cjs'
       - '.github/workflows/pwa-smoke.yml'
   workflow_dispatch:
