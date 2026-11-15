@@ -307,6 +307,21 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:900px){.jb-home{padding:60px 0 64px}.jb-home__grid{grid-template-columns:1fr;gap:34px}}
 @media(max-width:560px){.jb-home__btn{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.visual .visual__field,.visual__copy,.story__arrow{transition:none}}
+
+/* Optional install guidance; invisible in installed standalone mode. */
+.install-entry{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:14px;padding:8px 0;background:none;border:0;border-bottom:1px solid rgba(18,58,90,.4);color:var(--navy);font:700 14px var(--sans);cursor:pointer}
+.install-entry:hover{color:var(--blue-text)}
+.install-entry:focus-visible,.install-close:focus-visible,.install-action:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.install-dialog[hidden],.install-entry[hidden]{display:none!important}
+.install-dialog{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:18px;background:rgba(18,37,52,.58)}
+.install-card{width:min(100%,440px);position:relative;padding:30px 26px;background:#fff;border-radius:16px;box-shadow:0 18px 60px rgba(0,0,0,.18);color:var(--body)}
+.install-card h2{font-size:23px;color:var(--navy);margin:0 35px 14px 0}
+.install-card p{font-size:15px;line-height:1.8;margin:0 0 12px}
+.install-card ol{margin:8px 0 20px;padding-left:22px;line-height:1.9;font-size:15px}
+.install-close{position:absolute;top:12px;right:12px;min-width:44px;min-height:44px;border:0;background:transparent;color:var(--navy);font-size:23px;cursor:pointer}
+.install-action{min-height:44px;padding:10px 18px;border:0;border-radius:9px;background:var(--navy);color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+.install-action[hidden]{display:none}
+@media(max-width:560px){.install-card{padding:25px 20px}}
 </style>
 </head>
 <body>
@@ -339,6 +354,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <a class="hero__books" href="/books/">책 살펴보기<span aria-hidden="true">→</span></a>
     </div>
     <p class="hero__note">《투명의 호수》에서 꺼낸 공개 글 한 편으로 시작합니다.</p>
+    <button class="install-entry" id="install-entry" type="button" hidden>앱으로 설치하기 <span aria-hidden="true">↗</span></button>
   </div></div>
 </section>
 
@@ -560,6 +576,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <nav aria-label="하단 메뉴"><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/art-bible/">예술성경</a><a href="/judebible/">주드성경</a><a href="#about">소개</a></nav>
   </div>
 </footer>
+
+<div class="install-dialog" id="install-dialog" hidden>
+  <section class="install-card" role="dialog" aria-modal="true" aria-labelledby="install-title" aria-describedby="install-description">
+    <button class="install-close" id="install-close" type="button" aria-label="설치 안내 닫기">×</button>
+    <h2 id="install-title">말씀의 숲 앱으로 읽기</h2>
+    <p id="install-description">말씀의 숲을 홈 화면에 추가하면 앱처럼 열어볼 수 있습니다.</p>
+    <ol id="install-steps"></ol>
+    <button class="install-action" id="install-native" type="button" hidden>앱 설치하기</button>
+  </section>
+</div>
+<script defer src="/js/install-guide.js"></script>
 <script>
 (()=>{
   const visual=document.querySelector('.visual');
