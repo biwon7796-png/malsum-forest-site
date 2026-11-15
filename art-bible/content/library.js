@@ -8,6 +8,7 @@ window.ArtBookManifest = {
     "good-samaritan",
     "return-of-prodigal-son",
     "about-time", // ART-BIBLE-005
-    "the-lord-is-my-shepherd" // ART-BIBLE-006
+    "the-lord-is-my-shepherd", // ART-BIBLE-006
+    "starry-night-creation" // ART-BIBLE-007
   ]
 };

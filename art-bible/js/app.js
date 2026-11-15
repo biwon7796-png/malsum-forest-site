@@ -100,7 +100,9 @@
       f.referrerPolicy = "strict-origin-when-cross-origin"; // YouTube는 출처(Referer) 없는 임베드를 막는다
       var helpNote = el("p", "note", "영상이 멈춰 있으면 화면의 재생 단추를 한 번 더 눌러 주세요.");
       pl.parentNode.insertBefore(helpNote, pl.nextSibling);
-      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(M.videoId) + "?autoplay=1&rel=0&playsinline=1";
+      var start = Number(M.startSeconds);
+      var startQuery = isFinite(start) && start > 0 ? "&start=" + Math.floor(start) : "";
+      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(M.videoId) + "?autoplay=1&rel=0&playsinline=1" + startQuery;
       f.title = M.embedTitle;
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
       f.allowFullscreen = true;
