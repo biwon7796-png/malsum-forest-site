@@ -1,4 +1,4 @@
-/* ART-BIBLE-010 · 남겨진 이삭을 줍는 마음 — 장프랑수아 밀레 · 스팅 《Fields of Gold》 · 룻기 2장
+/* ART-BIBLE-010 · 남겨진 이삭을 줍는 마음 — 장프랑수아 밀레 · 《For the Beauty of the Earth》 · 룻기 2장
    승인된 상세 편집 기획 v0.2에 따라 제작하고 Captain이 2026-11-16 공개를 승인한 기본편. */
 ArtBook.register({
   id: "gleaning-kindness",
@@ -7,10 +7,10 @@ ArtBook.register({
     status: "candidate",
     summary: "고개 숙여 이삭을 줍는 노동을 바라보고, 공동체가 누군가의 생존과 안전을 위해 의도적으로 몫을 남겨 두는 룻기 2장의 은혜에 머뭅니다.",
     themes: ["노동", "배려", "보호"],
-    tags: ["룻", "나오미", "보아스", "이삭줍기", "기업 무를 자", "밀레", "이삭 줍는 여인들", "Fields of Gold", "스팅"],
+    tags: ["룻", "나오미", "보아스", "이삭줍기", "기업 무를 자", "밀레", "이삭 줍는 여인들", "For the Beauty of the Earth", "태버내클 콰이어"],
     bible: { books: ["룻기"], bookAliases: ["룻"], ranges: ["룻기 2장"], related: ["룻기 1:16–22", "레위기 19:9–10", "신명기 24:19–22", "룻기 3–4장"] },
     art: { artist: "장프랑수아 밀레", artistAliases: ["Jean-François Millet"], title: "이삭 줍는 여인들", titleAliases: ["Des glaneuses", "The Gleaners"], year: "1857" },
-    music: { composer: "스팅", composerAliases: ["Sting"], work: "Fields of Gold", workAliases: ["필즈 오브 골드"], performer: "Sting" },
+    music: { composer: "콘라트 코허", composerAliases: ["Conrad Kocher"], work: "For the Beauty of the Earth", workAliases: ["땅의 아름다움을 인하여"], performer: "The Tabernacle Choir at Temple Square" },
     cover: { src: "assets/gleaners-480.jpg", alt: "넓은 수확 들판 앞에서 세 여인이 허리를 굽혀 떨어진 이삭을 줍는 밀레의 그림" }
   },
   series: "내 손안의 예술성경",
@@ -56,27 +56,26 @@ ArtBook.register({
   },
 
   listen: {
-    work: "스팅 · 《Fields of Gold》",
-    titleDe: "Fields of Gold",
-    titleKo: "황금빛 들판 — Spotify 공식 미리듣기",
+    work: "콘라트 코허 곡 · 맥 윌버그 편곡 · 《For the Beauty of the Earth》",
+    titleDe: "For the Beauty of the Earth",
+    titleKo: "땅의 아름다움을 인하여 — 태버내클 콰이어",
     items: [
-      { tag: "사실", text: "스팅이 쓰고 노래해 1993년에 발표한 곡입니다. Spotify가 공식 제공하는 동일 곡의 허용 임베드로 미리듣습니다." },
-      { tag: "관찰", text: "부드럽게 반복되는 기타와 절제된 목소리가 넓은 들판을 서두르지 않고 걸어가는 듯한 흐름을 만듭니다. 선율이 되돌아올 때마다 기억의 결이 어떻게 달라지는지 들어 보세요." },
-      { tag: "해석", text: "노래 속 황금빛 들판은 사랑과 시간이 남긴 기억의 장소입니다. 룻기의 들판을 직접 설명하지는 않지만, 한 장소에서 쌓이는 관계와 돌봄의 기억을 생각하게 합니다." },
-      { tag: "구별", text: "이 곡은 룻이나 이삭줍기를 노래한 성가가 아닙니다. ‘황금빛 들판’이라는 이미지와 관계를 기억하는 정서가 본문과 간접적으로 대화합니다." }
+      { tag: "사실", text: "콘라트 코허의 선율을 맥 윌버그가 편곡한 찬송을 The Tabernacle Choir and Orchestra at Temple Square가 연주한 공식 영상입니다." },
+      { tag: "관찰", text: "오케스트라의 밝은 전주 위로 합창이 차분히 시작되고, 성부와 악기가 겹치며 감사의 고백이 넓어집니다. 같은 선율이 더 풍성한 소리로 돌아오는 흐름을 들어 보세요." },
+      { tag: "해석", text: "땅과 수확을 선물로 받아들이는 감사는 풍요를 혼자 움켜쥐지 않고 이웃의 몫을 남겨 두는 삶으로 이어져야 합니다. 룻기의 들판에서 감사와 배려가 어떻게 만나는지 생각하게 합니다." },
+      { tag: "구별", text: "이 찬송은 룻이나 이삭줍기를 직접 노래한 작품이 아닙니다. 창조 세계에 대한 감사가 가난한 사람과 이주민의 노동·안전·몫을 가리는 감상으로 흐르지 않도록 룻기 2장의 구체적인 보호와 함께 듣습니다." }
     ],
-    duration: "30초 미리듣기",
-    channel: "Spotify 공식 제공",
-    playLabel: "황금빛 들판 감상하기",
-    embedTitle: "Sting — Fields of Gold Spotify 공식 플레이어",
-    performance: "노래: Sting · Spotify 공식 임베드 플레이어 제공",
-    embedProvider: "spotify",
-    embedUrl: "https://open.spotify.com/embed/track/1exUmVPVMO5cIKSaup8qpI?utm_source=generator",
-    externalPlayUrl: "https://open.spotify.com/track/1exUmVPVMO5cIKSaup8qpI",
+    duration: "3분 27초",
+    channel: "The Tabernacle Choir 공식 제공",
+    playLabel: "수확의 감사 노래 듣기",
+    embedTitle: "For the Beauty of the Earth — The Tabernacle Choir",
+    performance: "노래: The Tabernacle Choir at Temple Square · 연주: Orchestra at Temple Square · 합창단 공식 아티스트 채널 제공",
+    videoId: "XbXvCZfiOVM",
+    externalPlayUrl: "https://www.youtube.com/watch?v=XbXvCZfiOVM",
     links: [
-      { label: "Spotify 공식 곡 페이지", url: "https://open.spotify.com/track/1exUmVPVMO5cIKSaup8qpI" }
+      { label: "합창단 공식 전체 영상", url: "https://www.youtube.com/watch?v=XbXvCZfiOVM" }
     ],
-    note: "버튼을 누르기 전에는 플레이어와 소리가 불러와지지 않습니다. 자동재생하지 않으며 음원 파일을 저장하지 않습니다. 미리듣기 길이는 Spotify의 제공 조건에 따릅니다."
+    note: "버튼을 누르기 전에는 영상과 소리가 불러와지지 않습니다. 자동재생하지 않으며 음원 파일을 저장하지 않습니다."
   },
 
   word: {
@@ -157,7 +156,7 @@ ArtBook.register({
 
   note: ArtBook.makeNote({
     reflectionHint: "누군가가 안전하게 자기 몫을 거둘 수 있도록 내가 남겨 두거나 바꿀 수 있는 한 가지를 적어 보세요.",
-    pdfCredit: "그림: 장프랑수아 밀레, 《이삭 줍는 여인들》(오르세 미술관 RF 592; Wikimedia Commons Public Domain Mark 이미지). 성경: 개역한글판(1961), 대한성서공회 안내에 따라 저작재산권 보호기간 소멸. 음악: Sting, 《Fields of Gold》 Spotify 공식 허용 임베드(음원 파일 미수록)."
+    pdfCredit: "그림: 장프랑수아 밀레, 《이삭 줍는 여인들》(오르세 미술관 RF 592; Wikimedia Commons Public Domain Mark 이미지). 성경: 개역한글판(1961), 대한성서공회 안내에 따라 저작재산권 보호기간 소멸. 음악: 《For the Beauty of the Earth》, The Tabernacle Choir at Temple Square 공식 YouTube 허용 임베드(음원 파일 미수록)."
   }),
 
   sources: {
@@ -169,9 +168,9 @@ ArtBook.register({
           "오르세 미술관의 작품 식별과 해설을 확인했습니다. 수록 이미지는 Google Art Project 파일을 Wikimedia Commons가 원작과 충실한 복제 모두 퍼블릭 도메인으로 표시한 공개본입니다."
         ], links: [{ label: "오르세 미술관 작품 정보", url: "https://www.musee-orsay.fr/en/artworks/des-glaneuses-342" }, { label: "Wikimedia Commons 이미지·권리", url: "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project.jpg" }, { label: "Public Domain Mark 1.0", url: "https://creativecommons.org/publicdomain/mark/1.0/deed.ko" }] },
       { label: "음악", lines: [
-          "Sting, 《Fields of Gold》(1993). Spotify가 공식 제공하는 동일 곡의 허용 임베드로 미리듣습니다.",
-          "현대 곡·실연·녹음의 권리는 제공자에게 있습니다. Spotify 공식 플레이어만 클릭 후 불러오며, 자동재생·복제·다운로드를 하지 않습니다. 전체 재생 가능 여부와 미리듣기 길이는 Spotify의 계정·지역·제공 조건에 따릅니다."
-        ], links: [{ label: "Spotify 공식 곡 페이지", url: "https://open.spotify.com/track/1exUmVPVMO5cIKSaup8qpI" }] },
+          "콘라트 코허 곡, 맥 윌버그 편곡, 《For the Beauty of the Earth》. The Tabernacle Choir and Orchestra at Temple Square의 공식 전체 연주를 감상합니다.",
+          "현대 편곡·실연·녹음의 권리는 제공자에게 있습니다. 합창단 공식 아티스트 채널이 제공하고 YouTube가 임베드를 허용한 영상만 클릭 후 불러오며, 자동재생·복제·다운로드를 하지 않습니다."
+        ], links: [{ label: "합창단 공식 전체 영상", url: "https://www.youtube.com/watch?v=XbXvCZfiOVM" }] },
       { label: "성경", lines: [
           "룻기 2장, 개역한글판(1961). 대한성서공회 공식 온라인 성경과 1–23절 전 구절을 대조했습니다.",
           "대한성서공회의 안내에 따르면 개역한글판의 저작재산권 보호기간은 2011년 12월 31일에 소멸했습니다."
@@ -195,14 +194,14 @@ ArtBook.register({
         status: "VERIFIED(작품 식별·소장처·원작 및 충실한 복제 Public domain 확인)", open: [], checkedOn: "2026-11-16"
       },
       music: {
-        id: "music-10", composer: "Sting", work: "Fields of Gold", composerStatus: "저작권 있는 현대 곡; 가사·악보·음원을 복제하지 않음",
-        performance: "Sting; Spotify official embedded preview",
-        officialPage: "https://open.spotify.com/track/1exUmVPVMO5cIKSaup8qpI",
-        embed: { provider: "Spotify", trackId: "1exUmVPVMO5cIKSaup8qpI", embedUrl: "https://open.spotify.com/embed/track/1exUmVPVMO5cIKSaup8qpI?utm_source=generator", previewAvailable: true, autoplay: false, loadedOnlyAfterTap: true },
-        audioFilesHosted: false, url: "https://open.spotify.com/track/1exUmVPVMO5cIKSaup8qpI",
-        license: "저작권 있는 현대 곡·실연·녹음; Spotify가 공식 제공한 허용 임베드와 링크만", rightsHolder: "Sting 및 해당 녹음 권리자; 플레이어 제공 Spotify",
-        rightsBasisUrl: "https://open.spotify.com/track/1exUmVPVMO5cIKSaup8qpI", useForm: "embed, link, original commentary", pdfInclude: false, pdfReason: "PDF에 음원·영상·가사·악보를 복제하지 않음",
-        connection: "간접 연결(황금빛 들판과 관계의 기억; 룻 이야기를 직접 노래한 작품은 아님)", status: "VERIFIED(Spotify 공식 임베드·페이지 내부 재생·일시정지 확인)", open: [], checkedOn: "2026-11-16"
+        id: "music-10", composer: "Conrad Kocher", work: "For the Beauty of the Earth", composerStatus: "19세기 찬송 선율; 현대 편곡·실연·녹음을 복제하지 않음",
+        performance: "The Tabernacle Choir and Orchestra at Temple Square; arranged by Mack Wilberg; official video",
+        officialPage: "https://www.youtube.com/watch?v=XbXvCZfiOVM",
+        embed: { provider: "YouTube", videoId: "XbXvCZfiOVM", channel: "The Tabernacle Choir at Temple Square", channelId: "UCiAkukrUIRCwaLaFx_MJq7Q", oembed: "200 OK", playableInEmbed: true, lengthSeconds: 207, startSeconds: 0, autoplay: false, loadedOnlyAfterTap: true },
+        audioFilesHosted: false, url: "https://www.youtube.com/watch?v=XbXvCZfiOVM",
+        license: "저작권 있는 현대 편곡·실연·녹음; 권리자가 공식 제공한 YouTube 허용 임베드와 링크만", rightsHolder: "The Tabernacle Choir at Temple Square 및 해당 편곡·녹음 권리자",
+        rightsBasisUrl: "https://www.youtube.com/watch?v=XbXvCZfiOVM", useForm: "embed, link, original commentary", pdfInclude: false, pdfReason: "PDF에 음원·영상·가사·악보를 복제하지 않음",
+        connection: "간접 연결(땅과 수확에 대한 감사; 룻 이야기를 직접 노래한 작품은 아님)", status: "VERIFIED(공식 제공·oEmbed·playableInEmbed=true·전체 재생·일시정지 확인)", open: [], checkedOn: "2026-11-16"
       },
       bible: {
         id: "bible-10", translation: "개역한글판(1961)", range: "룻기 2장",
