@@ -11,6 +11,7 @@ window.ArtBookManifest = {
     "the-lord-is-my-shepherd", // ART-BIBLE-006
     "starry-night-creation", // ART-BIBLE-007
     "wanderer-of-faith", // ART-BIBLE-008
-    "hagar-el-roi" // ART-BIBLE-009
+    "hagar-el-roi", // ART-BIBLE-009
+    "gleaning-kindness" // ART-BIBLE-010
   ]
 };

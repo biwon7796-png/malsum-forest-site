@@ -83,30 +83,30 @@
     var M = B.listen, o = section("s3", "paper2", 3, sc[2].name);
     add(o.inner, el("p", "work", M.work), el("p", "de", M.titleDe), el("p", "ko", M.titleKo));
     M.items.forEach(function (it) { o.inner.appendChild(item(it)); });
-    var pl = el("div", "player"), embedded = !!M.videoId;
+    var pl = el("div", "player"), provider = M.embedProvider || (M.videoId ? "youtube" : ""), embedded = !!(M.videoId || M.embedUrl);
     var play = el(embedded ? "button" : "a", "play" + (embedded ? "" : " ext"));
     if (embedded) play.type = "button";
     else { play.href = M.externalPlayUrl || (M.links[0] && M.links[0].url) || "#"; play.target = "_blank"; play.rel = "noopener noreferrer"; }
     var disc = el("span", "disc"); disc.appendChild(el("span", "tri"));
     var meta = el("span", "pmeta");
     add(meta, el("span", "t", M.playLabel), el("small", null, M.channel + " · " + M.duration),
-      el("small", "src", embedded ? "누르면 YouTube 공식 영상을 불러옵니다" : "공식 감상 페이지를 새 창으로 엽니다"));
+      el("small", "src", embedded ? (provider === "spotify" ? "누르면 Spotify 공식 음원을 불러옵니다" : "누르면 YouTube 공식 영상을 불러옵니다") : "공식 감상 페이지를 새 창으로 엽니다"));
     add(play, disc, meta);
-    play.setAttribute("aria-label", M.playLabel + (embedded ? " — 영상 재생하기 (YouTube에서 불러옴)" : " — 공식 감상 페이지에서 열기"));
+    play.setAttribute("aria-label", M.playLabel + (embedded ? (provider === "spotify" ? " — 음악 재생하기 (Spotify에서 불러옴)" : " — 영상 재생하기 (YouTube에서 불러옴)") : " — 공식 감상 페이지에서 열기"));
     if (embedded) play.addEventListener("click", function () {
-      // 파일로 직접 열었을 때(file://)는 YouTube가 출처 정보 없는 임베드를 거부해 검은 화면만 나온다 → 공식 영상 페이지를 새 탭으로 연다
-      if (location.protocol === "file:") { window.open("https://www.youtube.com/watch?v=" + encodeURIComponent(M.videoId), "_blank", "noopener"); return; }
+      // 파일로 직접 열었을 때(file://)는 제공자가 출처 없는 임베드를 거부할 수 있다 → 공식 감상 페이지를 새 탭으로 연다
+      if (location.protocol === "file:") { window.open(M.externalPlayUrl || (M.videoId ? "https://www.youtube.com/watch?v=" + encodeURIComponent(M.videoId) : M.embedUrl), "_blank", "noopener"); return; }
       var f = document.createElement("iframe");
-      f.referrerPolicy = "strict-origin-when-cross-origin"; // YouTube는 출처(Referer) 없는 임베드를 막는다
-      var helpNote = el("p", "note", "영상이 멈춰 있으면 화면의 재생 단추를 한 번 더 눌러 주세요.");
+      f.referrerPolicy = "strict-origin-when-cross-origin"; // 공식 제공자는 출처(Referer) 없는 임베드를 막을 수 있다
+      var helpNote = el("p", "note", provider === "spotify" ? "음악이 멈춰 있으면 플레이어의 재생 단추를 한 번 더 눌러 주세요." : "영상이 멈춰 있으면 화면의 재생 단추를 한 번 더 눌러 주세요.");
       pl.parentNode.insertBefore(helpNote, pl.nextSibling);
       var start = Number(M.startSeconds);
       var startQuery = isFinite(start) && start > 0 ? "&start=" + Math.floor(start) : "";
-      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(M.videoId) + "?autoplay=1&rel=0&playsinline=1" + startQuery;
+      f.src = provider === "spotify" ? M.embedUrl : "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(M.videoId) + "?autoplay=1&rel=0&playsinline=1" + startQuery;
       f.title = M.embedTitle;
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
       f.allowFullscreen = true;
-      pl.className = "player live"; pl.textContent = ""; pl.appendChild(f);
+      pl.className = "player live" + (provider === "spotify" ? " spotify" : ""); pl.textContent = ""; pl.appendChild(f);
     });
     pl.appendChild(play);
     var ul = el("ul", "links");
