@@ -1,0 +1,33 @@
+name: PWA smoke tests
+on:
+  push:
+    branches:
+      - feature/reading-pwa-v1-20261116
+  pull_request:
+    paths:
+      - 'sw.js'
+      - 'js/pwa-register.js'
+      - 'offline.html'
+      - 'index.html'
+      - 'tests/pwa.test.cjs'
+      - '.github/workflows/pwa-smoke.yml'
+  workflow_dispatch:
+jobs:
+  verify-pwa:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript syntax
+        run: |
+          node --check sw.js
+          node --check js/pwa-register.js
+      - name: Validate manifest
+        run: |
+          node -e "const m=require('./site.webmanifest'); if(m.display!=='standalone'||!m.name||!m.icons?.length) process.exit(1)"
+      - name: Run navigation and offline cache tests
+        run: node --test tests/pwa.test.cjs
