@@ -15,6 +15,7 @@ function harness() {
       this.headers = { get: key => key === 'content-type' ? type : key === 'cache-control' ? control : '' };
     }
     clone() { return new MockResponse(this.body, this.headers.get('content-type'), this.headers.get('cache-control')); }
+    async blob() { return { size: Buffer.byteLength(this.body) }; }
   }
   function keyOf(req) { return typeof req === 'string' ? new URL(req, home).href : req.url; }
   const caches = {
@@ -41,7 +42,7 @@ function harness() {
       addEventListener: (type, callback) => handlers.set(type, callback) },
     fetch: async request => {
       if (!online) throw new Error('offline');
-      return new MockResponse('live:' + new URL(request.url).pathname);
+      return new MockResponse('live:' + new URL(request.url).pathname, request.destination === 'style' ? 'text/css' : request.destination === 'image' ? 'image/png' : request.destination === 'script' ? 'text/javascript' : 'text/html');
     },
     Response: { error: () => ({ error: true }) }
   };
@@ -49,8 +50,8 @@ function harness() {
   async function lifecycle(type) {
     let job; handlers.get(type)({ waitUntil: p => { job = p; } }); await job;
   }
-  async function navigate(path, origin = home, mode = 'navigate', method = 'GET') {
-    const request = { url: origin + path, method, mode };
+  async function navigate(path, origin = home, mode = 'navigate', method = 'GET', destination = '') {
+    const request = { url: origin + path, method, mode, destination };
     let promise;
     handlers.get('fetch')({ request, respondWith: p => { promise = p; } });
     return promise ? promise : null;
@@ -88,7 +89,7 @@ test('offline home uses the pre-cached home document', async () => {
   const app = harness(); await app.lifecycle('install'); app.setOnline(false);
   assert.equal((await app.navigate('/')).body, 'shell:/');
 });
-test('does not intercept foreign origins, non-GET requests or resource loads', async () => {
+test('does not intercept foreign origins, non-GET requests or unknown resources', async () => {
   const app = harness();
   assert.equal(await app.navigate('/x', 'https://elsewhere.test'), null);
   assert.equal(await app.navigate('/x', 'https://www.malsumforest.com', 'cors'), null);
@@ -97,8 +98,44 @@ test('does not intercept foreign origins, non-GET requests or resource loads', a
 test('limits saved visited pages to twenty', async () => {
   const app = harness(); await app.lifecycle('install');
   for (let i = 0; i < 23; i++) await app.navigate('/stories/test-' + i);
-  const saved = app.stores.get('malsum-reading-v2-20261116-pages');
+  const saved = app.stores.get('malsum-reading-v3-20261116-pages');
   assert.equal(saved.size, 20);
   assert.ok(!saved.has('https://www.malsumforest.com/stories/test-0'));
   assert.ok(saved.has('https://www.malsumforest.com/stories/test-22'));
+});
+
+test('visited image, stylesheet and script work offline', async () => {
+  const app = harness(); await app.lifecycle('install');
+  for (const [path, dest] of [['/assets/photo.webp','image'], ['/css/site.css','style'], ['/js/app.js','script']]) {
+    assert.equal((await app.navigate(path, 'https://www.malsumforest.com', 'same-origin', 'GET', dest)).body, 'live:' + path);
+  }
+  app.setOnline(false);
+  for (const [path, dest] of [['/assets/photo.webp','image'], ['/css/site.css','style'], ['/js/app.js','script']]) {
+    assert.equal((await app.navigate(path, 'https://www.malsumforest.com', 'same-origin', 'GET', dest)).body, 'live:' + path);
+  }
+});
+test('uncached assets are not replaced with homepage HTML', async () => {
+  const app = harness(); await app.lifecycle('install'); app.setOnline(false);
+  assert.equal((await app.navigate('/assets/new.jpg', 'https://www.malsumforest.com','same-origin','GET','image')).error, true);
+});
+test('cross-origin image, API and unknown types bypass asset storage', async () => {
+  const app = harness();
+  assert.equal(await app.navigate('/art.png','https://cdn.example.org','no-cors','GET','image'), null);
+  assert.equal(await app.navigate('/api/private','https://www.malsumforest.com','same-origin','GET','image'), null);
+  assert.equal(await app.navigate('/media/video.mp4','https://www.malsumforest.com','same-origin','GET','video'), null);
+});
+test('asset cache never exceeds sixty entries', async () => {
+  const app = harness(); await app.lifecycle('install');
+  for(let i=0;i<63;i++) await app.navigate('/assets/a'+i+'.png','https://www.malsumforest.com','same-origin','GET','image');
+  const cache=app.stores.get('malsum-reading-v3-20261116-assets');
+  assert.equal(cache.size,60);
+  assert.ok(!cache.has('https://www.malsumforest.com/assets/a0.png'));
+  assert.ok(cache.has('https://www.malsumforest.com/assets/a62.png'));
+});
+test('upgrade migrates previously visited documents from v2', async () => {
+  const app=harness();
+  const old=await app.caches.open('malsum-reading-v2-20261116-pages');
+  await old.put('/stories/previous', {body:'previously saved'});
+  await app.lifecycle('install'); await app.lifecycle('activate'); app.setOnline(false);
+  assert.equal((await app.navigate('/stories/previous')).body,'previously saved');
 });

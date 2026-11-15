@@ -2,7 +2,7 @@ name: PWA smoke tests
 on:
   push:
     branches:
-      - fix/offline-home-startup-20261116
+      - feature/offline-assets-v3-20261116
   pull_request:
     paths:
       - 'sw.js'
