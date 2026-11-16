@@ -8,6 +8,7 @@
 const KEY="malsumforest:bible-literary-map:read:v1";
 const frame=document.getElementById("reader"); if(!frame)return;
 let read={};let storageOK=true;
+let refreshUI=null;
 try{const old=JSON.parse(localStorage.getItem(KEY)||"{}");if(old&&typeof old==="object"&&!Array.isArray(old))for(const [key,val] of Object.entries(old)){
   if((/^B\d{2}-P\d{4,}$/.test(key)||key.startsWith("REF:"))&&typeof val==="string")read[key]=val;
 }}catch(e){storageOK=false;}
@@ -149,6 +150,7 @@ doc.documentElement.dataset.malsumProgressV2="true";css(doc);
 let queued=false;
 function render(){queued=false;const r=rows(doc);renderTable(doc,r);renderMap(doc,r);renderCanon(doc,r);}
 function schedule(){if(queued)return;queued=true;(doc.defaultView||window).requestAnimationFrame(render);}
+refreshUI=schedule;
 doc.addEventListener("change",ev=>{
 const input=ev.target.closest?.("input[data-malsum-kind]");if(!input)return;
 if(input.dataset.malsumKind==="passage"){
@@ -168,4 +170,67 @@ if(found){schedule();break;}}
 schedule();
 }
 frame.addEventListener("load",setup);try{if(frame.contentDocument?.readyState==="complete")setup();}catch(e){}
+/* Standalone backup format; import never deletes existing checkmarks.
+ * Non-HTTPS or private sessions may prohibit localStorage: fail visibly. */
+const FORMAT="malsumforest-bible-literary-map-progress";
+const VERSION=1;
+const status=document.getElementById("progress-status");
+const picker=document.getElementById("progress-file");
+function message(text){if(status)status.textContent=text;}
+function isValidKey(key){return /^B\d{2}-P\d{4,}$/.test(key)||/^REF:[^\u0000-\u001f]{1,180}$/.test(key);}
+function validatedEntries(entries){
+  if(!entries||typeof entries!=="object"||Array.isArray(entries))throw Error("진도 데이터 형식이 올바르지 않습니다.");
+  const keys=Object.keys(entries);
+  if(keys.length>12000)throw Error("진도 항목이 허용 범위를 초과했습니다.");
+  const clean=Object.create(null);
+  for(const k of keys){
+    const value=entries[k];
+    if(!isValidKey(k)||typeof value!=="string"||!Number.isFinite(Date.parse(value))||value.length>40){
+      throw Error("지원하지 않는 진도 항목이 있습니다.");
+    }
+    clean[k]=value;
+  }
+  return clean;
+}
+document.getElementById("progress-export")?.addEventListener("click",()=>{
+  try{
+    // Re-read storage for consistency in case another tab changed progress.
+    const stored=JSON.parse(localStorage.getItem(KEY)||"{}");
+    const entries=validatedEntries(stored);
+    const backup={format:FORMAT,version:VERSION,exportedAt:new Date().toISOString(),entries};
+    const content=JSON.stringify(backup,null,2);
+    const blob=new Blob([content],{type:"application/json;charset=utf-8"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a");
+    a.href=url;a.download="말씀의숲_성경문학지도_통독진도_"+new Date().toISOString().slice(0,10)+".json";
+    document.body.append(a);a.click();a.remove();
+    window.setTimeout(()=>URL.revokeObjectURL(url),1000);
+    message("통독 진도 "+Object.keys(entries).length+"개 항목을 백업했습니다. 파일을 안전한 곳에 보관하세요.");
+  }catch(e){message("내보내기에 실패했습니다: "+e.message);}
+});
+document.getElementById("progress-import")?.addEventListener("click",()=>picker?.click());
+picker?.addEventListener("change",async()=>{
+  const file=picker.files?.[0];if(!file)return;
+  try{
+    if(file.size>2*1024*1024)throw Error("백업 파일은 2MB 이하여야 합니다.");
+    const incoming=JSON.parse(await file.text());
+    if(!incoming||incoming.format!==FORMAT||incoming.version!==VERSION)
+      throw Error("말씀의 숲 성경문학지도에서 내보낸 JSON 파일만 가져올 수 있습니다.");
+    const entries=validatedEntries(incoming.entries);
+    const saved=validatedEntries(JSON.parse(localStorage.getItem(KEY)||"{}"));
+    const merged=Object.assign(Object.create(null),saved);
+    let added=0;
+    for(const [key,value] of Object.entries(entries)){
+      const before=merged[key];
+      if(!before){merged[key]=value;added++;}
+      else if(Date.parse(value)>Date.parse(before))merged[key]=value;
+    }
+    localStorage.setItem(KEY,JSON.stringify(merged));
+    read=merged;storageOK=true;
+    refreshUI?.();
+    message("가져오기 완료: 새로운 읽음 기록 "+added+"개 추가. 기존 기록은 유지했습니다.");
+  }catch(e){message("가져오지 못했습니다: "+e.message);}
+  finally{picker.value="";}
+});
+
 })();
