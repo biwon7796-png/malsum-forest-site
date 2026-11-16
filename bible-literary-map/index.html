@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>성경 문학 지도 | 말씀의 숲</title>
-<link rel="icon" href="/favicon.ico"><style>
+<link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="../css/site-header.v2-candidate.css"><style>
 :root{--navy:#123a5a;--paper:#f7f7f4;--body:#2f3438}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--body);font-family:Arial,"Noto Sans KR",sans-serif;word-break:keep-all}
 a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #2e9fc4;outline-offset:3px}
 .skip{position:absolute;top:-80px;left:12px;background:white;padding:12px}.skip:focus{top:12px}
-header{position:sticky;top:0;z-index:2;background:rgba(247,247,244,.97);border-bottom:1px solid #d9dede;padding:14px max(20px,calc((100vw - 1180px)/2))}
-header a{text-decoration:none;font-weight:700;color:var(--navy)}
 .title{max-width:1180px;margin:auto;padding:24px 20px 16px}
 h1{font:700 clamp(28px,3.7vw,46px)/1.2 Georgia,"Nanum Myeongjo",serif;color:var(--navy);margin:6px 0 10px}
 p{margin:0;line-height:1.75;font-size:15px}.stats{font-size:13px;color:#566b75;padding-top:8px}
@@ -16,15 +14,16 @@ p{margin:0;line-height:1.75;font-size:15px}.stats{font-size:13px;color:#566b75;p
 .toolbar a{min-height:44px;display:inline-flex;align-items:center;color:var(--navy);font-weight:700;font-size:14px}
 #reader{display:block;width:100%;height:calc(100vh - 180px);min-height:520px;border:0;background:white}
 footer{padding:12px 20px;color:#65737b;font-size:12px;text-align:center}
-@media(max-width:640px){.title{padding:18px 16px 14px}#reader{height:calc(100dvh - 205px);min-height:480px}header{padding:12px 16px}.stats{font-size:12px}}
+body.map-wide .title{padding:12px 20px 6px}body.map-wide .title h1,body.map-wide .title>p,body.map-wide footer{display:none}body.map-wide #reader{height:calc(100dvh - 146px);min-height:420px}body.map-wide .toolbar{margin-top:2px}
+@media(max-width:640px){.title{padding:18px 16px 14px}#reader{height:calc(100dvh - 205px);min-height:480px}.stats{font-size:12px}}
 </style></head><body>
 <a href="#reader" class="skip">문학 지도 독서 화면으로 건너뛰기</a>
-<header><a href="/">← 말씀의 숲 홈</a></header>
-<main><div class="title"><h1>성경 문학 지도</h1>
+<header class="site-header"><div class="site-header__wrap"><a class="site-wordmark" href="/#page-top" aria-label="말씀의 숲 홈"><img class="wordmark__ma" src="/favicon-48x48.png" alt="" width="48" height="48" aria-hidden="true"><b>말씀의 숲</b></a><nav class="site-nav" aria-label="주요 메뉴"><a href="/">홈</a><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/art-bible/">예술성경</a><a href="/judebible/">주드성경</a><a href="/bible-literary-map/" aria-current="page">성경 문학 지도</a><a href="/#about">소개</a></nav></div></header>
+<main id="main"><div class="title"><h1>성경 문학 지도</h1>
 <p>성경의 문학단위 해설로 이해가 되는 성경통독의 흐름을 붙잡으세요.</p>
 <p class="stats">성경 66권 · 거시 구획 238개 · 통독 단락 2,494개 · 정경 연결 1,030행</p>
 
-<div class="toolbar"><a href="./reader.html" target="_blank" rel="noopener">넓은 화면에서 웹북 열기 ↗</a></div>
+<div class="toolbar"><a href="./?wide=1" target="_blank" rel="noopener">넓은 화면에서 웹북 열기 ↗</a></div>
 </div><iframe id="reader" src="./reader.html" title="성경 66권 문학 지도 전체 독서 화면" loading="eager"></iframe></main>
 <footer>말씀의 숲 · 성경 문학 지도</footer>
-</body></html>
+<script>if(new URLSearchParams(location.search).get("wide")==="1"){document.body.classList.add("map-wide");}</script></body></html>
