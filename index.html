@@ -347,6 +347,60 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .video-channel__go span:last-child{font-size:23px;font-weight:400;line-height:1}
 @media(max-width:760px){.video-channels{padding:58px 0 64px}.video-channels__head{display:block;margin-bottom:24px}.video-channels__intro{margin-top:15px;max-width:unset}.video-channels__grid{grid-template-columns:1fr;gap:14px}.video-channel{min-height:190px;padding:25px 24px 22px}.video-channel h3{font-size:26px}}
 @media(prefers-reduced-motion:reduce){.video-channel{transition:none}.video-channel:hover{transform:none}}
+
+/* ===== 2026-11 homepage focus improvements ===== */
+.nav-toggle{display:none;align-items:center;justify-content:center;min-width:58px;min-height:44px;padding:0 14px;border:1px solid rgba(18,58,90,.22);border-radius:10px;background:#fff;color:var(--navy);font:700 14px var(--sans);cursor:pointer}
+.nav-toggle:hover{border-color:rgba(18,58,90,.48);color:var(--blue-text)}
+.book-link--buy{display:inline-flex;width:fit-content;min-height:40px;margin-top:8px!important;padding:0 14px;border:1px solid rgba(18,58,90,.38);border-radius:999px;background:rgba(255,255,255,.62);font-weight:700}
+.book-link--buy:hover{border-color:var(--navy);background:#fff;color:var(--navy)}
+.explore__hint{display:none}
+.projects-home{padding:86px 0 92px;background:#f7f2e8;border-top:1px solid #e5dac7;border-bottom:1px solid #e5dac7}
+.projects-home__head{display:flex;justify-content:space-between;align-items:end;gap:44px;margin-bottom:36px}
+.projects-home__head .body{max-width:470px}
+.projects-home__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.project-card{overflow:hidden;border:1px solid #ded5c7;border-radius:16px;background:#fff;box-shadow:0 12px 30px rgba(59,43,23,.05)}
+.project-card__media{display:block;height:260px;overflow:hidden;background:#e9e3d9}
+.project-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.project-card--art .project-card__media img{object-position:center 20%}
+.project-card--study .project-card__media img{object-position:center}
+.project-card:hover .project-card__media img{transform:scale(1.025)}
+.project-card__copy{padding:28px 30px 30px}
+.project-card__label{font-size:11px;font-weight:700;letter-spacing:.16em;color:#85601f;text-transform:uppercase}
+.project-card h3{margin-top:10px;font:700 clamp(25px,2.5vw,34px)/1.25 var(--serif);letter-spacing:-.03em;color:var(--navy)}
+.project-card p:not(.project-card__label){margin-top:14px;font-size:15px;line-height:1.8;color:var(--muted)}
+.project-card__link{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;font-weight:700;color:var(--navy);border-bottom:1px solid rgba(18,58,90,.35)}
+.project-card__link:hover{color:var(--blue-text)}
+.about__more{max-width:520px;margin-top:28px;border-top:1px solid rgba(18,58,90,.18);border-bottom:1px solid rgba(18,58,90,.18)}
+.about__more summary{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;color:var(--navy);font-size:14px;font-weight:700;list-style:none}
+.about__more summary::-webkit-details-marker{display:none}
+.about__more summary:after{content:'+';font-size:22px;font-weight:400}
+.about__more[open] summary:after{content:'−'}
+.about__more-body{padding:0 0 24px}
+.about__more-body p{font-size:15px;line-height:1.85;color:var(--body)}
+.about__more-body p+p{margin-top:14px}
+.footer__brand{display:flex;flex-direction:column;align-items:flex-start}
+.footer .install-entry{color:#fff;border-color:rgba(255,255,255,.36);background:rgba(255,255,255,.08);box-shadow:none}
+.footer .install-entry:hover{color:#fff;border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.14)}
+@media(max-width:900px){
+  .projects-home{padding:60px 0 66px}.projects-home__head{display:block;margin-bottom:28px}.projects-home__head .body{margin-top:18px;max-width:620px}
+  .project-card__media{height:220px}.project-card__copy{padding:24px}
+}
+@media(max-width:560px){
+  .nav{padding:5px 0}.nav .wrap{display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 10px}.wordmark{padding:7px 0}.nav-toggle{display:inline-flex}
+  .navlinks{grid-column:1/-1;margin:5px 0 -5px;width:100%;display:none;flex-direction:column;align-items:stretch;gap:0;font-size:15px;border-top:1px solid #e4e8e9;overflow:visible;padding:7px 0 10px;-webkit-mask-image:none;mask-image:none}
+  .navlinks.is-open{display:flex}.navlinks a,.navlinks a[href='/']{display:flex;min-height:46px;padding:0 4px;border-bottom:1px solid rgba(18,58,90,.08)}.navlinks a:last-child{border-bottom:0}
+  [id]{scroll-margin-top:72px}
+  .book-item--archive{display:none}
+  .explore__hint{display:block;margin-top:18px;font-size:13px;line-height:1.6;color:var(--muted)}
+  .explore__rows{display:flex;grid-template-columns:none;gap:14px;margin:22px -20px 0;padding:2px 20px 18px;overflow-x:auto;border:0;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:rgba(18,58,90,.25) transparent}
+  .explore-row,.explore-row:last-child{flex:0 0 min(82vw,310px);min-height:270px;padding:22px;border:1px solid #cdd7da;border-radius:14px;background:#fff;scroll-snap-align:start}
+  .explore-row .no{margin-bottom:24px}.explore-row p{margin-top:12px;font-size:16px}.explore-row .status{margin-top:18px}
+  .projects-home__grid{grid-template-columns:1fr;gap:18px}.project-card__media{height:180px}.project-card__copy{padding:22px 22px 24px}
+  .about__more{margin-top:22px}.about__more-body p{font-size:15px}
+  .footer__brand{margin-bottom:18px}
+}
+@media(prefers-reduced-motion:reduce){.project-card__media img{transition:none}.project-card:hover .project-card__media img{transform:none}}
+
 </style>
 </head>
 <body>
@@ -355,7 +409,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 <header class="nav" id="top">
   <div class="wrap">
     <a class="wordmark" href="/#page-top" aria-label="말씀의 숲 홈"><img class="wordmark__ma" src="/favicon-48x48.png" alt="" width="48" height="48" aria-hidden="true"><b>말씀의 숲</b></a>
-    <nav class="navlinks" aria-label="주요 메뉴">
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">메뉴</button>
+    <nav class="navlinks" id="primary-menu" aria-label="주요 메뉴">
       <a href="/" aria-current="page">홈</a><a href="/open-pages/">열린 페이지</a>
       <a href="/stories/">이야기</a>
       <a href="/books/">책</a>
@@ -379,7 +434,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <a class="hero__books" href="/books/">책 살펴보기<span aria-hidden="true">→</span></a>
     </div>
     <p class="hero__note">《투명의 호수》에서 꺼낸 공개 글 한 편으로 시작합니다.</p>
-    <button class="install-entry" id="install-entry" type="button" hidden>앱으로 설치하기 <span aria-hidden="true">↗</span></button>
   </div></div>
 </section>
 
@@ -456,11 +510,21 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
             <div><dt>분량</dt><dd>74쪽</dd></div>
           </dl>
           <a class="book-link" href="/books/transparent-lake/">책 자세히 보기 →</a>
-<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000221331239" target="_blank" rel="noopener noreferrer">교보문고에서 보기 ↗</a>
+<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000221331239" target="_blank" rel="noopener noreferrer">교보문고에서 구매하기 ↗</a>
         </div>
       </article>
 
       <ul class="book-shelf" aria-label="함께 만날 수 있는 책">
+        <li class="book-item">
+          <figure class="book-item__cover"><img src="assets/img/web/fear-and-faith-cover-w240.webp" srcset="assets/img/web/fear-and-faith-cover-w240.webp 240w, assets/img/web/fear-and-faith-cover-w480.webp 480w" sizes="96px" alt="《말씀의 숲》 주제호 03 《두려움과 믿음》 공식 표지" width="240" height="338" loading="lazy" decoding="async"></figure>
+          <div class="book-item__meta">
+            <p class="book-item__issue">말씀의 숲 주제호 03</p>
+            <h3 class="book-item__title">두려움과 믿음</h3>
+            <p class="book-item__pub">발행 2026. 09. 08</p>
+            <a class="book-link" href="/books/fear-and-faith/">책 자세히 보기 →</a>
+<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000221168623" target="_blank" rel="noopener noreferrer">교보문고에서 구매하기 ↗</a>
+          </div>
+        </li>
         <li class="book-item">
           <figure class="book-item__cover"><img src="assets/img/web/waiting-and-time-cover-w240.webp" srcset="assets/img/web/waiting-and-time-cover-w240.webp 240w, assets/img/web/waiting-and-time-cover-w480.webp 480w" sizes="96px" alt="《말씀의 숲》 주제호 02 《기다림과 때》 공식 앞표지" width="240" height="345" loading="lazy" decoding="async"></figure>
           <div class="book-item__meta">
@@ -468,7 +532,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
             <h3 class="book-item__title">기다림과 때</h3>
             <p class="book-item__pub">발행 2026. 09. 03</p>
             <a class="book-link" href="/books/waiting-and-time/">책 자세히 보기 →</a>
-<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000221179927" target="_blank" rel="noopener noreferrer">교보문고에서 보기 ↗</a>
+<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000221179927" target="_blank" rel="noopener noreferrer">교보문고에서 구매하기 ↗</a>
           </div>
         </li>
         <li class="book-item">
@@ -478,27 +542,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
             <h3 class="book-item__title">돌아옴과 환대</h3>
             <p class="book-item__pub">발행 2026. 08. 21</p>
             <a class="book-link" href="/books/return-and-welcome/">책 자세히 보기 →</a>
-<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000220957587" target="_blank" rel="noopener noreferrer">교보문고에서 보기 ↗</a>
+<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000220957587" target="_blank" rel="noopener noreferrer">교보문고에서 구매하기 ↗</a>
           </div>
         </li>
-        <li class="book-item">
-          <figure class="book-item__cover"><img src="assets/img/web/fear-and-faith-cover-w240.webp" srcset="assets/img/web/fear-and-faith-cover-w240.webp 240w, assets/img/web/fear-and-faith-cover-w480.webp 480w" sizes="96px" alt="《말씀의 숲》 주제호 03 《두려움과 믿음》 공식 표지" width="240" height="338" loading="lazy" decoding="async"></figure>
-          <div class="book-item__meta">
-            <p class="book-item__issue">말씀의 숲 주제호 03</p>
-            <h3 class="book-item__title">두려움과 믿음</h3>
-            <p class="book-item__pub">발행 2026. 09. 08</p>
-            <a class="book-link" href="/books/fear-and-faith/">책 자세히 보기 →</a>
-<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000221168623" target="_blank" rel="noopener noreferrer">교보문고에서 보기 ↗</a>
-          </div>
-        </li>
-        <li class="book-item">
+        <li class="book-item book-item--archive">
           <figure class="book-item__cover"><img src="assets/img/web/malsum-forest-cover-w240.webp" srcset="assets/img/web/malsum-forest-cover-w240.webp 240w, assets/img/web/malsum-forest-cover-w480.webp 480w" sizes="96px" alt="《말씀의 숲》 공식 앞표지" width="240" height="369" loading="lazy" decoding="async"></figure>
           <div class="book-item__meta">
             <p class="book-item__issue">에세이</p>
             <h3 class="book-item__title">말씀의 숲</h3>
             <p class="book-item__pub">발행 2026. 08. 14</p>
             <a class="book-link" href="/books/malsum-forest/">책 자세히 보기 →</a>
-<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000220846081" target="_blank" rel="noopener noreferrer">교보문고에서 보기 ↗</a>
+<a class="book-link book-link--buy" href="https://product.kyobobook.co.kr/detail/S000220846081" target="_blank" rel="noopener noreferrer">교보문고에서 구매하기 ↗</a>
           </div>
         </li>
       </ul>
@@ -522,6 +576,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <div><p class="eyebrow">시리즈</p><h2 class="section-title" id="explore-title">한 숲 안의<br>다섯 산책길</h2></div>
       <p class="body">말씀의 숲이라는 하나의 세계 안에서, 독자가 서로 다른 방식으로 말씀과 삶을 탐색하는 다섯 개의 산책 경로를 제시합니다.</p>
     </div>
+    <p class="explore__hint">옆으로 넘기면 다섯 산책길을 모두 볼 수 있습니다.</p>
     <div class="explore__rows" aria-label="말씀의 숲 다섯 산책길">
       <div class="explore-row"><span class="no">01</span><h3><a class="explore-link" href="/series/issues/">말씀의 숲 주제호</a></h3><p>한 가지 질문을 성경과 오늘의 삶 속에서 오래 읽는 주제 중심의 산책길.</p><span class="status">출간됨</span></div>
       <div class="explore-row"><span class="no">02</span><h3><a class="explore-link" href="/series/land-reading/">땅으로 읽는 성경</a></h3><p>땅과 장소를 따라 성경 장면과 삶의 세계를 입체적으로 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span></div>
@@ -530,34 +585,28 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <div class="explore-row"><span class="no">05</span><h3><a class="explore-link" href="/series/story-bible/">이야기로 읽는 성경</a></h3><p>성경의 이야기와 인물, 장면의 흐름을 따라 말씀을 읽는 산책길.</p><span class="status">제작 중 · 미리보기</span></div>
     </div>
     <div class="explore__index">
-      <a class="cta" href="/series/">Series 전체 보기 →</a>
+      <a class="cta" href="/series/">모든 시리즈 보기 →</a>
     </div>
   </div>
 </section>
 
-<!-- 4b. ART BIBLE — a visual webbook corner inside Malsum Forest -->
-<section class="art-bible-home" id="art-bible" aria-labelledby="art-bible-title">
-  <div class="wrap jb-home__grid">
-    <div class="jb-home__copy">
-      <p class="eyebrow">내 손안의 예술성경 · ART BIBLE</p>
-      <h2 class="section-title" id="art-bible-title">그림 한 점,<br>음악 한 곡,<br>말씀 한 자락</h2>
-      <p class="body">그림과 음악을 천천히 바라보고 들으며 성경 본문에 머무는 작은 웹북입니다. 네 편의 예술성경과 영화 《어바웃 타임》을 잇는 특별판을 한 서재에서 만날 수 있습니다.</p>
-      <a class="jb-home__btn" href="/art-bible/">예술성경 펼치기<span aria-hidden="true">→</span></a>
+<!-- DIGITAL PROJECTS — two focused paths instead of two full-height sections -->
+<section class="projects-home" id="digital-projects" aria-labelledby="projects-home-title">
+  <div class="wrap">
+    <div class="projects-home__head">
+      <div><p class="eyebrow">디지털 프로젝트</p><h2 class="section-title" id="projects-home-title">말씀을 읽는<br>두 가지 새로운 길</h2></div>
+      <p class="body">예술 작품 앞에 천천히 머물거나, 원문과 지도와 연표를 따라 더 깊이 살펴보세요.</p>
     </div>
-    <a class="art-bible-home__cover" href="/art-bible/" tabindex="-1" aria-hidden="true"><img src="/art-bible/assets/default-cover-1080.jpg" loading="lazy" alt="" width="941" height="1672"></a>
-  </div>
-</section>
-
-<!-- 4b. JUDEBIBLE — research tool linked from Malsum Forest -->
-<section class="jb-home" id="judebible" aria-labelledby="jb-home-title">
-  <div class="wrap jb-home__grid">
-    <div class="jb-home__copy">
-      <p class="eyebrow">주드성경 · JudeBible</p>
-      <h2 class="section-title" id="jb-home-title">말씀을 읽는 데서,<br>깊이 이해하는 데까지</h2>
-      <p class="body">말씀의 숲에서 읽고 묵상한 본문을, 원문과 지도, 연표와 함께 더 깊이 살펴볼 수 있는 성경 연구 도구입니다.</p>
-      <a class="jb-home__btn" href="/judebible/">주드성경 알아보기<span aria-hidden="true">→</span></a>
+    <div class="projects-home__grid">
+      <article class="project-card project-card--art" aria-labelledby="project-art-title">
+        <a class="project-card__media" href="/art-bible/" tabindex="-1" aria-hidden="true"><img src="/art-bible/assets/default-cover-1080.jpg" loading="lazy" alt="" width="941" height="1672"></a>
+        <div class="project-card__copy"><p class="project-card__label">ART BIBLE</p><h3 id="project-art-title">내 손안의 예술성경</h3><p>그림과 음악을 바라보고 들으며 성경 본문에 머무는 작은 웹북입니다.</p><a class="project-card__link" href="/art-bible/">예술성경 펼치기 →</a></div>
+      </article>
+      <article class="project-card project-card--study" aria-labelledby="project-study-title">
+        <a class="project-card__media" href="/judebible/" tabindex="-1" aria-hidden="true"><img src="/judebible/app-study.jpg" loading="lazy" alt="" width="1900" height="955"></a>
+        <div class="project-card__copy"><p class="project-card__label">JUDEBIBLE</p><h3 id="project-study-title">주드성경</h3><p>말씀의 숲에서 읽은 본문을 원문과 지도, 연표와 함께 깊이 살펴보는 연구 도구입니다.</p><a class="project-card__link" href="/judebible/">주드성경 알아보기 →</a></div>
+      </article>
     </div>
-    <a class="jb-home__shot" href="/judebible/" tabindex="-1" aria-hidden="true"><img src="/judebible/app-study.jpg" width="1900" height="955" loading="lazy" alt=""></a>
   </div>
 </section>
 
@@ -615,10 +664,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <h2 class="section-title" id="about-title">말씀의 숲이<br>만들고 싶은 것</h2>
     <p class="about__vision">삶의 본질과 의미를 담아<br>미쁘고 아름다운 책을 만듭니다.</p>
     <dl class="about__points">
-      <div><dt>왜 만드는가</dt><dd>말씀의 숲은 빠른 답보다 오래 남는 질문을, 많은 정보보다 깊이 읽는 시간을 중요하게 생각합니다. 삶의 본질과 의미를 책 안에 담습니다.</dd></div>
-      <div><dt>만드는 사람</dt><dd>말씀과 삶을 오래 바라보고,<br>글과 그림으로 남깁니다.<br><br>생명숲교회에서 목회하며 말씀을 연구하고 설교하며 가르치는 일을 이어가고 있습니다. 성경 본문을 중심에 두고 예술과 문화, 오늘의 삶을 함께 읽으며 《말씀의 숲》을 기획하고 집필합니다.<br><br>목회자의 자리에서는 사람의 얼굴과 말, 마음이 움직이는 순간을 오래 바라봅니다. 글을 쓰고 그림을 그릴 때도 그 시선은 크게 다르지 않습니다.<br><br>글과 그림은 오래 바라본 시간에 남은 두 가지 흔적이라고 생각합니다. 말로 붙잡아야 할 것은 글이 되고, 말보다 먼저 다가오는 것은 그림이 됩니다.<br><br>그렇게 관계와 사랑, 기다림과 헤어짐, 믿음과 삶을 천천히 들여다보고, 오래 곁에 둘 수 있는 책으로 만들어 갑니다.</dd></div>
-      <div><dt>편집과 출판</dt><dd>필요한 깊이는 지키면서도 독자가 따라갈 수 있는 언어와 장면으로 책을 만듭니다. 말씀과 삶을 천천히 바라보고, 독자에게 닿는 언어와 시각으로 엮어 오래 머물 수 있는 책과 페이지를 펴냅니다.</dd></div>
+      <div><dt>왜 만드는가</dt><dd>빠른 답보다 오래 남는 질문을, 많은 정보보다 깊이 읽는 시간을 중요하게 생각합니다.</dd></div>
+      <div><dt>만드는 사람</dt><dd>생명숲교회에서 말씀을 연구하고 가르치며, 성경과 예술과 오늘의 삶을 글과 그림으로 엮습니다.</dd></div>
+      <div><dt>편집과 출판</dt><dd>필요한 깊이는 지키되 독자가 따라갈 수 있는 언어와 장면으로 오래 머물 수 있는 책을 만듭니다.</dd></div>
     </dl>
+    <details class="about__more">
+      <summary>만드는 사람 이야기 더 읽기</summary>
+      <div class="about__more-body">
+        <p>목회자의 자리에서 사람의 얼굴과 말, 마음이 움직이는 순간을 오래 바라봅니다. 글을 쓰고 그림을 그릴 때도 그 시선은 크게 다르지 않습니다.</p>
+        <p>글과 그림은 오래 바라본 시간에 남은 두 가지 흔적이라고 생각합니다. 말로 붙잡아야 할 것은 글이 되고, 말보다 먼저 다가오는 것은 그림이 됩니다.</p>
+        <p>관계와 사랑, 기다림과 헤어짐, 믿음과 삶을 천천히 들여다보고 오래 곁에 둘 수 있는 책으로 만들어 갑니다.</p>
+      </div>
+    </details>
     <blockquote class="about__quote-line">미쁘고 아름다운 책으로,<br>말씀과 삶 사이에 오래 머무는 시간.</blockquote>
     <a class="cta" href="#page-top">처음으로 돌아가기 →</a>
   </div>
@@ -628,7 +685,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 <footer class="footer">
   <div class="wrap">
-    <div><b>말씀의 숲</b><p>MALSUM FOREST · © 2026</p></div>
+    <div class="footer__brand"><b>말씀의 숲</b><p>MALSUM FOREST · © 2026</p><button class="install-entry" id="install-entry" type="button" hidden>앱으로 설치하기 <span aria-hidden="true">↗</span></button></div>
     <nav aria-label="하단 메뉴"><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/art-bible/">예술성경</a><a href="/judebible/">주드성경</a><a href="/bible-literary-map/">성경 문학 지도</a><a href="https://www.youtube.com/@%EC%83%9D%EB%AA%85%EC%88%B2-%EA%B5%90%ED%9A%8C" target="_blank" rel="noopener noreferrer">생명숲교회 유튜브</a><a href="https://www.youtube.com/@PointReadingBible" target="_blank" rel="noopener noreferrer">포인트리딩성경 유튜브</a><a href="#about">소개</a></nav>
   </div>
 </footer>
@@ -642,6 +699,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <button class="install-action" id="install-native" type="button" hidden>앱 설치하기</button>
   </section>
 </div>
+<script>
+(()=>{
+  const toggle=document.getElementById('nav-toggle');
+  const menu=document.getElementById('primary-menu');
+  if(!toggle||!menu) return;
+  const close=()=>{toggle.setAttribute('aria-expanded','false');menu.classList.remove('is-open');};
+  toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));menu.classList.toggle('is-open',!open);});
+  menu.addEventListener('click',(event)=>{if(event.target.closest('a')) close();});
+  document.addEventListener('keydown',(event)=>{if(event.key==='Escape'){close();toggle.focus();}});
+  window.addEventListener('resize',()=>{if(window.innerWidth>560) close();});
+})();
+</script>
 <script defer src="/js/install-guide.js"></script>
 <script>
 (()=>{
