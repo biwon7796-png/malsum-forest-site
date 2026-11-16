@@ -36,6 +36,7 @@ function css(doc){if(doc.getElementById("malsum-progress-css-v2"))return;const s
 ".malsum-checkbox input:focus-visible{outline:3px solid #3399b8;outline-offset:3px}",
 ".unit-panel .ph{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px}",
 ".unit-panel .ph .pt{margin:0}",
+".unit-panel .ph .malsum-passage-book{font-weight:700;color:#1d5245;white-space:nowrap;margin-right:-7px}",
 ".unit-panel .ph .malsum-inline-read{margin-left:4px;padding:3px 5px;min-height:34px;white-space:nowrap}",
 ".unit-panel .ph.malsum-inline-done .pt{color:#236a4d}",
 ".malsum-map-readings h3{margin:0 0 8px;font-size:14px;color:#184a38}",
@@ -94,6 +95,17 @@ for(const unit of list.querySelectorAll("button[data-unit]")){
   for(let i=0;i<entries.length;i++){
     const ph=entries[i],heading=ph.querySelector("h4.pt"),range=ph.querySelector(".pr");
     const title=heading.textContent.trim(),ref=(range?.textContent||"").trim();
+// Show the selected biblical book beside each detailed passage reference.
+// Keep .pr intact: the reading-progress matching logic relies on its raw range.
+if(range){
+  let bookLabel=ph.querySelector(".malsum-passage-book");
+  if(!bookLabel){
+    bookLabel=doc.createElement("span");
+    bookLabel.className="malsum-passage-book";
+    range.before(bookLabel);
+  }
+  bookLabel.textContent=book(doc)+" ";
+}
     // Resolve against the canonical reading table, scoped to this literary unit.
     // Avoid silently linking a different passage if the title or range disagrees.
     let row=unitRows.find(x=>{
