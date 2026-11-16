@@ -20,20 +20,26 @@ main{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
 .progress-tools-status{font-size:11px;color:#315b4e;line-height:1.35;max-width:100%}
 @media(max-width:640px){.progress-tools{gap:6px;margin:0}.progress-tools button{min-height:30px;padding:3px 9px;font-size:11px}.progress-tools-status{flex-basis:100%}}
 
-/* Desktop: one compact tool row; mobile: keep original accessible webbook controls. */
-.reader-font-tools{display:none;align-items:center;gap:10px;white-space:nowrap}
-.reader-font-group{display:inline-flex;overflow:hidden;border:1px solid #adbdba;border-radius:9px;background:#fff}
-.reader-font-group button{min-height:33px;padding:5px 12px;border:0;border-right:1px solid #d1dad8;background:#fff;color:#173f36;font:700 13px/1.3 Arial,"Noto Sans KR",sans-serif;cursor:pointer}
+/* Consistent compact controls at desktop, half-window and mobile widths. */
+.reader-font-tools{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.reader-font-group{display:inline-flex;overflow:hidden;border:1px solid #adbdba;border-radius:8px;background:#fff}
+.reader-font-group button{min-height:32px;padding:5px 9px;border:0;border-right:1px solid #d1dad8;background:#fff;color:#173f36;font:700 12px/1.3 Arial,"Noto Sans KR",sans-serif;cursor:pointer}
 .reader-font-group button:last-child{border-right:0}
 .reader-font-group button[aria-pressed="true"]{background:#1b4b3e;color:#fff}
 .reader-font-group button:focus-visible{outline:3px solid #2e9fc4;outline-offset:-3px}
 .reader-font-tag{font-size:12px;color:#385b4b;padding:7px 10px;border:1px solid #9bb0a8;border-radius:16px}
-@media(min-width:1100px){
- .title{min-height:44px;gap:18px}
- .progress-tools{margin-left:auto;flex-wrap:nowrap}
- .reader-font-tools{display:flex}
+.title{gap:10px;min-height:44px}
+.progress-tools{margin-left:auto;flex-wrap:nowrap}
+@media(max-width:1400px){.reader-font-tag{display:none}}
+@media(max-width:700px){
+ .title{padding:6px 10px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 9px;min-height:0}
+ .title h1{flex:0 0 100%;font-size:18px;white-space:normal;text-align:center;line-height:1.35}
+ .progress-tools{margin-left:0;gap:4px}
+ .progress-tools button{padding:4px 7px;min-height:31px;font-size:11px}
+ .reader-font-tools{gap:3px}
+ .reader-font-group button{min-height:31px;padding:4px 6px;font-size:11px}
+ .progress-tools-status{flex-basis:100%}
 }
-@media(max-width:640px){.title h1{font-size:18px;white-space:normal;text-align:center;line-height:1.35}}
 </style></head><body>
 <a href="#reader" class="skip">문학 지도 독서 화면으로 건너뛰기</a>
 <header class="site-header"><div class="site-header__wrap"><a class="site-wordmark" href="/#page-top" aria-label="말씀의 숲 홈"><img class="wordmark__ma" src="/favicon-48x48.png" alt="" width="48" height="48" aria-hidden="true"><b>말씀의 숲</b></a><nav class="site-nav" aria-label="주요 메뉴"><a href="/">홈</a><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/art-bible/">예술성경</a><a href="/judebible/">주드성경</a><a href="/bible-literary-map/" aria-current="page">성경 문학 지도</a><a href="/#about">소개</a></nav></div></header>
@@ -49,7 +55,7 @@ main{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
      if(!doc||!doc.head||doc.getElementById("malsum-compact-embedded-header"))return;
      const style=doc.createElement("style");
      style.id="malsum-compact-embedded-header";
-     style.textContent="body>header{height:auto!important;min-height:48px!important;padding:7px 16px!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important}body>header>.brand{display:none!important}html.malsum-embedded-desktop body>header{display:none!important}html.malsum-embedded-desktop .layout{height:100vh!important;height:100dvh!important;min-height:0!important}body>header>.head-tools{margin:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:9px!important;flex-wrap:wrap!important}@media(max-width:640px){body>header{padding:5px 9px!important;min-height:43px!important}body>header>.head-tools{gap:5px!important}}";
+     style.textContent="body>header{height:auto!important;min-height:48px!important;padding:7px 16px!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important}body>header>.brand{display:none!important}body>header{display:none!important}@media(min-width:701px){.layout{height:100vh!important;height:100dvh!important;min-height:0!important}}body>header>.head-tools{margin:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:9px!important;flex-wrap:wrap!important}@media(max-width:640px){body>header{padding:5px 9px!important;min-height:43px!important}body>header>.head-tools{gap:5px!important}}";
      doc.head.append(style);
      const buttons=document.querySelectorAll('[data-reader-font]');
      const sync=()=>{
@@ -62,11 +68,11 @@ main{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
      observer.observe(doc.documentElement,{attributes:true,attributeFilter:["data-font"]});
      // Desktop uses the parent toolbar: remove the duplicate iframe header only there.
      const switchHeader=()=>{
-       const embedded=window.matchMedia("(min-width:1100px)").matches;
-       doc.documentElement.classList.toggle("malsum-embedded-desktop",embedded);
+       // Parent toolbar now handles font controls at all viewport widths.
+       doc.documentElement.classList.add("malsum-embedded-compact");
      };
      switchHeader();
-     window.matchMedia("(min-width:1100px)").addEventListener("change",switchHeader);
+     
    }catch(e){}
  }
  frame.addEventListener("load",compact);
