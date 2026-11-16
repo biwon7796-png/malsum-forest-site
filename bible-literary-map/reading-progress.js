@@ -33,11 +33,12 @@ function css(doc){if(doc.getElementById("malsum-progress-css-v2"))return;const s
 ".malsum-checkbox{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#145741;font-weight:700;cursor:pointer;line-height:1.55}",
 ".malsum-checkbox input{width:19px;height:19px;flex:0 0 auto;accent-color:#266c4e;cursor:pointer}",
 ".malsum-checkbox input:focus-visible{outline:3px solid #3399b8;outline-offset:3px}",
-".malsum-map-readings{padding:11px 12px;margin:7px 0 13px;border:1px solid #d6e3d9;background:#f7fbf8;border-radius:8px}",
+".unit-panel .ph{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px}",
+".unit-panel .ph .pt{margin:0}",
+".unit-panel .ph .malsum-inline-read{margin-left:4px;padding:3px 5px;min-height:34px;white-space:nowrap}",
+".unit-panel .ph.malsum-inline-done .pt{color:#236a4d}",
 ".malsum-map-readings h3{margin:0 0 8px;font-size:14px;color:#184a38}",
-".malsum-map-item{display:flex;align-items:flex-start;gap:7px;padding:5px 1px;border-top:1px solid #e4ede6}",
-".malsum-map-item:first-of-type{border-top:0}.malsum-map-item small{color:#52695d;line-height:1.45;font-size:12px}",
-".malsum-map-total{font-size:12px;color:#29604a;display:block;margin-top:4px}",
+".malsum-map-total{font-size:12px;color:#29604a;display:inline-block;margin-left:8px}",
 "tr.malsum-checked>td:first-child{background:#edf7ee}",
 ".malsum-canon-note{margin:7px 0 13px;font-size:12px;color:#516c61}",
 "@media print{.malsum-progress-box,.malsum-map-readings,.malsum-checkbox,.malsum-map-total,.malsum-canon-note{display:none!important}tr.malsum-checked>td:first-child{background:none!important}}"
@@ -76,22 +77,54 @@ return mapping;}
 function renderMap(doc,r){
 const main=doc.querySelector("#view-map");if(!main)return;
 const list=main.querySelector("#literary-structure-list");if(!list)return;
-const map=unitMapping(doc,r);let done=r.filter(isRead).length;
+const mapping=unitMapping(doc,r),done=r.filter(isRead).length;
 let sum=main.querySelector('[data-malsum-progress="map"]');
 if(!sum){sum=doc.createElement("section");sum.className="malsum-progress-box";sum.dataset.malsumProgress="map";sum.innerHTML='<strong data-progress-title></strong><progress max="1" value="0"></progress><div data-progress-status class="malsum-progress-note"></div>';list.before(sum);}
-markBox(sum,book(doc)+" 문학지도 통독 진도",done,r.length,"문학단위를 펼쳐 각 세부단락을 체크하세요.");
-for(const button of list.querySelectorAll("button[data-unit]")){
-const id=button.dataset.unit,unitRows=map.get(id)||[];
-const li=button.closest("li"),panel=li?.querySelector(".unit-panel");
-if(!panel||!unitRows.length)continue;
-let block=panel.querySelector('[data-malsum-unit-progress="'+id+'"]');
-if(!block){block=doc.createElement("section");block.className="malsum-map-readings";block.dataset.malsumUnitProgress=id;block.innerHTML='<h3>이 문학단위의 통독 체크</h3>';panel.prepend(block);}
-for(const row of unitRows){const pid=row.dataset.passageRow,ref=passage(row);
-let input=block.querySelector('input[data-malsum-key="'+pid+'"]');
-if(!input){const line=doc.createElement("div");line.className="malsum-map-item";const check=checkbox(doc,pid,ref,"passage");const desc=doc.createElement("small");desc.textContent=ref+" · "+(row.querySelector('td[data-label="읽기 제목"]')?.textContent||"");line.append(check,desc);block.append(line);input=check.querySelector("input");}
-input.checked=isRead(row);}
-let total=block.querySelector(".malsum-map-total");if(!total){total=doc.createElement("span");total.className="malsum-map-total";block.append(total);}
-total.textContent="완료 "+unitRows.filter(isRead).length+" / "+unitRows.length+"단락";
+markBox(sum,book(doc)+" 문학지도 통독 진도",done,r.length,"세부단락 제목 옆의 체크박스로 읽음을 기록하세요.");
+// Earlier prototype used a duplicate checklist. Remove it and attach checkboxes
+// directly to the real per-passage heading (.ph > .pr + h4.pt).
+list.querySelectorAll(".malsum-map-readings").forEach(el=>el.remove());
+for(const unit of list.querySelectorAll("button[data-unit]")){
+  const id=unit.dataset.unit,unitRows=mapping.get(id)||[];
+  const panel=unit.closest("li")?.querySelector(".unit-panel");
+  if(!panel||!unitRows.length)continue;
+  const entries=[...panel.querySelectorAll(".ph")].filter(el=>el.querySelector("h4.pt"));
+  const assigned=new Set();
+  for(let i=0;i<entries.length;i++){
+    const ph=entries[i],heading=ph.querySelector("h4.pt"),range=ph.querySelector(".pr");
+    const title=heading.textContent.trim(),ref=(range?.textContent||"").trim();
+    // Resolve against the canonical reading table, scoped to this literary unit.
+    // Avoid silently linking a different passage if the title or range disagrees.
+    let row=unitRows.find(x=>{
+      if(assigned.has(x.dataset.passageRow))return false;
+      const rowTitle=x.querySelector('td[data-label="읽기 제목"]')?.textContent?.trim();
+      const rowRange=passage(x).replace(/^\S+\s+/,"").trim();
+      return rowTitle===title && norm(rowRange)===norm(ref);
+    });
+    if(!row)row=unitRows.find(x=>!assigned.has(x.dataset.passageRow)&&x.querySelector('td[data-label="읽기 제목"]')?.textContent?.trim()===title);
+    if(!row)continue;
+    const pid=row.dataset.passageRow;
+    assigned.add(pid);
+    let inp=ph.querySelector('input[data-malsum-kind="passage"]');
+    if(inp && inp.dataset.malsumKey!==pid){inp.closest(".malsum-checkbox")?.remove();inp=null;}
+    if(!inp){
+      const cb=checkbox(doc,pid,passage(row),"passage");
+      cb.classList.add("malsum-inline-read");
+      ph.append(cb);
+      inp=cb.querySelector("input");
+    }
+    inp.checked=isRead(row);
+    ph.classList.toggle("malsum-inline-done",inp.checked);
+  }
+  let indicator=unit.querySelector(".malsum-map-total");
+  if(!indicator){
+    indicator=doc.createElement("span");
+    indicator.className="malsum-map-total";
+    indicator.setAttribute("aria-live","polite");
+    const arrow=unit.querySelector(".arrow");
+    if(arrow)unit.insertBefore(indicator,arrow);else unit.append(indicator);
+  }
+  indicator.textContent=unitRows.filter(isRead).length+"/"+unitRows.length+" 읽음";
 }
 }
 function renderCanon(doc,r){
