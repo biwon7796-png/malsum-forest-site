@@ -1,5 +1,5 @@
 (function(){'use strict';
-const labels={bible:'말씀 깊이 읽기',essay:'사유의 숲',art:'말씀과 예술'};
+const labels={bible:'말씀 깊이 읽기',essay:'사유의 숲',art:'말씀과 예술',humanities:'고전 인문학'};
 const list=document.getElementById('stories-list'),empty=document.getElementById('stories-empty'),detail=document.getElementById('stories-detail'),listView=document.getElementById('stories-list-view');
 let all=[],filter='all';
 function el(tag,cls,text){const x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=text;return x}
