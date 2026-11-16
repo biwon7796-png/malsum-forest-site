@@ -10,17 +10,35 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #2e9fc4;o
 .skip{position:absolute;top:-80px;left:12px;background:white;padding:12px;z-index:40}.skip:focus{top:12px}
 .site-header{flex:0 0 auto;position:relative;z-index:30}
 main{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
-.title{flex:0 0 auto;width:100%;padding:11px 20px 10px;text-align:center;border-bottom:1px solid #e4e8e9;position:relative;z-index:10;background:var(--paper)}
-.title h1{font:700 clamp(17px,2.1vw,24px)/1.4 Georgia,"Nanum Myeongjo",serif;color:var(--navy);margin:0}
+.title{flex:0 0 auto;width:100%;min-height:46px;padding:5px max(16px,calc((100vw - 1180px)/2));display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #e4e8e9;position:relative;z-index:10;background:var(--paper)}
+.title h1{font:700 clamp(15px,1.5vw,19px)/1.3 Georgia,"Nanum Myeongjo",serif;color:var(--navy);margin:0;white-space:nowrap}
 #reader{display:block;flex:1 1 0;width:100%;height:0;min-height:0;border:0;background:#fff}
-@media(max-width:640px){.title{padding:9px 12px 8px}.title h1{font-size:17px}}
-.progress-tools{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-top:7px}
-.progress-tools button{background:#fff;color:var(--navy);border:1px solid #becbd0;border-radius:6px;padding:5px 12px;font:600 12px/1.4 Arial,"Noto Sans KR",sans-serif;min-height:34px;cursor:pointer}
+@media(max-width:640px){.title{padding:5px 10px;gap:8px;flex-wrap:wrap;justify-content:center;min-height:43px}.title h1{font-size:15px}}
+.progress-tools{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;margin-top:0}
+.progress-tools button{background:#fff;color:var(--navy);border:1px solid #becbd0;border-radius:6px;padding:5px 12px;font:600 12px/1.4 Arial,"Noto Sans KR",sans-serif;min-height:31px;cursor:pointer}
 .progress-tools button:hover{background:#eaf3f0}.progress-tools button:focus-visible{outline:3px solid #2e9fc4;outline-offset:2px}
 .progress-tools-status{font-size:11px;color:#315b4e;line-height:1.35;max-width:100%}
-@media(max-width:640px){.progress-tools{gap:6px;margin-top:5px}.progress-tools button{min-height:32px;padding:4px 10px;font-size:12px}.progress-tools-status{flex-basis:100%}}
+@media(max-width:640px){.progress-tools{gap:6px;margin:0}.progress-tools button{min-height:30px;padding:3px 9px;font-size:11px}.progress-tools-status{flex-basis:100%}}
 </style></head><body>
 <a href="#reader" class="skip">문학 지도 독서 화면으로 건너뛰기</a>
 <header class="site-header"><div class="site-header__wrap"><a class="site-wordmark" href="/#page-top" aria-label="말씀의 숲 홈"><img class="wordmark__ma" src="/favicon-48x48.png" alt="" width="48" height="48" aria-hidden="true"><b>말씀의 숲</b></a><nav class="site-nav" aria-label="주요 메뉴"><a href="/">홈</a><a href="/open-pages/">열린 페이지</a><a href="/stories/">이야기</a><a href="/books/">책</a><a href="/series/">시리즈</a><a href="/art-bible/">예술성경</a><a href="/judebible/">주드성경</a><a href="/bible-literary-map/" aria-current="page">성경 문학 지도</a><a href="/#about">소개</a></nav></div></header>
 <main id="main"><div class="title"><h1>통독의 흐름을 잇는 성경문학지도</h1><div class="progress-tools" aria-label="통독 진도 백업"><button id="progress-export" type="button">진도 내보내기</button><button id="progress-import" type="button">진도 가져오기</button><input id="progress-file" type="file" accept=".json,application/json" hidden aria-label="통독 진도 백업 파일 선택"><span id="progress-status" class="progress-tools-status" role="status" aria-live="polite"></span></div></div><iframe id="reader" src="./reader.html" title="성경 66권 문학 지도 전체 독서 화면" loading="eager"></iframe></main>
-<script src="./reading-progress.js?v=4" defer></script></body></html>
+<script>
+// Hide the duplicate branding INSIDE the webbook iframe; keep font tools,
+// book controls, and the independent reader intact. Same-origin child only.
+(function(){
+ const frame=document.getElementById("reader");
+ function compact(){
+   try{
+     const doc=frame.contentDocument;
+     if(!doc||!doc.head||doc.getElementById("malsum-compact-embedded-header"))return;
+     const style=doc.createElement("style");
+     style.id="malsum-compact-embedded-header";
+     style.textContent="body>header{height:auto!important;min-height:48px!important;padding:7px 16px!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important}body>header>.brand{display:none!important}body>header>.head-tools{margin:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:9px!important;flex-wrap:wrap!important}@media(max-width:640px){body>header{padding:5px 9px!important;min-height:43px!important}body>header>.head-tools{gap:5px!important}}";
+     doc.head.append(style);
+   }catch(e){}
+ }
+ frame.addEventListener("load",compact);
+ if(frame.contentDocument?.readyState==="complete")compact();
+})();
+</script><script src="./reading-progress.js?v=4" defer></script></body></html>
