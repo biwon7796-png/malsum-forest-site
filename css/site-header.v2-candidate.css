@@ -1,66 +1,69 @@
 /* ==========================================================================
    MALSUM FOREST — GLOBAL HEADER CONTRACT  v0.1
-   Canonical reference: the HOME page header
-     (.nav / .nav .wrap / .wordmark / .navlinks and its @media 900 / 560 blocks)
+      Canonical reference: the HOME page header
+           (.nav / .nav .wrap / .wordmark / .navlinks and its @media 900 / 560 blocks)
 
-   Every value below is the HOME header's own value, hard-coded instead of
-   var(): child pages also load css/style.css, whose :root defines different
-   --navy / --serif / --sans, so tokens would NOT resolve to the HOME values.
-   Class names are site-* (not .nav/.wordmark) because css/style.css already
-   owns .nav and .wordmark for the legacy home page.
+              Every value below is the HOME header's own value, hard-coded instead of
+                 var(): child pages also load css/style.css, whose :root defines different
+                    --navy / --serif / --sans, so tokens would NOT resolve to the HOME values.
+                       Class names are site-* (not .nav/.wordmark) because css/style.css already
+                          owns .nav and .wordmark for the legacy home page.
 
-   HOME inherited values that are declared explicitly here:
-     font-family  body var(--sans)   -> Arial,"Noto Sans KR",sans-serif
-     color        body               -> #2F3438
-     word-break   body               -> keep-all
-     link color / decoration  a{}    -> inherit / none
-     focus ring   a:focus-visible    -> 3px solid #2E9FC4, offset 3px
-   ========================================================================== */
+                             HOME inherited values that are declared explicitly here:
+                                  font-family  body var(--sans)   -> Arial,"Noto Sans KR",sans-serif
+                                       color        body               -> #2F3438
+                                            word-break   body               -> keep-all
+                                                 link color / decoration  a{}    -> inherit / none
+                                                      focus ring   a:focus-visible    -> 3px solid #2E9FC4, offset 3px
+                                                         ========================================================================== */
 
-.site-header{
-  height:76px;display:flex;align-items:center;
-  border-bottom:1px solid #e4e8e9;background:rgba(247,247,244,.96);
-  position:sticky;top:0;z-index:20;
-  font-family:Arial,"Noto Sans KR",sans-serif;font-size:16px;font-weight:400;
-  line-height:normal;letter-spacing:normal;color:#2F3438;word-break:keep-all
-}
-.site-header__wrap{width:min(1180px,calc(100% - 48px));margin:auto;display:flex;align-items:center;gap:24px}
-.site-header a{color:inherit;text-decoration:none}
-.site-header a:focus-visible{outline:3px solid #2E9FC4;outline-offset:3px}
+                                                         .site-header{
+                                                           height:76px;display:flex;align-items:center;
+                                                             border-bottom:1px solid #e4e8e9;background:rgba(247,247,244,.96);
+                                                               position:sticky;top:0;z-index:20;
+                                                                 font-family:Arial,"Noto Sans KR",sans-serif;font-size:16px;font-weight:400;
+                                                                   line-height:normal;letter-spacing:normal;color:#2F3438;word-break:keep-all
+                                                                   }
+                                                                   .site-header__wrap{width:min(1180px,calc(100% - 48px));margin:auto;display:flex;align-items:center;gap:24px}
+                                                                   .site-header a{color:inherit;text-decoration:none}
+                                                                   .site-header a:focus-visible{outline:3px solid #2E9FC4;outline-offset:3px}
 
-.site-wordmark{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.wordmark__ma{width:32px;height:32px;flex:0 0 32px;object-fit:contain}
-/* HOME declares Georgia,"Nanum Myeongjo",serif but loads no webfont, so its
-   Hangul resolves to the generic serif. Keep the same rendered wordmark type. */
-.site-wordmark b{font:700 24px/1.2 Georgia,serif;color:#123A5A}
+                                                                   .site-wordmark{display:flex;align-items:center;gap:10px;white-space:nowrap}
+                                                                   .wordmark__ma{width:32px;height:32px;flex:0 0 32px;object-fit:contain}
+                                                                   /* HOME declares Georgia,"Nanum Myeongjo",serif but loads no webfont, so its
+                                                                      Hangul resolves to the generic serif. Keep the same rendered wordmark type. */
+                                                                      .site-wordmark b{font:700 24px/1.2 Georgia,serif;color:#123A5A}
 
-.site-nav{margin-left:auto;display:flex;gap:24px;font-size:14px;align-items:center}
-.site-nav a{min-height:44px;display:flex;align-items:center}
-.site-nav a:hover{color:#2E9FC4}
-/* current page: the minimum mark that stays inside the HOME type contract —
-   weight only, no rule, no underline, no box (HOME itself has no active state) */
-.site-nav a[aria-current="page"]{font-weight:700;color:#123A5A}
+                                                                      .site-nav{margin-left:auto;display:flex;gap:24px;font-size:14px;align-items:center}
+                                                                      .site-nav a{min-height:44px;display:flex;align-items:center}
+                                                                      .site-nav a:hover{color:#2E9FC4}
+                                                                      .site-nav-toggle{display:none;align-items:center;justify-content:center;min-width:58px;min-height:44px;padding:0 14px;border:1px solid rgba(18,58,90,.22);border-radius:10px;background:#fff;color:#123A5A;font:700 14px Arial,"Noto Sans KR",sans-serif;cursor:pointer}
+                                                                      .site-nav-toggle:hover{border-color:rgba(18,58,90,.48);color:#17708C}
+                                                                      .site-nav-toggle:focus-visible{outline:3px solid #2E9FC4;outline-offset:3px}
 
-@media (max-width:900px){
-  .site-header{height:auto;min-height:64px;padding:8px 0}
-  .site-header__wrap{width:min(100% - 40px,720px);gap:12px}
-  .site-wordmark{flex-direction:row;align-items:center;gap:9px}
-  .wordmark__ma{width:28px;height:28px;flex-basis:28px}
-  .site-wordmark b{font-size:20px}
-  .site-nav{gap:18px;font-size:14px;flex-wrap:wrap;justify-content:flex-end}
-  .site-nav a{min-height:44px}
-}
-/* narrow phones: two-line header — wordmark row, then ONE full-width menu row.
-   Seven links do not fit 335px at 14px, so the row scrolls sideways instead of
-   wrapping (wrapping made the sticky header 140px tall). The right edge fades to
-   show there is more. Menu text stays 14px; every link keeps 44px touch height. */
-@media (max-width:560px){
-  .site-header{padding:4px 0 0}
-  .site-header__wrap{width:calc(100% - 40px);flex-wrap:wrap;gap:0}
-  .site-wordmark{flex-direction:row;align-items:center;gap:8px;padding:10px 0}
-  .wordmark__ma{width:26px;height:26px;flex-basis:26px}
-  .site-nav{margin-left:0;width:100%;display:flex;flex-wrap:nowrap;justify-content:flex-start;gap:0 18px;font-size:14px;border-top:1px solid #e4e8e9;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;padding-right:28px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
-  .site-nav::-webkit-scrollbar{display:none}
-  .site-nav a{padding:0 2px;flex:0 0 auto;white-space:nowrap}
-  .site-nav a[href="/"]{display:none}
-}
+                                                                      /* current page: the minimum mark that stays inside the HOME type contract —
+                                                                         weight only, no rule, no underline, no box (HOME itself has no active state) */
+                                                                         .site-nav a[aria-current="page"]{font-weight:700;color:#123A5A}
+
+                                                                         @media (max-width:900px){
+                                                                           .site-header{height:auto;min-height:64px;padding:8px 0}
+                                                                             .site-header__wrap{width:min(100% - 40px,720px);gap:12px}
+                                                                               .site-wordmark{flex-direction:row;align-items:center;gap:9px}
+                                                                                 .wordmark__ma{width:28px;height:28px;flex-basis:28px}
+                                                                                   .site-wordmark b{font-size:20px}
+                                                                                     .site-nav{gap:18px;font-size:14px;flex-wrap:wrap;justify-content:flex-end}
+                                                                                       .site-nav a{min-height:44px}
+                                                                                       }
+                                                                                       /* narrow phones: the same compact menu-button pattern as the homepage. */
+                                                                                       @media (max-width:560px){
+                                                                                         .site-header{padding:5px 0}
+                                                                                           .site-header__wrap{width:calc(100% - 40px);display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 10px}
+                                                                                             .site-wordmark{flex-direction:row;align-items:center;gap:8px;padding:7px 0}
+                                                                                               .wordmark__ma{width:26px;height:26px;flex-basis:26px}
+                                                                                                 .site-header.site-nav-ready .site-nav-toggle{display:inline-flex}
+                                                                                                   .site-header.site-nav-ready .site-nav{grid-column:1/-1;margin:5px 0 -5px;width:100%;display:none;flex-direction:column;align-items:stretch;gap:0;font-size:15px;border-top:1px solid #e4e8e9;overflow:visible;padding:7px 0 10px;-webkit-mask-image:none;mask-image:none}
+                                                                                                     .site-header.site-nav-ready .site-nav.is-open{display:flex}
+                                                                                                       .site-header.site-nav-ready .site-nav a,.site-header.site-nav-ready .site-nav a[href="/"]{display:flex;min-height:46px;padding:0 4px;flex:0 0 auto;white-space:nowrap;border-bottom:1px solid rgba(18,58,90,.08)}
+                                                                                                         .site-header.site-nav-ready .site-nav a:last-child{border-bottom:0}
+                                                                                                         }
+                                                                                                         
