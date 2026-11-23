@@ -13,6 +13,7 @@ window.ArtBookManifest = {
     "wanderer-of-faith", // ART-BIBLE-008
     "hagar-el-roi", // ART-BIBLE-009
     "gleaning-kindness", // ART-BIBLE-010
-    "giotto-kiss-of-judas" // ART-BIBLE-011
+    "giotto-kiss-of-judas", // ART-BIBLE-011
+    "sea-becomes-way" // ART-BIBLE-012 · candidate pending specialist QA
   ]
 };
