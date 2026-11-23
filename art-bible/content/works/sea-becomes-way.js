@@ -21,10 +21,10 @@ ArtBook.register({
     music: {
       composer: "게오르크 프리드리히 헨델", composerAliases: ["George Frideric Handel", "Handel", "Händel"],
       work: "이집트의 이스라엘인", workAliases: ["Israel in Egypt", "HWV 54"],
-      performer: "발타자르 노이만 합창단·앙상블"
+      performer: "바르샤바 국립필하모닉 합창단·오케스트라"
     },
     cover: {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/037.The_Egyptians_Drown_in_the_Sea.jpg/1280px-037.The_Egyptians_Drown_in_the_Sea.jpg",
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/037.The_Egyptians_Drown_in_the_Sea.jpg?width=960",
       alt: "멀리 높은 언덕에 모인 이스라엘 사람들과, 전경에서 거센 물결에 휘말리는 애굽 병사와 말의 모습을 그린 도레의 흑백 판화"
     }
   },
@@ -45,8 +45,8 @@ ArtBook.register({
 
   look: {
     image: {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/037.The_Egyptians_Drown_in_the_Sea.jpg/1280px-037.The_Egyptians_Drown_in_the_Sea.jpg", zoom: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/037.The_Egyptians_Drown_in_the_Sea.jpg/1280px-037.The_Egyptians_Drown_in_the_Sea.jpg",
-      width: 1280, height: 1024,
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/037.The_Egyptians_Drown_in_the_Sea.jpg?width=960", zoom: "https://commons.wikimedia.org/wiki/Special:FilePath/037.The_Egyptians_Drown_in_the_Sea.jpg?width=960",
+      width: 960, height: 768,
       alt: "높은 언덕에 빼곡히 서 있는 사람들과, 그 아래 두 방향에서 몰려드는 물결에 휩쓸린 애굽의 병거·말·군사들. 화면 전경에는 혼란과 파괴, 먼 곳에는 구원을 받은 백성이 보인다."
     },
     caption: {
@@ -81,22 +81,22 @@ ArtBook.register({
     titleKo: "이집트의 이스라엘인 — 공동체의 해방을 노래하는 합창",
     items: [
       { tag: "사실", text: "헨델의 오라토리오 《이집트의 이스라엘인》은 이집트에서의 해방과 바다의 사건, 모세의 노래를 중심에 둔 성경 기반 합창 작품입니다." },
-      { tag: "사실", text: "공식 공연 자료는 토마스 헹엘브로크 지휘, 발타자르 노이만 합창단·앙상블 연주로 소개합니다. 공연 정보의 총 길이는 약 85분입니다." },
+      { tag: "사실", text: "연결된 공식 영상은 바르샤바 국립필하모닉 합창단과 오케스트라의 연주이며, 얀 빌럼 데 프린트가 지휘합니다. 엘프필하모니의 토마스 헹엘브로크 공연 자료는 별도 참고 자료입니다." },
       { tag: "감상", text: "한 사람의 고백이 아니라 여러 목소리가 함께 움직이는 합창에 귀 기울여 보세요. 출애굽기가 개인의 탈출담이 아니라 백성 전체의 해방 이야기라는 사실을 떠올릴 수 있습니다." },
       { tag: "구별", text: "헨델의 음악은 출애굽기 본문 자체가 아니라 후대 음악가의 예술적 응답입니다. 음악의 극적 효과가 본문의 역사·신학적 의미를 대신하지 않습니다." }
     ],
-    duration: "약 85분 (엘프필하모니 공연)",
-    channel: "엘프필하모니 공식 공연 자료",
+    duration: "전곡 연주",
+    channel: "바르샤바 국립필하모닉 공식 채널",
     playLabel: "헨델 《이집트의 이스라엘인》 공연 영상 보기",
     embedTitle: "Israel in Egypt — Elbphilharmonie",
-    performance: "지휘: 토마스 헹엘브로크 · 발타자르 노이만 합창단 및 앙상블 · 엘프필하모니 공식 공연 기록",
-    externalPlayUrl: "https://www.youtube.com/watch?v=U32v8nMLpiQ",
+    performance: "지휘: 얀 빌럼 데 프린트 · 바르샤바 국립필하모닉 합창단·오케스트라 · 공식 채널의 실황 영상",
+    externalPlayUrl: "https://www.youtube.com/watch?v=qwtx_SUednI",
     links: [
-      { label: "헨델 공연 영상 · YouTube", url: "https://www.youtube.com/watch?v=U32v8nMLpiQ" },
+      { label: "바르샤바 국립필하모닉 공식 전곡 영상", url: "https://www.youtube.com/watch?v=qwtx_SUednI" },
       { label: "엘프필하모니 공식 공연 소개(2022년 제공 종료)", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
       { label: "공연 소개 및 관련 영상", url: "https://foyer.de/mediathek/haendel-israel-in-egypt/" }
     ],
-    note: "현대 공연의 음원이나 영상을 사이트에 복제하지 않습니다. 링크는 외부 공식 페이지로 이동하며, 과거 공연의 스트리밍 제공 여부는 공연 주최 측 사정에 따라 달라질 수 있습니다."
+    note: "현대 공연의 음원이나 영상을 사이트에 복제하지 않습니다. 링크를 누르면 바르샤바 국립필하모닉의 공식 채널 영상이 새 탭으로 열립니다. 재생 환경은 YouTube 정책에 따라 달라질 수 있습니다."
   },
 
   word: {
@@ -162,12 +162,12 @@ ArtBook.register({
   },
   note: ArtBook.makeNote({
     reflectionHint: "본문을 읽고 하나님의 구원과 공동체의 자유에 관해 내게 남은 질문을 기록해 보세요.",
-    pdfCredit: "그림: 귀스타브 도레, 《The Egyptians Drown in the Sea》(1866), Wikimedia Commons Public Domain Mark 1.0 공개 도판의 외부 이미지 링크. 음악: 헨델 《Israel in Egypt》 HWV 54, 엘프필하모니 공연 공식 페이지로 연결하며 음원·영상을 복제하지 않음. 성경: 출애굽기 14장 자체 요약(직접 인용 없음)."
+    pdfCredit: "그림: 귀스타브 도레, 《The Egyptians Drown in the Sea》(1866), Wikimedia Commons Public Domain Mark 1.0 외부 도판. 음악: 헨델 《Israel in Egypt》 HWV 54, 바르샤바 국립필하모닉 공식 채널 영상에 링크하며 음원·영상을 복제하지 않음. 성경: 출애굽기 14장 자체 요약(직접 인용 없음)."
   }),
   sources: {
     title: "작품과 자료 출처",
     checkedOn: "2026-11-23",
-    releaseStatus: "DRAFT · 012편 · 이미지 출처 확인 · 전문 해설 및 음악 실제 재생 QA HOLD · 미배포",
+    releaseStatus: "012편 · 출처 재검증 · 예술성경 전문 콘텐츠 최종 승인 전",
     groups: [
       {
         label: "미술작품",
@@ -184,7 +184,7 @@ ArtBook.register({
         label: "음악",
         lines: [
           "헨델, 오라토리오 《Israel in Egypt》 HWV 54. 엘프필하모니의 토마스 헹엘브로크·발타자르 노이만 합창단·앙상블 공연 소개를 참조합니다.",
-          "엘프필하모니는 해당 공연의 스트리밍이 2022년 5월 16일까지였다고 안내합니다. 따라서 공식 페이지를 현재 재생 가능하다고 표기하지 않으며, 별도 YouTube 영상으로 연결합니다. 음원과 영상은 복제하거나 내장하지 않습니다."
+          "엘프필하모니는 해당 공연의 스트리밍이 2022년 5월 16일까지였다고 안내합니다. 따라서 공식 페이지를 현재 재생 가능하다고 표기하지 않으며, 바르샤바 국립필하모닉 공식 채널 영상으로 연결합니다. 음원과 영상은 복제하거나 내장하지 않습니다."
         ],
         links: [
           { label: "엘프필하모니 공식 공연", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
@@ -217,16 +217,16 @@ ArtBook.register({
         artist: "Gustave Doré", title: "The Egyptians Drown in the Sea",
         year: "1866", source: "Doré's English Bible",
         sourceFile: "https://commons.wikimedia.org/wiki/File:037.The_Egyptians_Drown_in_the_Sea.jpg",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/037.The_Egyptians_Drown_in_the_Sea.jpg/1280px-037.The_Egyptians_Drown_in_the_Sea.jpg", license: "Public Domain Mark 1.0 (Wikimedia Commons file)",
+        imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/037.The_Egyptians_Drown_in_the_Sea.jpg?width=960", license: "Public Domain Mark 1.0 (Wikimedia Commons file)",
         useForm: "external image URL only", status: "PARTIAL", open: ["이미지 실화면·오프라인·PDF 재현 테스트"],
         checkedOn: "2026-11-23"
       },
       music: {
         composer: "George Frideric Handel", work: "Israel in Egypt HWV 54",
-        performance: "Thomas Hengelbrock / Balthasar Neumann Choir and Ensemble",
-        officialPage: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571",
-        useForm: "official external link only", audioFilesHosted: false,
-        status: "PARTIAL", open: ["YouTube 동영상의 실제 재생 및 게시 채널 검증", "정확한 감상 시작 지점"],
+        performance: "Jan Willem de Vriend / Warsaw Philharmonic Choir and Orchestra",
+        officialPage: "https://www.youtube.com/watch?v=qwtx_SUednI",
+        useForm: "official Warsaw Philharmonic video link only", audioFilesHosted: false,
+        status: "PARTIAL", open: ["모바일·브라우저에서 실제 영상 재생 확인", "정확한 감상 시작 지점"],
         checkedOn: "2026-11-23"
       },
       bible: {
