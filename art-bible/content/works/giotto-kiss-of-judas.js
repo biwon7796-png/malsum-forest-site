@@ -78,12 +78,12 @@ ArtBook.register({
       { tag: "연결", text: "공식 연주에서 소개되는 합창 ‘Sind Blitze, sind Donner’는 예수의 체포를 둘러싼 분노의 순간과 연결됩니다. 조토의 그림과 바흐의 음악은 같은 성경 사건을 서로 다른 시대의 예술 언어로 다룹니다." },
       { tag: "감상", text: "그림을 볼 때는 가운데의 얼굴을, 음악을 들을 때는 주변에서 몰아치는 목소리를 떠올려 보세요. 이는 두 작품을 나란히 읽는 감상 제안이지 역사적 직접 영향의 주장도, 성경 본문의 뜻 자체도 아닙니다." }
     ],
-    duration: "공식 영상에서 해당 악장 감상",
+    duration: "단독 합창 연주",
     channel: "네덜란드 바흐 협회",
-    playLabel: "《마태수난곡》 감상하기",
+    playLabel: "《마태수난곡》 중 체포 뒤 합창 감상하기",
     embedTitle: "바흐 《마태수난곡》 BWV 244 — 네덜란드 바흐 협회",
     performance: "연주: 네덜란드 바흐 협회(Netherlands Bach Society), Jos van Veldhoven 지휘",
-    videoId: "ZwVW1ttVhuQ",
+    videoId: "_uLpp6cW7sA",
     links: [
       { label: "네덜란드 바흐 협회 공식 설명", url: "https://www.bachvereniging.nl/en/bwv/bwv-244" },
       { label: "네덜란드 바흐 협회 공식 연주", url: "https://www.youtube.com/watch?v=ZwVW1ttVhuQ" },
@@ -189,7 +189,7 @@ ArtBook.register({
       music: {
         id: "music-11", composer: "J. S. Bach", work: "BWV 244",
         officialPage: "https://www.bachvereniging.nl/en/bwv/bwv-244",
-        embed: { provider: "YouTube", videoId: "ZwVW1ttVhuQ", channel: "Netherlands Bach Society", autoplay: false },
+        embed: { provider: "YouTube", videoId: "_uLpp6cW7sA", channel: "Netherlands Bach Society", autoplay: false },
         audioFilesHosted: false, url: "https://www.youtube.com/watch?v=ZwVW1ttVhuQ",
         license: "현대 공연·녹음 저작권 별도; 공식 연결만", useForm: "embed/link", pdfInclude: false,
         status: "SOURCE_VERIFIED", checkedOn: "2026-11-23"
