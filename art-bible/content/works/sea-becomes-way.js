@@ -88,7 +88,7 @@ ArtBook.register({
     duration: "전곡 연주",
     channel: "바르샤바 국립필하모닉 공식 채널",
     playLabel: "헨델 《이집트의 이스라엘인》 공연 영상 보기",
-    embedTitle: "Israel in Egypt — Elbphilharmonie",
+    embedTitle: "Israel in Egypt — Warsaw Philharmonic",
     performance: "지휘: 얀 빌럼 데 프린트 · 바르샤바 국립필하모닉 합창단·오케스트라 · 공식 채널의 실황 영상",
     externalPlayUrl: "https://www.youtube.com/watch?v=qwtx_SUednI",
     links: [
@@ -183,12 +183,12 @@ ArtBook.register({
       {
         label: "음악",
         lines: [
-          "헨델, 오라토리오 《Israel in Egypt》 HWV 54. 엘프필하모니의 토마스 헹엘브로크·발타자르 노이만 합창단·앙상블 공연 소개를 참조합니다.",
+          "헨델, 오라토리오 《Israel in Egypt》 HWV 54. 바르샤바 국립필하모닉 공식 채널의 합창단·오케스트라 전곡 공연을 연결합니다. 엘프필하모니의 토마스 헹엘브로크 공연은 별도의 참고 자료입니다.",
           "엘프필하모니는 해당 공연의 스트리밍이 2022년 5월 16일까지였다고 안내합니다. 따라서 공식 페이지를 현재 재생 가능하다고 표기하지 않으며, 바르샤바 국립필하모닉 공식 채널 영상으로 연결합니다. 음원과 영상은 복제하거나 내장하지 않습니다."
         ],
         links: [
-          { label: "엘프필하모니 공식 공연", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
-          { label: "FOYER 공연 자료", url: "https://foyer.de/mediathek/haendel-israel-in-egypt/" }
+          { label: "엘프필하모니 별도 공연 소개", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
+          { label: "FOYER 별도 공연 기록", url: "https://foyer.de/mediathek/haendel-israel-in-egypt/" }
         ]
       },
       {
