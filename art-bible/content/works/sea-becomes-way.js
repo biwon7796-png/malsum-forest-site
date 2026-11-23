@@ -1,5 +1,5 @@
-/* ART-BIBLE-011 · 바다가 길이 되는 순간
-   2026-11-15 Captain 승인 상세 편집 기획의 011 항목을 기반으로 한 검토용 초안입니다.
+/* ART-BIBLE-012 · 바다가 길이 되는 순간
+   2026-11-15 Captain 승인 상세 편집 기획의 011 항목을 Captain 지시에 따라 012번으로 순서 이동한을 기반으로 한 검토용 초안입니다.
    전문 본문·예술성경 원고 승인 미확인. 공개 승격이나 기존 대표본 대체를 뜻하지 않습니다.
    외부 이미지/음악은 원본 사이트의 공개 자료로 연결하며 파일을 복제·호스팅하지 않습니다. */
 ArtBook.register({
@@ -30,7 +30,7 @@ ArtBook.register({
   },
   series: "내 손안의 예술성경",
   seriesSub: "그림 한 점, 음악 한 곡, 말씀 한 자락",
-  status: "011편 · 검수 후보 (공개 승인 전)",
+  status: "012편 · 검수 후보 (공개 승인 전)",
   title: "바다가 길이 되는 순간",
   passage: "출애굽기 14장",
   themes: "해방 · 구원 · 공동체",
@@ -85,14 +85,15 @@ ArtBook.register({
       { tag: "감상", text: "한 사람의 고백이 아니라 여러 목소리가 함께 움직이는 합창에 귀 기울여 보세요. 출애굽기가 개인의 탈출담이 아니라 백성 전체의 해방 이야기라는 사실을 떠올릴 수 있습니다." },
       { tag: "구별", text: "헨델의 음악은 출애굽기 본문 자체가 아니라 후대 음악가의 예술적 응답입니다. 음악의 극적 효과가 본문의 역사·신학적 의미를 대신하지 않습니다." }
     ],
-    duration: "약 85분",
+    duration: "약 85분 (엘프필하모니 공연)",
     channel: "엘프필하모니 공식 공연 자료",
-    playLabel: "헨델 《이집트의 이스라엘인》 감상 페이지",
+    playLabel: "헨델 《이집트의 이스라엘인》 공연 영상 보기",
     embedTitle: "Israel in Egypt — Elbphilharmonie",
     performance: "지휘: 토마스 헹엘브로크 · 발타자르 노이만 합창단 및 앙상블 · 엘프필하모니 공식 공연 기록",
-    externalPlayUrl: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571",
+    externalPlayUrl: "https://www.youtube.com/watch?v=U32v8nMLpiQ",
     links: [
-      { label: "엘프필하모니 공식 공연 페이지", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
+      { label: "헨델 공연 영상 · YouTube", url: "https://www.youtube.com/watch?v=U32v8nMLpiQ" },
+      { label: "엘프필하모니 공식 공연 소개(2022년 제공 종료)", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
       { label: "공연 소개 및 관련 영상", url: "https://foyer.de/mediathek/haendel-israel-in-egypt/" }
     ],
     note: "현대 공연의 음원이나 영상을 사이트에 복제하지 않습니다. 링크는 외부 공식 페이지로 이동하며, 과거 공연의 스트리밍 제공 여부는 공연 주최 측 사정에 따라 달라질 수 있습니다."
@@ -166,7 +167,7 @@ ArtBook.register({
   sources: {
     title: "작품과 자료 출처",
     checkedOn: "2026-11-23",
-    releaseStatus: "DRAFT · 작품 이미지 출처 확인 · 전문 해설 및 음악 실제 재생 QA HOLD · 미배포",
+    releaseStatus: "DRAFT · 012편 · 이미지 출처 확인 · 전문 해설 및 음악 실제 재생 QA HOLD · 미배포",
     groups: [
       {
         label: "미술작품",
@@ -183,7 +184,7 @@ ArtBook.register({
         label: "음악",
         lines: [
           "헨델, 오라토리오 《Israel in Egypt》 HWV 54. 엘프필하모니의 토마스 헹엘브로크·발타자르 노이만 합창단·앙상블 공연 소개를 참조합니다.",
-          "공식 웹페이지의 공연 자료로만 연결합니다. 현재 재생 가능한 스트림이나 임베드 허용을 확정하지 않았으므로 음원과 영상은 복제하거나 내장하지 않습니다."
+          "엘프필하모니는 해당 공연의 스트리밍이 2022년 5월 16일까지였다고 안내합니다. 따라서 공식 페이지를 현재 재생 가능하다고 표기하지 않으며, 별도 YouTube 영상으로 연결합니다. 음원과 영상은 복제하거나 내장하지 않습니다."
         ],
         links: [
           { label: "엘프필하모니 공식 공연", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
@@ -203,7 +204,7 @@ ArtBook.register({
       {
         label: "편집과 검수",
         lines: [
-          "2026-11-15 Captain이 승인한 《내 손안의 예술성경》 007–050 상세 편집 기획 v0.2의 011편 기획 방향과 다섯 장면 구조를 따릅니다.",
+          "2026-11-15 Captain이 승인한 《내 손안의 예술성경》 007–050 상세 편집 기획 v0.2의 원래 011편 기획 방향(배포 순서 012)과 다섯 장면 구조를 따릅니다.",
           "이번 파일은 완성 원고·전문 QA·공개 상태로 승격하지 않은 검토용 초안입니다. 기획 승인과 실제 원고의 의미 승인을 구분합니다."
         ],
         links: [
@@ -225,7 +226,7 @@ ArtBook.register({
         performance: "Thomas Hengelbrock / Balthasar Neumann Choir and Ensemble",
         officialPage: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571",
         useForm: "official external link only", audioFilesHosted: false,
-        status: "PARTIAL", open: ["현재 스트리밍 재생 가능 여부", "정확한 감상 시작 지점"],
+        status: "PARTIAL", open: ["YouTube 동영상의 실제 재생 및 게시 채널 검증", "정확한 감상 시작 지점"],
         checkedOn: "2026-11-23"
       },
       bible: {
