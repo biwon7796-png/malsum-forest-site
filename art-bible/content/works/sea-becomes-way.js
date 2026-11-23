@@ -90,13 +90,14 @@ ArtBook.register({
     playLabel: "헨델 《이집트의 이스라엘인》 공연 영상 보기",
     embedTitle: "Israel in Egypt — Warsaw Philharmonic",
     performance: "지휘: 얀 빌럼 데 프린트 · 바르샤바 국립필하모닉 합창단·오케스트라 · 공식 채널의 실황 영상",
+    videoId: "qwtx_SUednI",
     externalPlayUrl: "https://www.youtube.com/watch?v=qwtx_SUednI",
     links: [
       { label: "바르샤바 국립필하모닉 공식 전곡 영상", url: "https://www.youtube.com/watch?v=qwtx_SUednI" },
       { label: "엘프필하모니 공식 공연 소개(2022년 제공 종료)", url: "https://www.elbphilharmonie.de/en/mediatheque/handel-israel-in-egypt/571" },
       { label: "공연 소개 및 관련 영상", url: "https://foyer.de/mediathek/haendel-israel-in-egypt/" }
     ],
-    note: "현대 공연의 음원이나 영상을 사이트에 복제하지 않습니다. 링크를 누르면 바르샤바 국립필하모닉의 공식 채널 영상이 새 탭으로 열립니다. 재생 환경은 YouTube 정책에 따라 달라질 수 있습니다."
+    note: "버튼을 누르면 이 페이지 안에서 바르샤바 국립필하모닉의 공식 YouTube 공연을 불러옵니다. 자동으로 외부 영상이 로드되지 않으며 음원·영상을 복제하지 않습니다. 재생이 제한되면 아래 공식 전곡 영상 링크로 감상하실 수 있습니다."
   },
 
   word: {
