@@ -31,7 +31,7 @@
 2. Notion 후보 DB에서 원본 카드를 읽고 정확한 화가·작품·본문을 확인. 본문 연결은 직접 서술/평행 본문/묵상적 연결로 구분.
 3. 원본 미술 이미지 **정확한 파일 URL**, 공개 도메인/라이선스 및 복제 가능 범위 확인. Commons 페이지와 실제 이미지 HTTP/브라우저 로드. 사진 자체의 권리가 남는 경우 별도 확인. 영상은 공식 채널 URL, 정확한 `videoId`, 적법한 임베드 가능 여부 확인.
 4. 기존 작품 JS 구조 재사용: `meta`, `series`, `seriesSub`, `status`, `title`, `passage`, `themes`, `scenes` (s1~s5), `look` (image/caption), `discover` (tagged items), `listen`, `word` (scripture/beats/echoes/care), `keep`, `note` (`ArtBook.makeNote()`), `sources` (rights, dates, records).
-5. 성경은 정확한 번역과 절을 확인해 인용하거나, 번역문 대신 **[요약]**으로 표시. 미술사 사실·눈으로 확인한 관찰·신학 해석·추정을 분리. 캡틴 승인 기록을 **실제 있었던 것 이상으로 확대하거나 전문 Registry 상태로 오인하지 않음**.
+5. **성경 본문에는 개역한글판(1961) 해당 범위를 절별로 빠짐없이 그대로 수록합니다.** 기존 예술성경의 기본 기준이며 절별 요약문으로 대체하지 않습니다. 반드시 대한성서공회 개역한글판 온라인 본문과 대조합니다. 해설/관찰/적용은 본문과 별도 영역으로 분리합니다. 개역한글판 저작재산권 보호기간은 2011-12-31 소멸(대한성서공회)입니다. 불명확한 절은 임의로 재작성하지 않고 HOLD/VERIFY. 미술사 사실·눈으로 확인한 관찰·신학 해석·추정을 분리. 캡틴 승인 기록을 **실제 있었던 것 이상으로 확대하거나 전문 Registry 상태로 오인하지 않음**.
 6. 권위/권리/실제 배포 허가 범위를 확인. 권위 불명확하면 전문 대표본을 승격하지 않고 HOLD/VERIFY. 외부 공개는 Captain Gate(명시적 일회 또는 위임) 준수.
 7. 새 `content/works/<id>.js` 파일을 GitHub에 생성한 뒤 **Node 문법 검사**. `library.js` 기존 전체 ID 배열 유지하면서 마지막에 새 id 추가(기존 마지막 요소 뒤 쉼표 주의). 동일 경로 동시쓰기 금지.
 8. GitHub Pages Actions `pages build and deployment` 성공과 commit SHA 일치 확인. 운영 사이트 경로 HTTP 200 / 배포된 인덱스 포함을 확인. CDN cache 문제일 수 있으므로 비교 시 cache-busting query 사용.
@@ -53,6 +53,14 @@
 - 운영 서재는 **총 13개 ID**를 로드합니다(2026-11-24 실제 Chrome QA).
 - **ART-BIBLE-012**: `sea-becomes-way` (출애굽기 14장, 도레/헨델): 별도 작업에서 `main`에 추가된 파일이며 현재 manifest 주석은 **candidate pending specialist QA** 입니다. 이 인수인계 문서는 이 후보를 전문 승인하거나 ACTIVE 승격하지 않습니다. 이 항목의 신학/내용·공개 상태는 rightful owner를 통해 별도 확인해야 합니다.
 - **ART-BIBLE-013**: `fra-angelico-annunciation` · 〈말씀 앞에 선 마리아〉 (누가복음 1:26–38, 프라 안젤리코 《수태고지》 / 바흐 《마니피카트》 BWV 243). 실제 공개 주소: https://www.malsumforest.com/art-bible/#/w/fra-angelico-annunciation
-- 013 신규 JS: `art-bible/content/works/fra-angelico-annunciation.js`. 2026-11-24 `main`에 게시. 원본 사진 `Prof. Mortel`, Commons 파일의 **CC BY 2.0** 조건에 따른 사진가/원본/라이선스 출처를 작품에 표시. 음악은 네덜란드 바흐 협회 공식 연주 링크/임베드만 사용. 성경은 직접 인용 대신 절별 요약. 바흐 가사(눅 1:46–55)와 수태고지(눅 1:26–38)를 분리.
+- 013 신규 JS: `art-bible/content/works/fra-angelico-annunciation.js`. 2026-11-24 `main`에 게시. 원본 사진 `Prof. Mortel`, Commons 파일의 **CC BY 2.0** 조건에 따른 사진가/원본/라이선스 출처를 작품에 표시. 음악은 네덜란드 바흐 협회 공식 연주 링크/임베드만 사용. 성경은 개역한글판(1961) 전체 본문으로 교체(2026-11-24). 바흐 가사(눅 1:46–55)와 수태고지(눅 1:26–38)를 분리.
 - 실서버 QA: 013 JS HTTP 200; Node `--check` PASS; Chrome Puppeteer E2E에서 서재 `count=13`, 013 카드 표시, 상세/이미지 `naturalWidth=960`, 다섯 장면 `1/5→5/5`, 390px 모바일 `scrollWidth=390`, pageerrors 0. 영상 플레이어 재생 및 개인 기록·백업은 이 실행에서 직접 시험하지 않았으므로 미검증.
 - 미래 작업 시 **GitHub 저장소의 현행 HEAD**를 다시 읽으십시오. 012가 동시에 추가되어 013 번호로 진행해야 했던 사례처럼, 이 문서의 편수와 HEAD가 달라질 수 있습니다. 기존 후보 상태·ID·메모 연결을 침범하지 말고 최신 manifest 끝에 새 id를 추가하십시오.
+
+## 2026-11-24 본문 수록 오류 수정 기록
+- 캡틴 지적: 예술성경 신규 011, 013의 Scripture 영역에 원문이 아니라 [요약]을 넣은 것이 기존 편집 원칙 위반.
+- 수정 대상: `giotto-kiss-of-judas.js` = **마태복음 26:47–56 개역한글판 10절**, `fra-angelico-annunciation.js` = **누가복음 1:26–38 개역한글판 13절**. `word.scripture.version`은 `개역한글판(1961)`; `lines`에는 각 절의 정식 본문을 넣고 기존 해설은 별도 유지.
+- **이후 예술성경 작품 제작 시 요약본을 Scripture 본문으로 대신하지 말 것.** 원문과 해설을 명확히 구분. 본문 입력 이후 대한성서공회 대조 및 운영 페이지 실제 표시 E2E 필수.
+- 대한성서공회 개역한글 본문: https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANmat026047 및 https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANluk001027
+- 대한성서공회 저작권 안내: https://www.bskorea.or.kr/bbs/content.php?co_id=subpage2_3_4_1 (1961 개역한글판의 저작재산권 보호기간 2011-12-31 소멸).
+- 이 사항은 **기존 예술성경 편집 패턴을 복구하기 위한 후속 QA 기록**이며 OS 공통 정책/전문 Registry의 권한을 새로 만들거나 변경하지 않습니다.
