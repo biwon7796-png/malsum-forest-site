@@ -1,4 +1,4 @@
-/* ART-BIBLE-006 · 나를 아시는 목자 — 밀레 · 바흐 BWV 112 · 시편 23편
+/* ART-BIBLE-006 · 나를 아시는 목자 — 밀레 · 존 루터 시편 23편 · 개역한글판 시편 23편
    Captain 제작·배포 지시에 따라 만든 기본편. 미술·음악·성경·문학의 고유성을 구별해 연결한다. */
 ArtBook.register({
   id: "the-lord-is-my-shepherd",
