@@ -48,3 +48,11 @@
 
 ## 다음 요청을 위한 1문장 인수인계
 “GitHub `biwon7796-png/malsum-forest-site/art-bible/PRODUCTION_HANDOFF.md`와 현행 `art-bible/content/library.js`, Notion 예술과 신학 작품별 레퍼런스 DB를 먼저 읽고, 기존 완성작과 중복되지 않는 작품 한 편을 선정하여 원본/라이선스/음악/성경을 확인한 후 동일한 5장면 예술성경 웹북 JS로 제작, Captain의 공개 허가 범위 내에서 GitHub Pages 배포와 운영 브라우저 QA까지 진행하십시오.”
+
+## 2026-11-24 추가 기록 (후속 채팅이 먼저 확인할 사항)
+- 운영 서재는 **총 13개 ID**를 로드합니다(2026-11-24 실제 Chrome QA).
+- **ART-BIBLE-012**: `sea-becomes-way` (출애굽기 14장, 도레/헨델): 별도 작업에서 `main`에 추가된 파일이며 현재 manifest 주석은 **candidate pending specialist QA** 입니다. 이 인수인계 문서는 이 후보를 전문 승인하거나 ACTIVE 승격하지 않습니다. 이 항목의 신학/내용·공개 상태는 rightful owner를 통해 별도 확인해야 합니다.
+- **ART-BIBLE-013**: `fra-angelico-annunciation` · 〈말씀 앞에 선 마리아〉 (누가복음 1:26–38, 프라 안젤리코 《수태고지》 / 바흐 《마니피카트》 BWV 243). 실제 공개 주소: https://www.malsumforest.com/art-bible/#/w/fra-angelico-annunciation
+- 013 신규 JS: `art-bible/content/works/fra-angelico-annunciation.js`. 2026-11-24 `main`에 게시. 원본 사진 `Prof. Mortel`, Commons 파일의 **CC BY 2.0** 조건에 따른 사진가/원본/라이선스 출처를 작품에 표시. 음악은 네덜란드 바흐 협회 공식 연주 링크/임베드만 사용. 성경은 직접 인용 대신 절별 요약. 바흐 가사(눅 1:46–55)와 수태고지(눅 1:26–38)를 분리.
+- 실서버 QA: 013 JS HTTP 200; Node `--check` PASS; Chrome Puppeteer E2E에서 서재 `count=13`, 013 카드 표시, 상세/이미지 `naturalWidth=960`, 다섯 장면 `1/5→5/5`, 390px 모바일 `scrollWidth=390`, pageerrors 0. 영상 플레이어 재생 및 개인 기록·백업은 이 실행에서 직접 시험하지 않았으므로 미검증.
+- 미래 작업 시 **GitHub 저장소의 현행 HEAD**를 다시 읽으십시오. 012가 동시에 추가되어 013 번호로 진행해야 했던 사례처럼, 이 문서의 편수와 HEAD가 달라질 수 있습니다. 기존 후보 상태·ID·메모 연결을 침범하지 말고 최신 manifest 끝에 새 id를 추가하십시오.
