@@ -1,4 +1,4 @@
-/* ART-BIBLE-012 · 프라 안젤리코 《수태고지》, 누가복음 1:26–38
+/* ART-BIBLE-013 · 프라 안젤리코 《수태고지》, 누가복음 1:26–38
    Notion 시범 색인 #012을 원본 출처로 재사용. 기존 OS 전문 Registry 승인 상태와 무관한 웹북 표시용 데이터. */
 ArtBook.register({
   id: "fra-angelico-annunciation",
