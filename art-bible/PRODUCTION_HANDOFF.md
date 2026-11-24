@@ -71,3 +71,11 @@
 - 음악 선정 순서: **성경 본문/미술 작품과의 실제 연결 적합성 → 공식 연주·영상의 출처와 연결 가능성 → 역사·신학적 표현 정확성 → 작곡가·시대·장르 다양성**. 다양성을 이유로 억지 연결이나 사실·감상 혼동은 금지.
 - 고려 영역: 헨델·모차르트·멘델스존·브람스·전통 영가·가스펠·현대 합창/현대 기악·영화음악 등. 자동 고정 배분 비율을 만들거나 기존 작품을 일괄 변경하지 않음.
 - 음악의 직접 성경본문 가사 / 연관 주제 / 감상적 병치를 분명히 구분하고, 현대 연주 저작권은 공식 링크·허용 임베드만 활용할 것.
+
+## 2026-11-24 음악 교체 실적 — 선택적 개선, 편집 변경만
+- Captain 결정: 바흐를 일괄 배제하지 않으며 **성경 본문과의 적합성 및 공식 연주 출처가 더 나은 후보만 선별 교체**.
+- 006 `the-lord-is-my-shepherd` (시편 23:1–6): 바흐 BWV 112 → **John Rutter, `The Lord Is My Shepherd`**. 합창곡은 시편 23편 본문을 직접 노래. 작곡가 공식 설명 `https://johnrutter.com/music/printed-music/catalogue/the-lord-is-my-shepherd`, John Rutter & The Cambridge Singers 공식 채널 `https://www.youtube.com/watch?v=wqGJ_Gh6Fnk`. 이미지/개역한글 6절/id 유지.
+- 013 `fra-angelico-annunciation` (누가복음 1:26–38): 바흐 `Magnificat BWV 243`(누가복음 1:46–55의 후속 사건) → **전통 캐럴 `Gabriel's Message`**, VOCES8 공식 영상, Jim Clements 편곡, `https://www.youtube.com/watch?v=EAsLEYWtIkY`. 수태고지를 다룬 노래이나 성경 축어 인용은 아니며 캐럴의 전통적 시적 표현을 개역한글판과 구분. 이미지/개역한글 13절/id 유지.
+- 다른 바흐 작품은 이번에 수정하지 않음. 브리튼 《The Prodigal Son》은 누가복음 15장과 직접 연결되지만 약 70분 길이 및 공식 공개 연주 접근성 검토가 남아 **보류**. 특히 본문 직접 연결이 강한 BWV 81(풍랑), BWV 244(체포) 무리한 교체 지양.
+- 운영 Chrome 점검: 006/013 갱신된 음악 메타와 공식 YouTube ID 읽힘, 본문 6절/13절 및 개역한글판 표기 유지, 모바일 390px에서 가로 넘침 없음, JS pageerror 0. **실제 YouTube 영상 내부 재생 완료는 이번 QA 범위에 없음.**
+- 기존 `meta.status`, 전문 Registry·전문 대표본 상태·개인 기록 키를 변경하지 않음. 향후 후보 평가는 현재 HEAD의 음악 구성을 재조회할 것.
