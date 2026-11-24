@@ -5,7 +5,7 @@ ArtBook.register({
 
   meta: {
     status: "candidate",
-    summary: "그늘 아래 양 떼를 지키는 한 사람. 밀레의 파스텔과 시편 23편, 바흐 BWV 112를 따라 ‘나를 아는 목자’의 돌봄과 동행을 천천히 바라봅니다.",
+    summary: "그늘 아래 양 떼를 지키는 한 사람. 밀레의 파스텔과 시편 23편, 존 루터의 합창곡을 따라 ‘나를 아는 목자’의 돌봄과 동행을 천천히 바라봅니다.",
     themes: ["돌봄", "동행", "쉼"],
     tags: ["목자", "양", "푸른 초장", "쉴만한 물가", "사망의 음침한 골짜기", "지팡이", "선하심", "인자하심", "시편", "하이디", "파스텔"],
     bible: {
@@ -14,7 +14,7 @@ ArtBook.register({
       related: ["요한복음 10:11–15", "에스겔 34:11–16", "누가복음 15:3–7", "요한계시록 7:17"]
     },
     art: { artist: "장프랑수아 밀레", artistAliases: ["밀레", "Jean-François Millet", "Millet"], title: "나무 그늘의 양 떼와 목동 소녀", titleAliases: ["A Shepherdess and Her Flock in the Shade of Trees", "목동 소녀와 양 떼"], year: "1854–55" },
-    music: { composer: "요한 제바스티안 바흐", composerAliases: ["바흐", "Bach", "J.S. Bach"], work: "칸타타 BWV 112", workAliases: ["BWV 112", "Der Herr ist mein getreuer Hirt"] },
+    music: { composer: "존 루터", composerAliases: ["John Rutter", "Rutter", "루터"], work: "The Lord Is My Shepherd", workAliases: ["시편 23편", "Psalm 23", "Requiem"] },
     literature: { author: "요한나 슈피리", title: "하이디", aliases: ["Johanna Spyri", "Heidi"] },
     cover: { src: "assets/shepherd-480.jpg", alt: "나무 그늘에서 목동 소녀가 양 떼와 개를 지키는 밀레의 파스텔" }
   },
@@ -65,27 +65,26 @@ ArtBook.register({
   },
 
   listen: {
-    work: "요한 제바스티안 바흐 · 칸타타 BWV 112",
-    titleDe: "Der Herr ist mein getreuer Hirt",
-    titleKo: "주는 나의 신실한 목자 (제목 번역)",
+    work: "존 루터 · 《The Lord Is My Shepherd》",
+    titleDe: "The Lord Is My Shepherd (Psalm 23)",
+    titleKo: "여호와는 나의 목자시니 (시편 23편)",
     items: [
-      { tag: "사실", text: "이 곡은 시편 23편과 직접 이어집니다. 1531년에 시편을 독일어 찬송으로 풀어 쓴 노랫말을 바흐가 다섯 악장의 코랄 칸타타로 만들었고, 1731년 4월 8일 라이프치히에서 처음 연주했습니다." },
-      { tag: "관찰", text: "첫 합창에는 두 대의 호른이 밝은 울림을 더합니다. 이어지는 알토 아리아에서는 오보에 다모레의 부드러운 음색이 ‘맑은 물’과 ‘바른 길’을 노래하고, 어두운 골짜기는 베이스 레치타티보로 지나갑니다. 시편의 장면이 악장마다 다른 목소리와 걸음으로 바뀝니다." },
-      { tag: "해석", text: "바흐의 음악은 목자의 돌봄을 조용한 배경음으로만 그리지 않습니다. 쉼은 밝고, 골짜기는 긴장되며, 마지막 선하심과 인자하심은 공동체의 합창으로 닫힙니다. 보호받는 삶 안에도 서로 다른 빛과 어둠이 함께 있다는 듯합니다." },
-      { tag: "감상", text: "밀레와 바흐 사이에 직접적인 역사적 연결은 없습니다. 다만 그림 속 지팡이와 그늘, 음악 속 호른과 오보에를 함께 경험하면 ‘목자가 곁에 있다’는 문장이 눈과 귀에 서로 다른 방식으로 남습니다." }
+      { tag: "사실", text: "영국 작곡가 존 루터(John Rutter)가 시편 23편을 영어 성경의 노랫말로 만든 합창곡입니다. 작곡가 공식 소개에 따르면 이 곡은 《레퀴엠》의 여섯 번째 악장에도 수록됩니다. 기존 바흐 칸타타와 달리 시편 23편의 말씀을 직접 노래한다는 점에서 이 페이지와 더욱 가깝습니다." },
+      { tag: "관찰", text: "공식 녹음에서는 오보에 선율과 합창이 시편의 고백을 함께 이어 갑니다. 소리의 크기를 높이기보다 숨을 고르는 듯한 선율 속에 목자의 돌봄을 담는 방식으로 들어 보세요." },
+      { tag: "연결", text: "시편은 푸른 초장뿐 아니라 사망의 음침한 골짜기도 말합니다. 그림의 양 떼와 목동 소녀는 실제 농촌의 장면이며, 합창곡은 성경 시편을 노래합니다. 둘을 동일한 장면으로 보지 않고 ‘돌봄과 동행’이라는 주제로 나란히 감상합니다." },
+      { tag: "감상", text: "그림 속 그늘진 자리에 잠시 시선을 머물게 하고 음악이 시편의 문장을 어떻게 흘려보내는지 들어 보세요. 미술작품과 곡 사이에 역사적 직접 연결이 있다는 주장은 아닙니다." }
     ],
-    duration: "16분 49초",
-    channel: "J. S. Bach-Stiftung",
-    playLabel: "BWV 112 감상하기",
-    embedTitle: "바흐 칸타타 BWV 112 — J. S. Bach-Stiftung",
-    performance: "연주: J. S. Bach-Stiftung · Rudolf Lutz 지휘 · 2025년 2월 21일 스위스 트로겐 복음교회 녹화",
-    videoId: "",
-    externalPlayUrl: "https://bachipedia.org/werke/bwv-112-der-herr-ist-mein-getreuer-hirt/",
+    duration: "약 5분",
+    channel: "John Rutter & The Cambridge Singers",
+    playLabel: "존 루터 《The Lord Is My Shepherd》 감상",
+    embedTitle: "John Rutter · The Lord Is My Shepherd — The Cambridge Singers",
+    performance: "John Rutter 지휘 · The Cambridge Singers · City of London Sinfonia · Quentin Poole(오보에). 작곡가·연주단체의 공식 채널 게시 음원 영상.",
+    videoId: "wqGJ_Gh6Fnk",
     links: [
-      { label: "Bachipedia 작품·연주 페이지", url: "https://bachipedia.org/werke/bwv-112-der-herr-ist-mein-getreuer-hirt/" },
-      { label: "YouTube에서 열기", url: "https://www.youtube.com/watch?v=Ou8pk8JgXg4" }
+      { label: "존 루터 공식 작품 설명", url: "https://johnrutter.com/music/printed-music/catalogue/the-lord-is-my-shepherd" },
+      { label: "John Rutter & The Cambridge Singers 공식 영상", url: "https://www.youtube.com/watch?v=wqGJ_Gh6Fnk" }
     ],
-    note: "소리는 자동으로 재생되지 않습니다. 재생이 어려운 곳이라면 다음 장면으로 그냥 넘어가셔도 됩니다."
+    note: "연주·녹음의 권리는 연주자와 권리자에게 있습니다. 사이트에는 음원을 저장하지 않고 공식 게시 영상만 연결합니다. 소리는 자동 재생되지 않습니다."
   },
 
   word: {
@@ -152,7 +151,7 @@ ArtBook.register({
 
   note: ArtBook.makeNote({
     reflectionHint: "시편 23편을 읽으며 지금 나에게 가장 필요한 돌봄과 동행을 적어 보세요.",
-    pdfCredit: "그림: 장프랑수아 밀레, 《나무 그늘의 양 떼와 목동 소녀》(메트로폴리탄 미술관 소장, Public Domain 표시 이미지). 성경: 개역한글판(1961), 대한성서공회 안내에 따라 저작재산권 보호기간 소멸. 음악: 바흐 BWV 112와 J. S. Bach-Stiftung 연주(링크로만 연결)."
+    pdfCredit: "그림: 장프랑수아 밀레, 《나무 그늘의 양 떼와 목동 소녀》(메트로폴리탄 미술관 소장, Public Domain 표시 이미지). 성경: 개역한글판(1961), 대한성서공회 안내에 따라 저작재산권 보호기간 소멸. 음악: 존 루터 《The Lord Is My Shepherd》, John Rutter & The Cambridge Singers 공식 게시 영상(링크로만 연결)."
   }),
 
   sources: {
@@ -165,9 +164,10 @@ ArtBook.register({
           "메트로폴리탄 미술관이 작품 페이지에서 Public Domain으로 표시하고 다운로드 원본을 제공합니다. 이미지의 색과 비율은 바꾸지 않고 크기만 줄였습니다."
         ], links: [{ label: "메트로폴리탄 작품 페이지", url: "https://www.metmuseum.org/art/collection/search/337797" }, { label: "이미지 원본", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/337797/761740/main-image" }, { label: "오픈 액세스 안내", url: "https://www.metmuseum.org/hubs/open-access" }] },
       { label: "음악", lines: [
-          "요한 제바스티안 바흐, 칸타타 BWV 112 〈Der Herr ist mein getreuer Hirt〉. 1531년의 시편 23편 찬송을 바탕으로 하며 1731년 4월 8일 라이프치히에서 초연되었습니다.",
-          "연주·녹화: J. S. Bach-Stiftung, Rudolf Lutz 지휘, 2025년 2월 21일 스위스 트로겐. 현대 연주의 권리는 재단에 있으며 음원을 복제하지 않고 공식 페이지와 YouTube 영상만 연결합니다."
-        ], links: [{ label: "Bachipedia 작품·연주 페이지", url: "https://bachipedia.org/werke/bwv-112-der-herr-ist-mein-getreuer-hirt/" }, { label: "공식 YouTube 영상", url: "https://www.youtube.com/watch?v=Ou8pk8JgXg4" }, { label: "Morgan Library 자필 악보 기록", url: "https://www.themorgan.org/music-manuscripts-and-printed-music/114172" }] },
+          "존 루터(John Rutter), 《The Lord Is My Shepherd》(시편 23편). 작곡가 공식 설명에 따르면 이 곡은 《레퀴엠》 제6악장에 수록되었습니다. 본문 가사는 시편 23편을 직접 다룹니다.",
+          "공식 게시 음원 영상: John Rutter 지휘, The Cambridge Singers, City of London Sinfonia, Quentin Poole(오보에). 저작권 있는 현대 연주·녹음은 복제하지 않고 연주자 공식 유튜브 영상으로 연결합니다.",
+          "2026-11-24 Captain 요청에 따른 음악 편집 변경. 바흐 BWV 112를 대체했으며 성경·그림·개인 기록의 id는 변경하지 않았습니다."
+        ], links: [{ label: "존 루터 공식 작품 설명", url: "https://johnrutter.com/music/printed-music/catalogue/the-lord-is-my-shepherd" }, { label: "공식 게시 음악 영상", url: "https://www.youtube.com/watch?v=wqGJ_Gh6Fnk" }] },
       { label: "성경", lines: [
           "시편 23:1–6, 개역한글판(1961). 대한성서공회의 안내에 따르면 개역한글판의 저작재산권 보호기간은 2011년 12월 31일에 소멸했습니다.",
           "본문은 대한성서공회 온라인 성경의 개역한글판 전 구절과 대조했습니다. 제목의 ‘아시는’은 요한복음 10:14–15와 연결한 편집 제목입니다."
@@ -178,7 +178,7 @@ ArtBook.register({
         ], links: [{ label: "Project Gutenberg · Heidi", url: "https://www.gutenberg.org/ebooks/20781" }, { label: "미국 의회도서관 판본", url: "https://www.loc.gov/item/13021709/" }] },
       { label: "해설", lines: [
           "미술·음악·성경·문학 자료를 바탕으로 새로 쓴 편집 원고입니다. 외부 해설 문장을 옮기지 않았으며, 사실·관찰·해석·연결을 구분했습니다.",
-          "핵심 연결: 시편 23편의 목자와 동행, 요한복음 10장의 ‘내 양을 안다’, 바흐 BWV 112의 시편 찬송, 밀레가 그린 실제 목동 노동. 서로를 동일시하지 않고 만나는 지점만 설명합니다."
+          "핵심 연결: 시편 23편의 목자와 동행, 요한복음 10장의 ‘내 양을 안다’, 루터의 시편 23편 합창곡, 밀레가 그린 실제 목동 노동. 서로를 동일시하지 않고 만나는 지점만 설명합니다."
         ], links: [] }
     ],
     records: {
@@ -196,17 +196,16 @@ ArtBook.register({
         status: "VERIFIED(작품 페이지 Public Domain 표시·원본 다운로드 확인)", open: [], checkedOn: "2026-11-13"
       },
       music: {
-        id: "music-6", composer: "J. S. Bach", work: "BWV 112", composerStatus: "저작권 소멸(1750 사망)",
-        performance: "J. S. Bach-Stiftung, Rudolf Lutz, recorded 2025-02-21, Evangelische Kirche Trogen",
-        officialPage: "https://bachipedia.org/werke/bwv-112-der-herr-ist-mein-getreuer-hirt/",
-        embed: { provider: "YouTube", videoId: "Ou8pk8JgXg4", channel: "J. S. Bach-Stiftung", playableInEmbed: false, fallback: "Bachipedia 공식 감상 페이지 새 창", idSource: "Bachipedia 공식 연주 iframe" },
-        audioFilesHosted: false,
-        url: "https://bachipedia.org/werke/bwv-112-der-herr-ist-mein-getreuer-hirt/",
-        license: "저작권 있는 현대 연주·녹화; 공식 링크/허용 임베드만", rightsHolder: "J. S. Bach-Stiftung",
-        rightsBasisUrl: "https://www.youtube.com/watch?v=Ou8pk8JgXg4",
-        useForm: "embed, link, summary", pdfInclude: false, pdfReason: "PDF에 음원·영상·악보·가사를 복제하지 않음",
-        connection: "직접 연결(1531년 시편 23편 찬송을 바탕으로 한 코랄 칸타타)",
-        status: "VERIFIED(공식 작품 페이지·연주 정보·영상 ID 확인; YouTube 내부 임베드 차단 확인 후 공식 페이지 링크 방식 적용)", open: [], checkedOn: "2026-11-13"
+        id: "music-6-rutter", composer: "John Rutter", work: "The Lord Is My Shepherd (Psalm 23)", composerStatus: "현대 작곡가, 저작권 보호",
+        performance: "John Rutter / The Cambridge Singers / City of London Sinfonia / Quentin Poole (oboe)",
+        officialPage: "https://johnrutter.com/music/printed-music/catalogue/the-lord-is-my-shepherd",
+        embed: { provider: "YouTube", videoId: "wqGJ_Gh6Fnk", channel: "John Rutter & The Cambridge Singers", autoplay: false },
+        audioFilesHosted: false, url: "https://www.youtube.com/watch?v=wqGJ_Gh6Fnk",
+        license: "저작권 있는 현대 연주·녹음, 공식 링크 및 YouTube 제공 임베드만", rightsHolder: "음반/연주 권리자",
+        rightsBasisUrl: "https://www.youtube.com/watch?v=wqGJ_Gh6Fnk",
+        useForm: "embed/link, original commentary", pdfInclude: false, pdfReason: "음원·악보·가사 복제하지 않음",
+        connection: "직접 연결: 시편 23편을 영어로 노래한 합창곡",
+        status: "OFFICIAL_CHANNEL_AND_COMPOSER_PAGE_VERIFIED; browser embed QA pending", open: ["운영 브라우저에서 실제 임베드 재생 추가 확인 필요"], checkedOn: "2026-11-24"
       },
       bible: {
         id: "bible-6", translation: "개역한글판(1961)", range: "시편 23:1–6",
