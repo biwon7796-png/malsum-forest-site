@@ -4,9 +4,9 @@ ArtBook.register({
   id: "fra-angelico-annunciation",
   meta: {
     status: "approved",
-    summary: "천사의 인사와 마리아의 응답. 프라 안젤리코가 그린 조용한 공간을 바라보고, 누가복음의 말씀과 바흐의 마니피카트를 함께 읽습니다.",
+    summary: "천사의 인사와 마리아의 응답. 프라 안젤리코가 그린 조용한 공간을 바라보고, 누가복음의 말씀과 수태고지를 노래한 전통 캐럴을 함께 읽습니다.",
     themes: ["수태고지", "은혜", "말씀", "응답"],
-    tags: ["마리아", "가브리엘", "성육신", "나사렛", "누가복음", "수태고지", "프라 안젤리코", "마니피카트", "순종"],
+    tags: ["마리아", "가브리엘", "성육신", "나사렛", "누가복음", "수태고지", "프라 안젤리코", "가브리엘의 메시지", "순종"],
     bible: {
       books: ["누가복음"], bookAliases: ["누가"],
       ranges: ["누가복음 1:26–38"],
@@ -17,8 +17,8 @@ ArtBook.register({
       title: "수태고지", titleAliases: ["The Annunciation", "Annunciation at San Marco"], year: "1440–1445년경"
     },
     music: {
-      composer: "요한 제바스티안 바흐", composerAliases: ["Bach", "J. S. Bach", "바흐"],
-      work: "마니피카트 BWV 243", workAliases: ["Magnificat", "BWV 243"]
+      composer: "바스크 지방 전통 선율", composerAliases: ["Basque traditional", "Traditional", "전통 캐럴"],
+      work: "Gabriel's Message", workAliases: ["The Angel Gabriel from Heaven Came", "가브리엘의 소식", "VOCES8"]
     },
     cover: { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fra_Angelico%2C_The_Annunciation%2C_ca._1443%3B_Convent_of_San_Marco%2C_Florence_%282%29.jpg?width=960", alt: "회랑의 아치 아래에서 천사가 마리아를 향해 다가오고 마리아가 앉아 있는 프레스코화" }
   },
@@ -65,26 +65,26 @@ ArtBook.register({
     again: "이번에는 두 인물보다 화면 사이에 놓인 기둥과 빈 공간을 보세요."
   },
   listen: {
-    work: "요한 제바스티안 바흐 · 《마니피카트》 BWV 243",
-    titleDe: "Magnificat in D major",
-    titleKo: "내 영혼이 주를 찬양하나이다 (누가복음 1:46–55)",
+    work: "바스크 지방 전통 캐럴 · 《Gabriel's Message》",
+    titleDe: "The Angel Gabriel from Heaven Came",
+    titleKo: "하늘에서 천사 가브리엘이 왔네 (제목의 뜻)",
     items: [
-      { tag: "사실", text: "바흐의 《마니피카트》는 마리아가 엘리사벳을 방문한 뒤 부른 찬가(누가복음 1:46–55)를 라틴어로 노래한 작품입니다. 수태고지 장면 자체를 직접 묘사하는 곡은 아닙니다." },
-      { tag: "사실", text: "바흐는 1723년에 초기 버전을 작곡했고 1733년경 조성과 편성을 고쳐 오늘날 자주 연주되는 BWV 243의 D장조 판본을 만들었습니다. 네덜란드 바흐 협회는 12개의 짧은 악장으로 구성된다고 설명합니다." },
-      { tag: "연결", text: "그림과 누가복음 1:26–38은 아직 마리아가 천사의 말을 듣는 때입니다. 음악의 가사는 그 뒤에 이어지는 마리아의 찬가입니다. 같은 이야기의 ‘응답 이후’에 귀 기울이는 연결입니다." },
-      { tag: "감상", text: "그림 속 침묵에 머물렀다면 합창이 시작하는 순간을 들어 보세요. 조용한 인사에서 노래의 환희로 이동하는 것은 감상적 연결이며 그림을 그릴 때 바흐의 음악이 존재했던 것은 아닙니다." }
+      { tag: "사실", text: "《Gabriel's Message》는 바스크 지방의 전통 캐럴에서 유래한 수태고지 노래입니다. 천사 가브리엘이 마리아에게 예수의 탄생을 알리고, 마리아가 응답하는 이야기를 노랫말로 풀어냅니다. 기존 바흐 《마니피카트》가 누가복음 1:46–55의 후속 찬가를 노래한 것과 달리, 이 캐럴은 그림과 본문인 누가복음 1:26–38의 사건 자체를 다룹니다." },
+      { tag: "사실", text: "음악은 VOCES8의 공식 채널에 게시된 2025년 연주 영상입니다. 합창 편곡은 Jim Clements가 맡았으며, 영상 설명은 이 곡을 바스크 지방의 전통 크리스마스 캐럴로 소개합니다." },
+      { tag: "연결", text: "가사의 인사와 마리아의 응답은 누가복음의 사건을 재구성한 것입니다. 성경을 축어적으로 옮긴 번역문이 아니며, 마리아를 높여 부르는 노래의 표현을 성경 본문 자체나 필수 신학 주장으로 단정하지 않습니다." },
+      { tag: "감상", text: "그림에서 천사와 마리아가 서로 바라보는 장면을 본 뒤, 목소리들이 인사와 응답의 흐름을 어떻게 들려주는지 들어 보세요. 프라 안젤리코와 이 현대 연주 사이에 직접적인 역사적 관계가 있었다는 뜻은 아닙니다." }
     ],
-    duration: "공식 연주 전체 감상",
-    channel: "네덜란드 바흐 협회",
-    playLabel: "《마니피카트》 공식 연주 감상",
-    embedTitle: "Bach Magnificat BWV 243 — Netherlands Bach Society",
-    performance: "연주: 네덜란드 바흐 협회, Jos van Veldhoven 지휘, 2014년 녹음",
-    videoId: "EsUWG2axB3w",
+    duration: "공식 합창 영상 감상",
+    channel: "VOCES8",
+    playLabel: "VOCES8 《Gabriel's Message》 감상",
+    embedTitle: "VOCES8 & Classic FM · Gabriel's Message",
+    performance: "VOCES8 합창 · Jim Clements 편곡 · VOCES8 공식 YouTube 채널, 2025년 게시",
+    videoId: "EAsLEYWtIkY",
     links: [
-      { label: "네덜란드 바흐 협회 공식 작품 설명", url: "https://www.bachvereniging.nl/en/bwv/bwv-243" },
-      { label: "협회 공식 YouTube 연주", url: "https://www.youtube.com/watch?v=EsUWG2axB3w" }
+      { label: "VOCES8 공식 연주 영상", url: "https://www.youtube.com/watch?v=EAsLEYWtIkY" },
+      { label: "전통 캐럴 참고(킹스 칼리지 합창단 공식 음원)", url: "https://www.youtube.com/watch?v=WWPnCsAHco0" }
     ],
-    note: "현대 연주의 녹음·영상은 이 사이트에 저장하지 않고 공식 링크 및 제공되는 임베드로만 연결합니다. 자동 재생되지 않습니다."
+    note: "노래에는 전통적 시적 표현과 마리아에 대한 호칭이 포함됩니다. 이를 성경 번역문과 구분하여 감상하세요. 현대 연주의 음원을 사이트에 저장하지 않으며 자동 재생하지 않습니다."
   },
   word: {
     scripture: {
@@ -137,7 +137,7 @@ ArtBook.register({
       lines: [
         "성경 본문: 누가복음 1:26–38은 천사의 인사, 아들에 대한 약속, 마리아의 질문과 응답을 전합니다.",
         "그림: 아치가 있는 회랑과 앉은 마리아의 자세는 화가의 시각적 구성입니다. 성경이 그런 건축 공간을 설명하지는 않습니다.",
-        "음악: 《마니피카트》의 직접 성경 가사는 수태고지 뒤의 누가복음 1:46–55입니다. 수태고지 사건과 노래를 동일한 순간으로 혼동하지 않습니다."
+        "음악: 《Gabriel's Message》는 수태고지 사건을 재구성한 전통 캐럴이며, 성경의 축어 번역이 아닙니다. 캐럴의 시적·전통적 표현은 개역한글판 본문과 구분합니다."
       ]
     }
   },
@@ -150,7 +150,7 @@ ArtBook.register({
   },
   note: ArtBook.makeNote({
     reflectionHint: "누가복음 1:26–38과 이 그림을 함께 보며 마음에 남은 것을 적어 보세요.",
-    pdfCredit: "그림: Fra Angelico, 《The Annunciation》, 약 1443, San Marco Museum, Florence. 사진: Prof. Mortel / Flickr, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). 원본 https://commons.wikimedia.org/wiki/File:Fra_Angelico,_The_Annunciation,_ca._1443;_Convent_of_San_Marco,_Florence_(2).jpg . 960px 축소 표시·자르기/색보정 없음. 음악: J. S. Bach, Magnificat BWV 243, Netherlands Bach Society 공식 연주 영상 링크. 본문: 누가복음 1:26–38, 개역한글판(1961)."
+    pdfCredit: "그림: Fra Angelico, 《The Annunciation》, 약 1443, San Marco Museum, Florence. 사진: Prof. Mortel / Flickr, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). 원본 https://commons.wikimedia.org/wiki/File:Fra_Angelico,_The_Annunciation,_ca._1443;_Convent_of_San_Marco,_Florence_(2).jpg . 960px 축소 표시·자르기/색보정 없음. 음악: 바스크 전통 캐럴 《Gabriel's Message》, VOCES8 공식 연주(2025), Jim Clements 편곡, YouTube 영상 링크. 본문: 누가복음 1:26–38, 개역한글판(1961)."
   }),
   sources: {
     title: "작품과 자료 출처",
@@ -167,16 +167,17 @@ ArtBook.register({
         { label: "미술사 작품 해설", url: "https://smarthistory.org/fra-angelico-the-annunciation-c-1438-47/" }
       ] },
       { label: "음악", lines: [
-        "바흐 《마니피카트》 BWV 243, 가사 원전 누가복음 1:46–55. 네덜란드 바흐 협회 공식 설명에 따르면 1723년 초판, 1733년 개정판이 있습니다.",
-        "네덜란드 바흐 협회 2014년 녹음, Jos van Veldhoven 지휘. 현대 연주·영상은 복제하지 않고 공식 감상 페이지와 영상으로만 연결합니다."
+        "《Gabriel's Message》(〈The Angel Gabriel from Heaven Came〉)는 수태고지를 다룬 바스크 지방 전통 캐럴입니다. 성경 본문을 축어 번역한 가사가 아니라 이야기로 재구성한 노랫말입니다.",
+        "VOCES8 공식 연주 영상(2025-11-28 게시), Jim Clements 편곡. 현대 연주·녹음·영상은 권리자의 것이며 이 웹북은 공식 YouTube 링크 및 임베드만 연결합니다.",
+        "2026-11-24 Captain의 음악 다양화 요청에 따라 바흐 《마니피카트》 BWV 243에서 교체했습니다. 본문/작품 이미지/고유 ID/개인 기록은 그대로 유지합니다."
       ], links: [
-        { label: "네덜란드 바흐 협회 작품 페이지", url: "https://www.bachvereniging.nl/en/bwv/bwv-243" },
-        { label: "공식 감상 영상", url: "https://www.youtube.com/watch?v=EsUWG2axB3w" }
+        { label: "VOCES8 공식 합창 영상", url: "https://www.youtube.com/watch?v=EAsLEYWtIkY" },
+        { label: "킹스 칼리지 합창단 공식 음원 참고", url: "https://www.youtube.com/watch?v=WWPnCsAHco0" }
       ] },
       { label: "성경 및 원고", lines: [
         "누가복음 1:26–38 개역한글판(1961) 본문을 대한성서공회 온라인 성경과 대조하여 수록했습니다.",
                   "개역한글판(1961) 저작재산권 보호기간은 2011년 12월 31일 소멸했습니다(대한성서공회 안내).",
-        "누가복음 1:46–55는 별도 후속 사건의 찬가이며 바흐 음악과 연결했습니다. 그림·본문·음악이 역사적으로 동일한 순간임을 주장하지 않습니다.",
+        "누가복음 1:26–38은 이번 그림과 캐럴의 직접 사건입니다. 다만 캐럴의 노랫말은 성경 번역문과 같지 않으며 프라 안젤리코의 제작 시기와 이 현대 녹음을 혼동하지 않습니다.",
         "Notion 《예술과 신학 — 작품별 레퍼런스 DB》 #012 후보의 미술품·본문 색인을 재사용했습니다. 노션의 이미지확인 상태를 전문 신학 승인이나 Registry 승격으로 변경하지 않았습니다."
       ], links: [
         { label: "대한성서공회 개역한글판 본문", url: "https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANluk001027" }, { label: "대한성서공회 저작권 안내", url: "https://www.bskorea.or.kr/bbs/content.php?co_id=subpage2_3_4_1" },
@@ -189,11 +190,12 @@ ArtBook.register({
         url: "https://commons.wikimedia.org/wiki/File:Fra_Angelico,_The_Annunciation,_ca._1443;_Convent_of_San_Marco,_Florence_(2).jpg", license: "CC BY 2.0", rightsHolder: "Photographer Prof. Mortel",
         rightsBasisUrl: "https://creativecommons.org/licenses/by/2.0/", useForm: "external image link with attribution",
         status: "IMAGE_RIGHTS_CHECKED", checkedOn: "2026-11-24" },
-      music: { id: "music-12", composer: "J. S. Bach", work: "BWV 243 Magnificat",
-        officialPage: "https://www.bachvereniging.nl/en/bwv/bwv-243",
-        embed: { provider: "YouTube", videoId: "EsUWG2axB3w", channel: "Netherlands Bach Society", autoplay: false },
-        audioFilesHosted: false, license: "Modern recording retained by performer; embed/link only",
-        useForm: "official video embed/link", status: "SOURCE_VERIFIED", checkedOn: "2026-11-24" },
+      music: { id: "music-13-gabriels-message", composer: "Basque traditional", work: "Gabriel's Message",
+        arranger: "Jim Clements", officialPage: "https://www.youtube.com/watch?v=EAsLEYWtIkY",
+        embed: { provider: "YouTube", videoId: "EAsLEYWtIkY", channel: "VOCES8", autoplay: false },
+        audioFilesHosted: false, license: "저작권 있는 현대 연주·편곡·녹음; 공식 영상 링크/허용 임베드",
+        useForm: "official video link/embed; original commentary", status: "OFFICIAL_CHANNEL_VERIFIED; browser embed QA pending",
+        checkedOn: "2026-11-24" },
       bible: { id: "bible-12", translation: "개역한글판(1961)", range: "누가복음 1:26–38", useForm: "scripture text", status: "VERIFIED_AGAINST_BSKOREA", checkedOn: "2026-11-24", sourceUrl: "https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANluk001027", rightsBasisUrl: "https://www.bskorea.or.kr/bbs/content.php?co_id=subpage2_3_4_1" },
       commentary: { id: "text-12", authorship: "이번 작품용 신규 작성", status: "CAPTAIN_REQUESTED_PUBLICATION", checkedOn: "2026-11-24" }
     }
