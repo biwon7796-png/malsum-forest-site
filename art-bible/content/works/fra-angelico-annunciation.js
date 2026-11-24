@@ -88,25 +88,25 @@ ArtBook.register({
   },
   word: {
     scripture: {
-      version: "본문 흐름 요약 — 성경 번역문 인용 아님",
+      version: "개역한글판(1961)",
       range: "누가복음 1:26–38",
       lines: [
-        { v: 26, t: "[요약] 하나님께서 가브리엘을 갈릴리 나사렛으로 보내십니다." },
-        { v: 27, t: "[요약] 가브리엘이 요셉과 약혼한 마리아에게 갑니다." },
-        { v: 28, t: "[요약] 천사가 마리아에게 은혜를 입은 사람이라고 인사합니다." },
-        { v: 29, t: "[요약] 마리아는 이 인사가 무슨 뜻인지 생각합니다." },
-        { v: 30, t: "[요약] 천사는 두려워하지 말라고 말합니다." },
-        { v: 31, t: "[요약] 마리아가 아들을 낳을 것이며 그의 이름을 예수라 하라고 전합니다." },
-        { v: 32, t: "[요약] 그 아들이 큰 분이 되고 지극히 높으신 분의 아들이라 불릴 것을 말합니다." },
-        { v: 33, t: "[요약] 그가 야곱의 집을 영원히 다스릴 것이며 나라가 끝나지 않을 것을 전합니다." },
-        { v: 34, t: "[요약] 마리아는 아직 남자를 알지 못하는데 어떻게 가능한지 묻습니다." },
-        { v: 35, t: "[요약] 천사는 성령의 역사와 하나님의 능력을 말합니다." },
-        { v: 36, t: "[요약] 늙은 나이에 임신한 엘리사벳의 소식을 전합니다." },
-        { v: 37, t: "[요약] 하나님께는 불가능한 일이 없다는 뜻을 전합니다." },
-        { v: 38, t: "[요약] 마리아는 주님의 말씀대로 이루어지기를 바라며 응답합니다. 천사는 떠납니다." }
+        { v: 26, t: "여섯째 달에 천사 가브리엘이 하나님의 보내심을 받들어 갈릴리 나사렛이란 동네에 가서" },
+        { v: 27, t: "다윗의 자손 요셉이라 하는 사람과 정혼한 처녀에게 이르니 그 처녀의 이름은 마리아라" },
+        { v: 28, t: "그에게 들어가 가로되 은혜를 받은 자여 평안할찌어다 주께서 너와 함께하시도다 하니" },
+        { v: 29, t: "처녀가 그 말을 듣고 놀라 이런 인사가 어찌함인고 생각하매" },
+        { v: 30, t: "천사가 일러 가로되 마리아여 무서워 말라 네가 하나님께 은혜를 얻었느니라" },
+        { v: 31, t: "보라 네가 수태하여 아들을 낳으리니 그 이름을 예수라 하라" },
+        { v: 32, t: "저가 큰 자가 되고 지극히 높으신 이의 아들이라 일컬을 것이요 주 하나님께서 그 조상 다윗의 위를 저에게 주시리니" },
+        { v: 33, t: "영원히 야곱의 집에 왕노릇 하실 것이며 그 나라가 무궁하리라" },
+        { v: 34, t: "마리아가 천사에게 말하되 나는 사내를 알지 못하니 어찌 이 일이 있으리이까" },
+        { v: 35, t: "천사가 대답하여 가로되 성령이 네게 임하시고 지극히 높으신 이의 능력이 너를 덮으시리니 이러므로 나실바 거룩한 자는 하나님의 아들이라 일컬으리라" },
+        { v: 36, t: "보라 네 친족 엘리사벳도 늙어서 아들을 배었느니라 본래 수태하지 못한다 하던 이가 이미 여섯 달이 되었나니" },
+        { v: 37, t: "대저 하나님의 모든 말씀은 능치 못하심이 없느니라" },
+        { v: 38, t: "마리아가 가로되 주의 계집 종이오니 말씀대로 내게 이루어지이다 하매 천사가 떠나가니라" }
       ]
     },
-    intro: "아래는 누가복음 1:26–38의 흐름을 절별로 요약한 것입니다. 성경 번역문을 그대로 옮긴 것이 아니므로 성경을 직접 펼쳐 읽어 주세요.",
+    intro: "개역한글판(1961) 성경 본문을 천천히 읽습니다. 아래의 본문 흐름·해설은 별도의 설명입니다.",
     flowTitle: "본문의 흐름",
     beats: [
       { ref: "1:26–29", items: [
@@ -150,12 +150,12 @@ ArtBook.register({
   },
   note: ArtBook.makeNote({
     reflectionHint: "누가복음 1:26–38과 이 그림을 함께 보며 마음에 남은 것을 적어 보세요.",
-    pdfCredit: "그림: Fra Angelico, 《The Annunciation》, 약 1443, San Marco Museum, Florence. 사진: Prof. Mortel / Flickr, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). 원본 https://commons.wikimedia.org/wiki/File:Fra_Angelico,_The_Annunciation,_ca._1443;_Convent_of_San_Marco,_Florence_(2).jpg . 960px 축소 표시·자르기/색보정 없음. 음악: J. S. Bach, Magnificat BWV 243, Netherlands Bach Society 공식 연주 영상 링크. 본문: 누가복음 1:26–38 자체 요약(성경 번역문 직접 인용 아님)."
+    pdfCredit: "그림: Fra Angelico, 《The Annunciation》, 약 1443, San Marco Museum, Florence. 사진: Prof. Mortel / Flickr, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). 원본 https://commons.wikimedia.org/wiki/File:Fra_Angelico,_The_Annunciation,_ca._1443;_Convent_of_San_Marco,_Florence_(2).jpg . 960px 축소 표시·자르기/색보정 없음. 음악: J. S. Bach, Magnificat BWV 243, Netherlands Bach Society 공식 연주 영상 링크. 본문: 누가복음 1:26–38, 개역한글판(1961)."
   }),
   sources: {
     title: "작품과 자료 출처",
     checkedOn: "2026-11-24",
-    releaseStatus: "2026-11-24 Captain의 다음 작품 제작·배포 요청에 따라 게시 · 개별 사진 CC BY 2.0 조건 검토 · 전문 Registry 상태 불변",
+    releaseStatus: "2026-11-24 Captain의 다음 작품 제작·배포 요청에 따라 게시 · 개별 사진 CC BY 2.0 조건 검토 · 전문 Registry 상태 불변 · 2026-11-24 개역한글판 본문 교체",
     groups: [
       { label: "그림 및 사진 저작권", lines: [
         "프라 안젤리코(Fra Angelico), 《수태고지》, 1440–1445년경, 프레스코, 산 마르코 수도원(피렌체) 북쪽 복도.",
@@ -174,10 +174,12 @@ ArtBook.register({
         { label: "공식 감상 영상", url: "https://www.youtube.com/watch?v=EsUWG2axB3w" }
       ] },
       { label: "성경 및 원고", lines: [
-        "누가복음 1:26–38의 절별 흐름을 자체 문장으로 요약했습니다. 번역문 직접 인용이 아닙니다.",
+        "누가복음 1:26–38 개역한글판(1961) 본문을 대한성서공회 온라인 성경과 대조하여 수록했습니다.",
+                  "개역한글판(1961) 저작재산권 보호기간은 2011년 12월 31일 소멸했습니다(대한성서공회 안내).",
         "누가복음 1:46–55는 별도 후속 사건의 찬가이며 바흐 음악과 연결했습니다. 그림·본문·음악이 역사적으로 동일한 순간임을 주장하지 않습니다.",
         "Notion 《예술과 신학 — 작품별 레퍼런스 DB》 #012 후보의 미술품·본문 색인을 재사용했습니다. 노션의 이미지확인 상태를 전문 신학 승인이나 Registry 승격으로 변경하지 않았습니다."
       ], links: [
+        { label: "대한성서공회 개역한글판 본문", url: "https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANluk001027" }, { label: "대한성서공회 저작권 안내", url: "https://www.bskorea.or.kr/bbs/content.php?co_id=subpage2_3_4_1" },
         { label: "노션 작품 출처 카드", url: "https://app.notion.com/4073b0124c52811e9f8bd49c16e2780a" }
       ] }
     ],
@@ -192,7 +194,7 @@ ArtBook.register({
         embed: { provider: "YouTube", videoId: "EsUWG2axB3w", channel: "Netherlands Bach Society", autoplay: false },
         audioFilesHosted: false, license: "Modern recording retained by performer; embed/link only",
         useForm: "official video embed/link", status: "SOURCE_VERIFIED", checkedOn: "2026-11-24" },
-      bible: { id: "bible-12", translation: "본문 요약(성경 번역문 아님)", range: "누가복음 1:26–38", useForm: "paraphrase", status: "PASSAGE_REFERENCE", checkedOn: "2026-11-24" },
+      bible: { id: "bible-12", translation: "개역한글판(1961)", range: "누가복음 1:26–38", useForm: "scripture text", status: "VERIFIED_AGAINST_BSKOREA", checkedOn: "2026-11-24", sourceUrl: "https://www.bskorea.or.kr/bible/korbibReadpage.php?linkBible=BHANluk001027", rightsBasisUrl: "https://www.bskorea.or.kr/bbs/content.php?co_id=subpage2_3_4_1" },
       commentary: { id: "text-12", authorship: "이번 작품용 신규 작성", status: "CAPTAIN_REQUESTED_PUBLICATION", checkedOn: "2026-11-24" }
     }
   }
